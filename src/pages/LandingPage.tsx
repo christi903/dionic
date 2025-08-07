@@ -60,8 +60,7 @@ const LandingPage = () => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1.5,
-        ease: "easeInOut"
+        duration: 1.5
       }
     }
   };
@@ -72,8 +71,7 @@ const LandingPage = () => {
       opacity: 0.3,
       transition: {
         duration: 1,
-        delay: 0.5,
-        ease: "easeInOut"
+        delay: 0.5
       }
     }
   };
@@ -87,16 +85,14 @@ const LandingPage = () => {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: 1.5,
-        ease: "easeInOut"
+        duration: 1.5
       }
     },
     exit: { 
       opacity: 0,
       scale: 0.9,
       transition: {
-        duration: 1.5,
-        ease: "easeInOut"
+        duration: 1.5
       }
     }
   };
