@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+
+import { motion, easeOut, easeInOut } from 'framer-motion';
 
 const HeroSection: React.FC = () => {
   const containerVariants = {
@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
       scale: 1,
       transition: { 
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -46,7 +46,7 @@ const HeroSection: React.FC = () => {
       transition: { 
         duration: 0.6,
         delay: 1.2 + (i * 0.1),
-        ease: "backOut"
+        ease: easeInOut
       }
     })
   };
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
       transition: { 
         duration: 0.8,
         delay: 2.5,
-        ease: "backOut"
+        ease: easeInOut
       }
     }
   };
@@ -82,7 +82,7 @@ const HeroSection: React.FC = () => {
       transition: { 
         duration: 0.8,
         delay: 0.3,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };

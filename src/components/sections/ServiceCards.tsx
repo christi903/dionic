@@ -1,6 +1,6 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, easeOut, easeInOut } from 'framer-motion';
 import { Stethoscope, GraduationCap, ArrowRight } from 'lucide-react';
 
 const ServiceCards: React.FC = () => {
@@ -30,7 +30,7 @@ const ServiceCards: React.FC = () => {
       rotateY: 0,
       transition: { 
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -46,7 +46,7 @@ const ServiceCards: React.FC = () => {
       transition: { 
         duration: 0.6,
         delay: 0.3,
-        ease: "backOut"
+        ease: easeInOut
       }
     }
   };
