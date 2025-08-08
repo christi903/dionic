@@ -1,8 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion, easeOut, easeInOut } from 'framer-motion';
-import { Stethoscope, GraduationCap, ArrowRight } from 'lucide-react';
-import GoLearnLogo from '../ui/GoLearnLogo';
+import { Stethoscope, ArrowRight } from 'lucide-react';
 
 const ServiceCards: React.FC = () => {
   const containerVariants = {
@@ -122,15 +121,17 @@ const ServiceCards: React.FC = () => {
         >
           <div className="text-center">
                          <motion.div 
-               className="bg-emerald-500/20 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors"
+               className="w-20 h-20 mx-auto mb-6 flex items-center justify-center"
                variants={iconVariants}
              >
-               <GraduationCap className="h-10 w-10 text-emerald-300" />
+               <img 
+                 src="/golearn.jpg" 
+                 alt="Go Learn Global Logo" 
+                 className="w-20 h-20 object-contain rounded-lg"
+               />
              </motion.div>
                          <motion.div variants={textVariants}>
-               <div className="mb-4 flex justify-center">
-                 <GoLearnLogo size="sm" showTagline={false} />
-               </div>
+               <h3 className="text-2xl font-bold text-white mb-4">Go Learn Global</h3>
                <p className="text-emerald-100 mb-6 leading-relaxed">
                  Transform your future with international scholarship opportunities. 
                  We connect Tanzanian students with world-class universities globally.
