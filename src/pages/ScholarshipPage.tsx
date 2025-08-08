@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Globe, Award, DollarSign, BookOpen, CheckCircle, Plane, FileText, Phone, Mail } from 'lucide-react';
-import Header from '../components/layout/Header';
+import { Users, Globe, Award, DollarSign, BookOpen, CheckCircle, Plane, FileText, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import Navigation from '../components/ui/Navigation';
 import ScholarshipCard from '../components/ui/ScholarshipCard';
 import DiplomaCourseCard from '../components/ui/DiplomaCourseCard';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
@@ -9,6 +10,42 @@ import { scholarships, programTypes, diplomaCourses } from '../data/scholarships
 
 const ScholarshipPage = () => {
   const [selectedProgram, setSelectedProgram] = useState('diploma');
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Background images of students and universities in Asia and India
+  const backgroundImages = [
+    {
+      url: 'https://images.pexels.com/photos/1438081/pexels-photo-1438081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description: 'Students in Asian University'
+    },
+    {
+      url: 'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description: 'Indian University Campus'
+    },
+    {
+      url: 'https://images.pexels.com/photos/1438072/pexels-photo-1438072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description: 'International Students'
+    },
+    {
+      url: 'https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description: 'University Library'
+    },
+    {
+      url: 'https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      description: 'Students Studying'
+    }
+  ];
+
+  // Auto-advance slideshow every 4 seconds
+  useState(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => 
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  });
 
   const stats = [
     { icon: <Users className="h-8 w-8" />, number: '500+', label: 'Students Placed' },
@@ -60,17 +97,24 @@ const ScholarshipPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <Header showBackButton={true} />
-        </div>
-      </header>
+      <Navigation />
 
-                    {/* Hero Section */}
-       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
+      {/* Hero Section with Dynamic Background */}
+      <section className="relative py-16 overflow-hidden">
+        {/* Dynamic Background Slideshow */}
+        <div className="absolute inset-0 z-0">
+          <div
+            className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+            style={{
+              backgroundImage: `url('${backgroundImages[currentImageIndex].url}')`
+            }}
+          />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/90 via-emerald-800/85 to-emerald-700/90" />
+        </div>
+
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="text-center">
+           <div className="text-center relative z-10">
              {/* GoLearn Global Logo */}
              <motion.div
                className="flex justify-center mb-8"
@@ -102,7 +146,7 @@ const ScholarshipPage = () => {
          </div>
        </section>
 
-             {/* What is GoLearn Global Section */}
+      {/* What is GoLearn Global Section */}
        <section className="py-12 bg-gray-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <motion.div
@@ -257,7 +301,7 @@ const ScholarshipPage = () => {
        </section>
 
        {/* Contact Section */}
-       <section className="py-16 bg-emerald-600 text-white">
+       <section className="py-16 bg-emerald-600 text-white relative">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="text-center mb-12">
              <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
@@ -286,6 +330,21 @@ const ScholarshipPage = () => {
                <h3 className="text-xl font-semibold mb-2">Email Us</h3>
                <p className="text-emerald-100">Musadionis58@gmail.com</p>
              </motion.div>
+           </div>
+           
+           {/* Start Application Button */}
+           <div className="text-center mt-12">
+             <Link to="/application">
+               <motion.button
+                 className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-3 mx-auto"
+                 whileHover={{ scale: 1.05 }}
+                 whileTap={{ scale: 0.95 }}
+               >
+                 <FileText className="h-6 w-6" />
+                 <span>Start Application</span>
+                 <ArrowRight className="h-6 w-6" />
+               </motion.button>
+             </Link>
            </div>
          </div>
        </section>
