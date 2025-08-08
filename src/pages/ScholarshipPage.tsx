@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Globe, Award, DollarSign, BookOpen, CheckCircle, Plane, GraduationCap, FileText, Phone, Mail } from 'lucide-react';
+import { Users, Globe, Award, DollarSign, BookOpen, CheckCircle, Plane, FileText, Phone, Mail } from 'lucide-react';
 import Header from '../components/layout/Header';
 import ScholarshipCard from '../components/ui/ScholarshipCard';
+import DiplomaCourseCard from '../components/ui/DiplomaCourseCard';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
-import { scholarships, programTypes } from '../data/scholarships';
+import { scholarships, programTypes, diplomaCourses } from '../data/scholarships';
 
 const ScholarshipPage = () => {
-  const [selectedProgram, setSelectedProgram] = useState('undergraduate');
+  const [selectedProgram, setSelectedProgram] = useState('diploma');
 
   const stats = [
     { icon: <Users className="h-8 w-8" />, number: '500+', label: 'Students Placed' },
@@ -146,16 +147,6 @@ const ScholarshipPage = () => {
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => setSelectedProgram('all')}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedProgram === 'all'
-                  ? 'bg-green-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              All Programs
-            </button>
             {programTypes.map((program) => (
               <button
                 key={program.id}
@@ -173,14 +164,31 @@ const ScholarshipPage = () => {
         </div>
       </section>
 
-      {/* Scholarships Grid */}
+      {/* Programs Grid */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredScholarships.map((scholarship) => (
-              <ScholarshipCard key={scholarship.id} scholarship={scholarship} />
-            ))}
-          </div>
+          {selectedProgram === 'diploma' ? (
+            <div>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Available Diploma Programs</h2>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                  Explore our comprehensive diploma programs offered by prestigious universities worldwide. 
+                  Each program is designed to provide practical skills and industry-relevant knowledge.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {diplomaCourses.map((course) => (
+                  <DiplomaCourseCard key={course.id} course={course} />
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredScholarships.map((scholarship) => (
+                <ScholarshipCard key={scholarship.id} scholarship={scholarship} />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
