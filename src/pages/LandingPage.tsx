@@ -12,22 +12,22 @@ const LandingPage = () => {
   const backgroundImages = [
     {
       url: 'https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      overlay: 'from-blue-900/90 via-purple-900/80 to-green-900/90',
+      overlay: 'from-slate-900/95 via-blue-900/85 to-emerald-900/90',
       description: 'Medical Equipment'
     },
     {
       url: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      overlay: 'from-green-900/90 via-blue-900/80 to-purple-900/90',
+      overlay: 'from-emerald-900/95 via-slate-800/85 to-blue-900/90',
       description: 'Education & Learning'
     },
     {
       url: 'https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      overlay: 'from-purple-900/90 via-green-900/80 to-blue-900/90',
+      overlay: 'from-blue-900/95 via-emerald-800/85 to-slate-900/90',
       description: 'Healthcare Excellence'
     },
     {
       url: 'https://images.pexels.com/photos/4050320/pexels-photo-4050320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      overlay: 'from-blue-900/90 via-purple-900/80 to-green-900/90',
+      overlay: 'from-slate-900/95 via-blue-900/85 to-emerald-900/90',
       description: 'Global Opportunities'
     }
   ];

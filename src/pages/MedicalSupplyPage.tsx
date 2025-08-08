@@ -39,8 +39,8 @@ const MedicalSupplyPage = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+             {/* Hero Section */}
+       <section className="bg-gradient-to-r from-slate-700 to-slate-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1 
@@ -49,10 +49,10 @@ const MedicalSupplyPage = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              MedioTech Supply
+              MediTech Supply
             </motion.h1>
-            <motion.p 
-              className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed"
+                         <motion.p 
+               className="text-xl text-slate-100 max-w-3xl mx-auto leading-relaxed"
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -72,11 +72,11 @@ const MedicalSupplyPage = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                  activeCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                }`}
+                                 className={`px-6 py-2 rounded-full font-medium transition-colors ${
+                   activeCategory === category.id
+                     ? 'bg-slate-600 text-white'
+                     : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                 }`}
               >
                 {category.name}
               </button>
@@ -114,7 +114,7 @@ const MedicalSupplyPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-blue-600 mb-4 flex justify-center">
+                                 <div className="text-slate-600 mb-4 flex justify-center">
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>

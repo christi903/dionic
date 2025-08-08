@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { motion, easeOut, easeInOut } from 'framer-motion';
 import { Stethoscope, GraduationCap, ArrowRight } from 'lucide-react';
+import GoLearnLogo from '../ui/GoLearnLogo';
 
 const ServiceCards: React.FC = () => {
   const containerVariants = {
@@ -75,8 +76,8 @@ const ServiceCards: React.FC = () => {
     >
       {/* Medical Supply Card */}
       <Link to="/medical-supply" className="group">
-        <motion.div 
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:bg-white/15 hover:scale-105 hover:border-blue-400/50"
+                 <motion.div 
+           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:bg-white/15 hover:scale-105 hover:border-slate-400/50"
           variants={cardVariants}
           whileHover={{ 
             y: -8,
@@ -86,19 +87,19 @@ const ServiceCards: React.FC = () => {
           whileTap={{ scale: 0.98 }}
         >
           <div className="text-center">
-            <motion.div 
-              className="bg-blue-500/20 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors"
-              variants={iconVariants}
-            >
-              <Stethoscope className="h-10 w-10 text-blue-300" />
-            </motion.div>
-            <motion.div variants={textVariants}>
-              <h3 className="text-2xl font-bold text-white mb-4">MedioTech Supply</h3>
-              <p className="text-blue-100 mb-6 leading-relaxed">
-                Premium medical instruments, equipment, and supplies for healthcare facilities across Tanzania. 
-                Quality you can trust, service you can rely on.
-              </p>
-              <div className="flex items-center justify-center text-blue-300 group-hover:text-blue-200 transition-colors">
+                         <motion.div 
+               className="bg-slate-500/20 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center group-hover:bg-slate-500/30 transition-colors"
+               variants={iconVariants}
+             >
+               <Stethoscope className="h-10 w-10 text-slate-300" />
+             </motion.div>
+                         <motion.div variants={textVariants}>
+               <h3 className="text-2xl font-bold text-white mb-4">MediTech Supply</h3>
+                              <p className="text-slate-100 mb-6 leading-relaxed">
+                 Premium medical instruments, equipment, and supplies for healthcare facilities across Tanzania. 
+                 Quality you can trust, service you can rely on.
+               </p>
+               <div className="flex items-center justify-center text-slate-300 group-hover:text-slate-200 transition-colors">
                 <span className="font-medium">Explore Medical Solutions</span>
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -109,8 +110,8 @@ const ServiceCards: React.FC = () => {
 
       {/* Scholarship Card */}
       <Link to="/scholarships" className="group">
-        <motion.div 
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:bg-white/15 hover:scale-105 hover:border-green-400/50"
+                 <motion.div 
+           className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 transition-all duration-300 hover:bg-white/15 hover:scale-105 hover:border-emerald-400/50"
           variants={cardVariants}
           whileHover={{ 
             y: -8,
@@ -120,23 +121,25 @@ const ServiceCards: React.FC = () => {
           whileTap={{ scale: 0.98 }}
         >
           <div className="text-center">
-            <motion.div 
-              className="bg-green-500/20 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center group-hover:bg-green-500/30 transition-colors"
-              variants={iconVariants}
-            >
-              <GraduationCap className="h-10 w-10 text-green-300" />
-            </motion.div>
-            <motion.div variants={textVariants}>
-              <h3 className="text-2xl font-bold text-white mb-4">Go Learn Global</h3>
-              <p className="text-green-100 mb-6 leading-relaxed">
-                Transform your future with international scholarship opportunities. 
-                We connect Tanzanian students with world-class universities globally.
-              </p>
-              <div className="flex items-center justify-center text-green-300 group-hover:text-green-200 transition-colors">
-                <span className="font-medium">Discover Scholarships</span>
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </motion.div>
+                         <motion.div 
+               className="bg-emerald-500/20 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center group-hover:bg-emerald-500/30 transition-colors"
+               variants={iconVariants}
+             >
+               <GraduationCap className="h-10 w-10 text-emerald-300" />
+             </motion.div>
+                         <motion.div variants={textVariants}>
+               <div className="mb-4 flex justify-center">
+                 <GoLearnLogo size="sm" showTagline={false} />
+               </div>
+               <p className="text-emerald-100 mb-6 leading-relaxed">
+                 Transform your future with international scholarship opportunities. 
+                 We connect Tanzanian students with world-class universities globally.
+               </p>
+               <div className="flex items-center justify-center text-emerald-300 group-hover:text-emerald-200 transition-colors">
+                 <span className="font-medium">Discover Scholarships</span>
+                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+               </div>
+             </motion.div>
           </div>
         </motion.div>
       </Link>

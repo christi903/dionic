@@ -35,13 +35,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       <div className="p-6">
         <div className="flex justify-between items-start mb-2">
           <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
-          <span className="text-blue-600 font-bold">{product.price}</span>
+          <span className="text-slate-600 font-bold">{product.price}</span>
         </div>
         <p className="text-gray-600 text-sm mb-4">{product.description}</p>
         <div className="space-y-2">
           {product.features.map((feature, index) => (
             <div key={index} className="flex items-center text-sm text-gray-600">
-              <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                             <CheckCircle className="h-4 w-4 text-emerald-500 mr-2 flex-shrink-0" />
               <span>{feature}</span>
             </div>
           ))}

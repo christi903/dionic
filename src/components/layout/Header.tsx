@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Phone, Mail, ArrowLeft } from 'lucide-react';
+import Logo from '../ui/Logo';
 
 interface HeaderProps {
   showBackButton?: boolean;
@@ -24,27 +25,26 @@ const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           {showBackButton && (
-            <Link 
-              to={backTo} 
-              className="flex items-center text-blue-600 hover:text-blue-700 transition-colors mr-4"
-            >
+                         <Link 
+               to={backTo} 
+               className="flex items-center text-slate-600 hover:text-slate-700 transition-colors mr-4"
+             >
               <ArrowLeft className="h-5 w-5 mr-2" />
               <span className="font-medium">{backText}</span>
             </Link>
           )}
           <div className="text-white">
-            <h1 className="text-2xl sm:text-3xl font-bold">Dionic Company</h1>
-            <p className="text-blue-200 text-sm">Excellence in Healthcare & Education</p>
+            <Logo size="sm" className="text-white" />
           </div>
         </div>
         <div className="hidden sm:flex items-center space-x-6 text-white text-sm">
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4" />
-            <span>+255 123 456 789</span>
+            <span>+255693641585</span>
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <span>info@dioniccompany.com</span>
+            <span>Musadionis58@gmail.com</span>
           </div>
         </div>
       </div>

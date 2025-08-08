@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Globe, Award, DollarSign, BookOpen } from 'lucide-react';
+import { Users, Globe, Award, DollarSign, BookOpen, CheckCircle, Plane, GraduationCap, FileText, Phone, Mail } from 'lucide-react';
 import Header from '../components/layout/Header';
 import ScholarshipCard from '../components/ui/ScholarshipCard';
+import GoLearnLogo from '../components/ui/GoLearnLogo';
 import { scholarships, programTypes } from '../data/scholarships';
 
 const ScholarshipPage = () => {
@@ -18,19 +19,38 @@ const ScholarshipPage = () => {
   const services = [
     {
       icon: <BookOpen className="h-8 w-8" />,
-      title: 'Application Guidance',
-      description: 'Expert assistance with application forms, essays, and documentation requirements.'
+      title: 'Personalized Study Abroad Counseling',
+      description: 'Matching your goals, strengths, and interests with countries, universities, and programs. Popular destinations: India, China, Malaysia, Turkey.'
     },
     {
-      icon: <Award className="h-8 w-8" />,
-      title: 'Scholarship Matching',
-      description: 'Personalized matching based on your academic profile and career goals.'
+      icon: <FileText className="h-8 w-8" />,
+      title: 'University Admissions Assistance',
+      description: 'Shortlisting universities, preparing documents, tracking deadlines, SOP/LOR writing & editing, application form filling, document verification, timely submission follow-up.'
     },
     {
       icon: <Globe className="h-8 w-8" />,
-      title: 'Visa & Travel Support',
-      description: 'Comprehensive support for visa applications and travel arrangements.'
+      title: 'Visa Guidance & Processing',
+      description: 'Expertise in visa processes, complete support for visa success rate, visa interview preparation, financial documentation support, statement of purpose review, real-time updates and application monitoring.'
+    },
+    {
+      icon: <Award className="h-8 w-8" />,
+      title: 'Scholarships & Financial Aid (Up to 100%)',
+      description: 'We help you apply for partial (50%) to full (100%) scholarships, based on merit, need, or country-specific criteria.'
+    },
+    {
+      icon: <Plane className="h-8 w-8" />,
+      title: 'Pre-Departure & Post-Arrival Support',
+      description: 'Help with settling in and succeeding, cultural orientation & student life briefing, packing, travel, and insurance advice, accommodation booking, airport pickup assistance, local emergency contact support.'
     }
+  ];
+
+  const scholarshipTypes = [
+    'Merit-based scholarships',
+    'Government-funded scholarships',
+    'University-specific grants',
+    'Need-based financial aid',
+    'Early-bird tuition discounts',
+    'Assistantships & on-campus work opportunities'
   ];
 
   const filteredScholarships = selectedProgram === 'all' 
@@ -46,33 +66,61 @@ const ScholarshipPage = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <motion.h1 
-              className="text-4xl sm:text-5xl font-bold mb-6"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              Go Learn Global
-            </motion.h1>
-            <motion.p 
-              className="text-xl text-green-100 max-w-3xl mx-auto leading-relaxed"
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Transform your future with international scholarship opportunities. 
-              We connect Tanzanian students with world-class universities globally.
-            </motion.p>
-          </div>
-        </div>
-      </section>
+                    {/* Hero Section */}
+       <section className="bg-gradient-to-r from-emerald-600 to-emerald-800 text-white py-16">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="text-center">
+             {/* GoLearn Global Logo */}
+             <motion.div
+               className="flex justify-center mb-8"
+               initial={{ opacity: 0, scale: 0.8 }}
+               animate={{ opacity: 1, scale: 1 }}
+               transition={{ duration: 0.8 }}
+             >
+               <GoLearnLogo size="lg" className="text-white" />
+             </motion.div>
+             
+             <motion.h1 
+               className="text-4xl sm:text-5xl font-bold mb-6"
+               initial={{ y: 20, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 0.6, delay: 0.3 }}
+             >
+               Your Gateway to Global Education & Opportunities
+             </motion.h1>
+             <motion.p 
+               className="text-xl text-emerald-100 max-w-4xl mx-auto leading-relaxed"
+               initial={{ y: 20, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 0.6, delay: 0.5 }}
+             >
+               Are you dreaming of studying abroad but unsure where to begin? GoLearn Global is your trusted partner in turning that dream into success. 
+               We believe education should be accessible to everyone, regardless of their background.
+             </motion.p>
+           </div>
+         </div>
+       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-white">
+             {/* What is GoLearn Global Section */}
+       <section className="py-12 bg-gray-50">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <motion.div
+             className="bg-white rounded-lg shadow-lg p-8 mb-12"
+             initial={{ y: 20, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 0.6 }}
+           >
+             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">What is GoLearn Global?</h2>
+             <p className="text-gray-700 text-lg leading-relaxed text-center max-w-4xl mx-auto">
+               GoLearn Global is a premier international education consultancy that helps students explore academic opportunities worldwide. 
+               We guide you through every step of your study abroad journey—from choosing the right course to securing scholarships, visas, and more.
+             </p>
+           </motion.div>
+         </div>
+       </section>
+
+       {/* Stats Section */}
+       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -83,7 +131,7 @@ const ScholarshipPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="text-green-600 mb-2 flex justify-center">
+                                 <div className="text-emerald-600 mb-2 flex justify-center">
                   {stat.icon}
                 </div>
                 <div className="text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
@@ -136,34 +184,103 @@ const ScholarshipPage = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We provide comprehensive support throughout your scholarship journey.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                className="text-center p-6 rounded-lg bg-gray-50"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="text-green-600 mb-4 flex justify-center">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+             {/* Scholarship Types Section */}
+       <section className="py-16 bg-emerald-50">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="text-center mb-12">
+             <h2 className="text-3xl font-bold text-gray-900 mb-4">Types of Scholarships We Assist With</h2>
+             <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+               Studying abroad doesn't have to break the bank. We help you apply for partial (50%) to full (100%) scholarships, 
+               based on merit, need, or country-specific criteria.
+             </p>
+             <div className="bg-white rounded-lg shadow-lg p-8">
+               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                 {scholarshipTypes.map((type, index) => (
+                   <motion.div
+                     key={index}
+                     className="flex items-center space-x-3"
+                     initial={{ x: -20, opacity: 0 }}
+                     animate={{ x: 0, opacity: 1 }}
+                     transition={{ duration: 0.5, delay: index * 0.1 }}
+                   >
+                     <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                     <span className="text-gray-700 font-medium">{type}</span>
+                   </motion.div>
+                 ))}
+               </div>
+               <div className="mt-8 p-4 bg-emerald-100 rounded-lg">
+                 <p className="text-emerald-800 font-semibold text-center">
+                   "Several of our students have secured scholarships covering up to 100% of tuition, 
+                   saving thousands of dollars while gaining a world-class education."
+                 </p>
+               </div>
+             </div>
+           </div>
+         </div>
+       </section>
+
+       {/* Services Section */}
+       <section className="py-16 bg-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="text-center mb-12">
+             <h2 className="text-3xl font-bold text-gray-900 mb-4">What We Offer: End-to-End Support</h2>
+             <p className="text-gray-600 max-w-2xl mx-auto">
+               For your global academic journey
+             </p>
+           </div>
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+             {services.map((service, index) => (
+               <motion.div
+                 key={index}
+                 className="text-center p-6 rounded-lg bg-gray-50 hover:shadow-lg transition-shadow duration-300"
+                 initial={{ y: 20, opacity: 0 }}
+                 animate={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.5, delay: index * 0.1 }}
+               >
+                 <div className="text-emerald-600 mb-4 flex justify-center">
+                   {service.icon}
+                 </div>
+                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+                 <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+               </motion.div>
+             ))}
+           </div>
+         </div>
+       </section>
+
+       {/* Contact Section */}
+       <section className="py-16 bg-emerald-600 text-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="text-center mb-12">
+             <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
+             <p className="text-emerald-100 text-lg max-w-2xl mx-auto">
+               Contact us today to begin your path to global education success.
+             </p>
+           </div>
+           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+             <motion.div
+               className="text-center p-6 rounded-lg bg-emerald-700"
+               initial={{ y: 20, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 0.6 }}
+             >
+               <Phone className="h-8 w-8 mx-auto mb-4" />
+               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
+               <p className="text-emerald-100">+255693641585</p>
+             </motion.div>
+             <motion.div
+               className="text-center p-6 rounded-lg bg-emerald-700"
+               initial={{ y: 20, opacity: 0 }}
+               animate={{ y: 0, opacity: 1 }}
+               transition={{ duration: 0.6, delay: 0.2 }}
+             >
+               <Mail className="h-8 w-8 mx-auto mb-4" />
+               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
+               <p className="text-emerald-100">Musadionis58@gmail.com</p>
+             </motion.div>
+           </div>
+         </div>
+       </section>
     </div>
   );
 };

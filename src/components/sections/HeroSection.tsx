@@ -1,5 +1,6 @@
 
 import { motion, easeOut, easeInOut } from 'framer-motion';
+import Logo from '../ui/Logo';
 
 const HeroSection: React.FC = () => {
   const containerVariants = {
@@ -90,6 +91,23 @@ const HeroSection: React.FC = () => {
   // Split the title into individual letters for animation
   const titleText = "Bridging Healthcare";
   const educationText = "Education";
+  
+  // Logo variants for animation
+  const logoVariants = {
+    hidden: { 
+      scale: 0,
+      opacity: 0
+    },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: { 
+        duration: 1,
+        delay: 0.5,
+        ease: easeOut
+      }
+    }
+  };
 
   return (
     <motion.main 
@@ -99,6 +117,13 @@ const HeroSection: React.FC = () => {
       animate="visible"
     >
       <div className="text-center max-w-4xl mx-auto">
+        {/* Logo Section */}
+        <motion.div
+          variants={logoVariants}
+          className="mb-8 flex justify-center"
+        >
+          <Logo size="lg" className="text-white" />
+        </motion.div>
         <motion.div
           variants={titleVariants}
           className="mb-6"
@@ -112,12 +137,12 @@ const HeroSection: React.FC = () => {
                   custom={index}
                   variants={letterVariants}
                   className="inline-block"
-                  whileHover={{ 
-                    scale: 1.2, 
-                    y: -5,
-                    color: "#60A5FA",
-                    textShadow: "0 0 20px rgba(96, 165, 250, 0.8)"
-                  }}
+                                     whileHover={{ 
+                     scale: 1.2, 
+                     y: -5,
+                     color: "#3B82F6",
+                     textShadow: "0 0 20px rgba(59, 130, 246, 0.8)"
+                   }}
                 >
                   {letter === ' ' ? '\u00A0' : letter}
                 </motion.span>
@@ -128,11 +153,11 @@ const HeroSection: React.FC = () => {
             <motion.span 
               className="text-blue-400 inline-block mx-4"
               variants={highlightVariants}
-              whileHover={{ 
-                scale: 1.3, 
-                rotate: 360,
-                color: "#FBBF24"
-              }}
+                             whileHover={{ 
+                 scale: 1.3, 
+                 rotate: 360,
+                 color: "#F59E0B"
+               }}
             >
               &
             </motion.span>
@@ -145,12 +170,12 @@ const HeroSection: React.FC = () => {
                   custom={index + titleText.length}
                   variants={letterVariants}
                   className="inline-block"
-                  whileHover={{ 
-                    scale: 1.2, 
-                    y: -5,
-                    color: "#34D399",
-                    textShadow: "0 0 20px rgba(52, 211, 153, 0.8)"
-                  }}
+                                     whileHover={{ 
+                     scale: 1.2, 
+                     y: -5,
+                     color: "#10B981",
+                     textShadow: "0 0 20px rgba(16, 185, 129, 0.8)"
+                   }}
                 >
                   {letter === ' ' ? '\u00A0' : letter}
                 </motion.span>
@@ -164,14 +189,14 @@ const HeroSection: React.FC = () => {
           className="mb-12"
         >
           <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-            <motion.span
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 3.2 }}
-              className="inline-block"
-            >
-              Dionic Company
-            </motion.span>{' '}
+                         <motion.span
+               initial={{ opacity: 0, x: -20 }}
+               animate={{ opacity: 1, x: 0 }}
+               transition={{ duration: 0.6, delay: 3.2 }}
+               className="inline-block"
+             >
+               Dionis Company MediTech Supply
+             </motion.span>{' '}
             <motion.span
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -180,14 +205,14 @@ const HeroSection: React.FC = () => {
             >
               proudly serves Tanzania through two specialized divisions:
             </motion.span>{' '}
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 3.6 }}
-              className="inline-block text-blue-300 font-medium"
-            >
-              providing world-class medical equipment
-            </motion.span>{' '}
+                         <motion.span
+               initial={{ opacity: 0, y: 20 }}
+               animate={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.6, delay: 3.6 }}
+               className="inline-block text-emerald-300 font-medium"
+             >
+               providing world-class medical equipment
+             </motion.span>{' '}
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

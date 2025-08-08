@@ -38,7 +38,7 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({ scholarship }) => {
       </div>
       <div className="p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-2">{scholarship.title}</h3>
-        <p className="text-blue-600 font-medium mb-2">{scholarship.university}</p>
+                 <p className="text-slate-600 font-medium mb-2">{scholarship.university}</p>
         
         <div className="flex items-center text-sm text-gray-600 mb-3">
           <MapPin className="h-4 w-4 mr-1" />
@@ -63,7 +63,7 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({ scholarship }) => {
           <div className="space-y-1">
             {scholarship.requirements.map((requirement, index) => (
               <div key={index} className="flex items-center text-sm text-gray-600">
-                <CheckCircle className="h-3 w-3 text-green-500 mr-2 flex-shrink-0" />
+                <CheckCircle className="h-3 w-3 text-emerald-500 mr-2 flex-shrink-0" />
                 <span>{requirement}</span>
               </div>
             ))}
