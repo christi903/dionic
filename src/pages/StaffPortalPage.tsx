@@ -1,6 +1,11 @@
 import { useEffect, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Lock, User, Eye, EyeOff, Mail, ArrowLeft, UserPlus, AlertCircle, CheckCircle } from 'lucide-react';
+import { 
+  Lock, User, Eye, EyeOff, Mail, ArrowLeft, UserPlus, AlertCircle, CheckCircle,
+  LayoutDashboard, Users, FileText, Settings, LogOut, Search, Filter,
+  Calendar, Phone, MapPin, GraduationCap, X, Menu, Bell, Download,
+  TrendingUp, Clock, Award, Globe
+} from 'lucide-react';
 import Navigation from '../components/ui/Navigation';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
 import { useAuth } from '../hooks/useAuth';
@@ -110,7 +115,7 @@ const StaffPortalPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-blue-50">
       <Navigation />
       
       <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] py-12">
@@ -120,10 +125,16 @@ const StaffPortalPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-white/20">
             {/* Header */}
             <div className="text-center mb-8">
-              <GoLearnLogo size="md" className="mx-auto mb-4" />
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <GoLearnLogo size="md" className="mx-auto mb-4" />
+              </motion.div>
               <h2 className="text-2xl font-bold text-gray-900">
                 {authMode === 'login' && 'Staff Portal'}
                 {authMode === 'register' && 'Create Staff Account'}
@@ -175,7 +186,7 @@ const StaffPortalPage = () => {
                       value={formData.fullName}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -195,7 +206,7 @@ const StaffPortalPage = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -215,13 +226,13 @@ const StaffPortalPage = () => {
                       value={formData.password}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                       placeholder="Enter your password"
                     />
                     <button
                       type="button"
                       onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                     >
                       {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                     </button>
@@ -243,13 +254,13 @@ const StaffPortalPage = () => {
                       value={formData.confirmPassword}
                       onChange={handleInputChange}
                       required
-                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                       placeholder="Confirm your password"
                     />
                     <button
                       type="button"
                       onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
                     >
                       {showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
                     </button>
@@ -267,7 +278,7 @@ const StaffPortalPage = () => {
                     name="role"
                     value={formData.role}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                    className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200"
                   >
                     <option value="staff">Staff Member</option>
                     <option value="admin">Administrator</option>
@@ -280,7 +291,7 @@ const StaffPortalPage = () => {
               <motion.button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-gradient-to-r from-emerald-600 to-emerald-700 text-white py-3 rounded-lg font-semibold hover:from-emerald-700 hover:to-emerald-800 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                 whileHover={{ scale: loading ? 1 : 1.02 }}
                 whileTap={{ scale: loading ? 1 : 0.98 }}
               >
@@ -306,7 +317,7 @@ const StaffPortalPage = () => {
                   <div className="text-center">
                     <button
                       onClick={() => switchMode('forgot-password')}
-                      className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
+                      className="text-sm text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
                     >
                       Forgot your password?
                     </button>
@@ -315,7 +326,7 @@ const StaffPortalPage = () => {
                     <span className="text-sm text-gray-600">Don't have an account? </span>
                     <button
                       onClick={() => switchMode('register')}
-                      className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
+                      className="text-sm text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
                     >
                       Register here
                     </button>
@@ -328,7 +339,7 @@ const StaffPortalPage = () => {
                   <span className="text-sm text-gray-600">Already have an account? </span>
                   <button
                     onClick={() => switchMode('login')}
-                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium"
+                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium transition-colors"
                   >
                     Sign in here
                   </button>
@@ -339,7 +350,7 @@ const StaffPortalPage = () => {
                 <div className="text-center">
                   <button
                     onClick={() => switchMode('login')}
-                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium flex items-center justify-center space-x-1"
+                    className="text-sm text-emerald-600 hover:text-emerald-700 font-medium flex items-center justify-center space-x-1 transition-colors"
                   >
                     <ArrowLeft className="h-4 w-4" />
                     <span>Back to Sign In</span>
@@ -356,9 +367,12 @@ const StaffPortalPage = () => {
 
 export default StaffPortalPage;
 
-// Separate component to keep hooks order consistent
+// Enhanced Dashboard Component
 function StaffDashboard({ user }: { user: SupabaseUser }) {
   const { signOut } = useAuth();
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [activeTab, setActiveTab] = useState('dashboard');
+  
   type ApplicationRow = {
     id: number;
     serial_number: string | null;
@@ -428,6 +442,10 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
     if (!confirm('Delete this application?')) return;
     const { error } = await supabase.from('applications').delete().eq('id', id);
     if (error) alert(`Failed to delete: ${error.message}`);
+    else {
+      setApplications(prev => prev.filter(a => a.id !== id));
+      if (selectedApp && selectedApp.id === id) setSelectedApp(null);
+    }
   };
 
   const courses = useMemo(() => {
@@ -455,120 +473,216 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
     return { total, new: by('new'), review: by('in_review'), accepted: by('accepted'), rejected: by('rejected') };
   }, [applications]);
 
+  const sidebarItems = [
+    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { id: 'applications', label: 'Applications', icon: Users },
+    { id: 'reports', label: 'Reports', icon: FileText },
+    { id: 'settings', label: 'Settings', icon: Settings },
+  ];
+
+  const handleLogout = async () => {
+    if (confirm('Are you sure you want to logout?')) {
+      await signOut();
+      window.location.reload();
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navigation />
-
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <motion.div
-          className="bg-white rounded-lg shadow-lg p-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="text-center mb-8">
-            <GoLearnLogo size="md" className="mx-auto mb-4" />
-            <h1 className="text-3xl font-bold text-gray-900">Staff Dashboard</h1>
-            <p className="text-gray-600 mt-2">Welcome, {user.user_metadata?.full_name || user.email}</p>
+    <div className="min-h-screen bg-gray-50 flex">
+      {/* Sidebar */}
+      <motion.div
+        className={`bg-white shadow-xl border-r border-gray-200 transition-all duration-300 ${
+          sidebarOpen ? 'w-64' : 'w-16'
+        }`}
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="p-4">
+          <div className="flex items-center justify-between">
+            {sidebarOpen && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }}
+              >
+                <GoLearnLogo size="sm" />
+              </motion.div>
+            )}
+            <button
+              onClick={() => setSidebarOpen(!sidebarOpen)}
+              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              <Menu className="h-5 w-5 text-gray-600" />
+            </button>
           </div>
+        </div>
 
-          {/* Summary cards */}
-          <section className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 text-white p-6 rounded-lg shadow">
-              <div className="text-sm opacity-90">Total</div>
-              <div className="text-3xl font-bold mt-1">{counts.total}</div>
-            </div>
-            <div className="bg-white border p-6 rounded-lg">
-              <div className="text-sm text-gray-600">New</div>
-              <div className="text-3xl font-bold mt-1">{counts.new}</div>
-            </div>
-            <div className="bg-white border p-6 rounded-lg">
-              <div className="text-sm text-gray-600">In Review</div>
-              <div className="text-3xl font-bold mt-1">{counts.review}</div>
-            </div>
-            <div className="bg-white border p-6 rounded-lg">
-              <div className="text-sm text-gray-600">Accepted</div>
-              <div className="text-3xl font-bold mt-1">{counts.accepted}</div>
-            </div>
-          </section>
+        <nav className="mt-8">
+          {sidebarItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => setActiveTab(item.id)}
+              className={`w-full flex items-center px-4 py-3 text-left hover:bg-emerald-50 transition-colors ${
+                activeTab === item.id ? 'bg-emerald-100 border-r-2 border-emerald-600 text-emerald-700' : 'text-gray-600'
+              }`}
+            >
+              <item.icon className="h-5 w-5 flex-shrink-0" />
+              {sidebarOpen && (
+                <motion.span
+                  className="ml-3 font-medium"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.1 }}
+                >
+                  {item.label}
+                </motion.span>
+              )}
+            </button>
+          ))}
+        </nav>
 
-          {/* Filters */}
-          <section className="mt-6 grid gap-3 md:grid-cols-3">
-            <div className="flex items-center gap-2 md:col-span-1">
-              <svg className="h-4 w-4 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 21l-4.3-4.3"/><circle cx="10" cy="10" r="7"/></svg>
-              <input
-                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                placeholder="Search name, email, course..."
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-            </div>
-            <div>
-              <select
-                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                value={statusFilter}
-                onChange={(e) => setStatusFilter(e.target.value as any)}
-              >
-                <option value="all">All statuses</option>
-                <option value="new">New</option>
-                <option value="in_review">In Review</option>
-                <option value="accepted">Accepted</option>
-                <option value="rejected">Rejected</option>
-              </select>
-            </div>
-            <div>
-              <select
-                className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                value={courseFilter}
-                onChange={(e) => setCourseFilter(e.target.value as any)}
-              >
-                <option value="all">All courses</option>
-                {courses.map(c => (
-                  <option key={c} value={c}>{c}</option>
-                ))}
-              </select>
-            </div>
-          </section>
-
-          {/* Applications Table */}
-          <section className="mt-6">
-            <div className="border rounded-lg overflow-hidden">
-              <div className="border-b p-4">
-                <h2 className="text-lg font-semibold">Applications</h2>
+        {/* User Profile & Logout */}
+        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-gray-200">
+          <div className={`flex items-center ${sidebarOpen ? 'justify-between' : 'justify-center'}`}>
+            {sidebarOpen && (
+              <div className="flex items-center space-x-3">
+                <div className="w-8 h-8 bg-emerald-600 rounded-full flex items-center justify-center">
+                  <User className="h-4 w-4 text-white" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-medium text-gray-900 truncate">
+                    {user.user_metadata?.full_name || 'Staff Member'}
+                  </p>
+                  <p className="text-xs text-gray-500 truncate">{user.email}</p>
+                </div>
               </div>
-              <div className="overflow-x-auto">
-                <table className="min-w-full text-sm">
-                  <thead className="bg-gray-50 text-left">
-                    <tr>
-                      <th className="px-4 py-2">Sr</th>
-                      <th className="px-4 py-2">Name</th>
-                      <th className="px-4 py-2">Course</th>
-                      <th className="px-4 py-2">School</th>
-                      <th className="px-4 py-2">Passing</th>
-                      <th className="px-4 py-2">Status</th>
-                      <th className="px-4 py-2">Submitted</th>
-                      <th className="px-4 py-2 text-right">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {appsLoading && (
-                      <tr><td className="px-4 py-6 text-gray-600" colSpan={8}>Loading applications...</td></tr>
-                    )}
-                    {appsError && !appsLoading && (
-                      <tr><td className="px-4 py-6 text-red-600" colSpan={8}>{appsError}</td></tr>
-                    )}
-                    {!appsLoading && filtered.length === 0 && !appsError && (
-                      <tr><td className="px-4 py-6 text-gray-600" colSpan={8}>No applications found.</td></tr>
-                    )}
-                    {filtered.map(app => (
-                      <tr key={app.id} className="border-t hover:bg-gray-50">
-                        <td className="px-4 py-2">{app.serial_number || '—'}</td>
-                        <td className="px-4 py-2 font-medium">{app.full_name}</td>
-                        <td className="px-4 py-2">{app.interested_course || '—'}</td>
-                        <td className="px-4 py-2">{app.school_name || '—'}</td>
-                        <td className="px-4 py-2">{app.passing_year || '—'}</td>
-                        <td className="px-4 py-2">
-                          <span className={`px-2 py-1 rounded text-xs font-semibold ${
+            )}
+            <button
+              onClick={handleLogout}
+              className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+              title="Logout"
+            >
+              <LogOut className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {/* Top Header */}
+        <header className="bg-white shadow-sm border-b border-gray-200 px-6 py-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">
+                {activeTab === 'dashboard' && 'Dashboard'}
+                {activeTab === 'applications' && 'Applications Management'}
+                {activeTab === 'reports' && 'Reports & Analytics'}
+                {activeTab === 'settings' && 'Settings'}
+              </h1>
+              <p className="text-gray-600 mt-1">
+                {activeTab === 'dashboard' && 'Welcome to your staff dashboard'}
+                {activeTab === 'applications' && 'Manage student applications'}
+                {activeTab === 'reports' && 'View reports and analytics'}
+                {activeTab === 'settings' && 'Manage your account settings'}
+              </p>
+            </div>
+            <div className="flex items-center space-x-4">
+              <button className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
+                <Bell className="h-5 w-5" />
+              </button>
+              <div className="text-sm text-gray-600">
+                {new Date().toLocaleDateString('en-US', { 
+                  weekday: 'long', 
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Content Area */}
+        <main className="flex-1 overflow-auto p-6">
+          {activeTab === 'dashboard' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6"
+            >
+              {/* Stats Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 text-white p-6 rounded-xl shadow-lg">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-emerald-100 text-sm">Total Applications</p>
+                      <p className="text-3xl font-bold mt-1">{counts.total}</p>
+                    </div>
+                    <Users className="h-8 w-8 text-emerald-200" />
+                  </div>
+                  <div className="mt-4 flex items-center text-emerald-100 text-sm">
+                    <TrendingUp className="h-4 w-4 mr-1" />
+                    <span>+12% from last month</span>
+                  </div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-gray-600 text-sm">New Applications</p>
+                      <p className="text-3xl font-bold mt-1 text-blue-600">{counts.new}</p>
+                    </div>
+                    <Clock className="h-8 w-8 text-blue-500" />
+                  </div>
+                  <div className="mt-4 text-gray-500 text-sm">Pending review</div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-gray-600 text-sm">In Review</p>
+                      <p className="text-3xl font-bold mt-1 text-yellow-600">{counts.review}</p>
+                    </div>
+                    <FileText className="h-8 w-8 text-yellow-500" />
+                  </div>
+                  <div className="mt-4 text-gray-500 text-sm">Being processed</div>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="text-gray-600 text-sm">Accepted</p>
+                      <p className="text-3xl font-bold mt-1 text-green-600">{counts.accepted}</p>
+                    </div>
+                    <Award className="h-8 w-8 text-green-500" />
+                  </div>
+                  <div className="mt-4 text-gray-500 text-sm">Successfully approved</div>
+                </div>
+              </div>
+
+              {/* Recent Applications */}
+              <div className="bg-white rounded-xl shadow-lg border border-gray-200">
+                <div className="p-6 border-b border-gray-200">
+                  <h2 className="text-lg font-semibold text-gray-900">Recent Applications</h2>
+                </div>
+                <div className="p-6">
+                  <div className="space-y-4">
+                    {applications.slice(0, 5).map((app) => (
+                      <div key={app.id} className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                        <div className="flex items-center space-x-4">
+                          <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                            <User className="h-5 w-5 text-emerald-600" />
+                          </div>
+                          <div>
+                            <p className="font-medium text-gray-900">{app.full_name}</p>
+                            <p className="text-sm text-gray-600">{app.interested_course || 'No course specified'}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                             app.status === 'new' ? 'bg-gray-100 text-gray-700' :
                             app.status === 'in_review' ? 'bg-yellow-100 text-yellow-800' :
                             app.status === 'accepted' ? 'bg-green-100 text-green-800' :
@@ -576,118 +690,428 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
                           }`}>
                             {app.status === 'in_review' ? 'In Review' : app.status.charAt(0).toUpperCase() + app.status.slice(1)}
                           </span>
-                        </td>
-                        <td className="px-4 py-2">{new Date(app.created_at).toLocaleDateString()}</td>
-                        <td className="px-4 py-2 text-right space-x-2">
                           <button
-                            className="inline-flex items-center gap-1 px-3 py-1.5 border rounded hover:bg-gray-50"
                             onClick={() => setSelectedApp(app)}
+                            className="text-emerald-600 hover:text-emerald-700 font-medium text-sm"
                           >
-                            View
+                            View Details
                           </button>
-                          <button
-                            className="inline-flex items-center gap-1 px-3 py-1.5 text-red-600 hover:bg-red-50 border rounded"
-                            onClick={() => deleteApplication(app.id)}
-                          >
-                            Delete
-                          </button>
-                        </td>
-                      </tr>
+                        </div>
+                      </div>
                     ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-
-          {/* Details Modal */}
-          {selectedApp && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4" role="dialog" aria-modal="true">
-              <div className="bg-white rounded-lg shadow-xl w-full max-w-2xl">
-                <div className="border-b px-6 py-4 flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">Application Details</h3>
-                  <button className="text-gray-500 hover:text-gray-700" onClick={() => setSelectedApp(null)}>✕</button>
-                </div>
-                <div className="px-6 py-4 space-y-3 max-h-[70vh] overflow-auto">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <div className="text-xs text-gray-500">Name</div>
-                      <div className="font-medium">{selectedApp.full_name}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500">Email</div>
-                      <div className="font-medium">{selectedApp.email || '—'}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500">Mobile</div>
-                      <div className="font-medium">{selectedApp.mobile || '—'}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500">WhatsApp</div>
-                      <div className="font-medium">{selectedApp.whatsapp || '—'}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500">Course</div>
-                      <div className="font-medium">{selectedApp.interested_course || '—'}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500">School</div>
-                      <div className="font-medium">{selectedApp.school_name || '—'}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500">Passing Year</div>
-                      <div className="font-medium">{selectedApp.passing_year || '—'}</div>
-                    </div>
-                    <div>
-                      <div className="text-xs text-gray-500">Submitted</div>
-                      <div className="font-medium">{new Date(selectedApp.created_at).toLocaleString()}</div>
-                    </div>
                   </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
 
-                  <div className="pt-2">
-                    <label className="block text-sm text-gray-700 mb-1">Status</label>
+          {activeTab === 'applications' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6"
+            >
+              {/* Filters */}
+              <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+                    <input
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      placeholder="Search applications..."
+                      value={query}
+                      onChange={(e) => setQuery(e.target.value)}
+                    />
+                  </div>
+                  <div className="relative">
+                    <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
                     <select
-                      className="w-full border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500"
-                      value={selectedApp.status}
-                      onChange={(e) => updateStatus(selectedApp.id, e.target.value as any)}
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent appearance-none"
+                      value={statusFilter}
+                      onChange={(e) => setStatusFilter(e.target.value as any)}
                     >
+                      <option value="all">All Statuses</option>
                       <option value="new">New</option>
                       <option value="in_review">In Review</option>
                       <option value="accepted">Accepted</option>
                       <option value="rejected">Rejected</option>
                     </select>
                   </div>
+                  <div>
+                    <select
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                      value={courseFilter}
+                      onChange={(e) => setCourseFilter(e.target.value as any)}
+                    >
+                      <option value="all">All Courses</option>
+                      {courses.map(c => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
-                <div className="border-t px-6 py-4 flex justify-end gap-2">
+              </div>
+
+              {/* Applications Table */}
+              <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">School</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Submitted</th>
+                        <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      {appsLoading && (
+                        <tr>
+                          <td colSpan={6} className="px-6 py-12 text-center text-gray-500">
+                            <div className="flex items-center justify-center space-x-2">
+                              <div className="w-6 h-6 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+                              <span>Loading applications...</span>
+                            </div>
+                          </td>
+                        </tr>
+                      )}
+                      {appsError && !appsLoading && (
+                        <tr>
+                          <td colSpan={6} className="px-6 py-12 text-center text-red-600">
+                            <AlertCircle className="h-8 w-8 mx-auto mb-2" />
+                            <p>{appsError}</p>
+                          </td>
+                        </tr>
+                      )}
+                      {!appsLoading && filtered.length === 0 && !appsError && (
+                        <tr>
+                          <td colSpan={6} className="px-6 py-12 text-center text-gray-500">
+                            <Users className="h-8 w-8 mx-auto mb-2" />
+                            <p>No applications found.</p>
+                          </td>
+                        </tr>
+                      )}
+                      {filtered.map((app) => (
+                        <tr key={app.id} className="hover:bg-gray-50 transition-colors">
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center">
+                              <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
+                                <User className="h-5 w-5 text-emerald-600" />
+                              </div>
+                              <div className="ml-4">
+                                <button
+                                  onClick={() => setSelectedApp(app)}
+                                  className="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors"
+                                >
+                                  {app.full_name}
+                                </button>
+                                <div className="text-sm text-gray-500">{app.email || 'No email'}</div>
+                              </div>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {app.interested_course || '—'}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                            {app.school_name || '—'}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                              app.status === 'new' ? 'bg-gray-100 text-gray-800' :
+                              app.status === 'in_review' ? 'bg-yellow-100 text-yellow-800' :
+                              app.status === 'accepted' ? 'bg-green-100 text-green-800' :
+                              'bg-red-100 text-red-800'
+                            }`}>
+                              {app.status === 'in_review' ? 'In Review' : app.status.charAt(0).toUpperCase() + app.status.slice(1)}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                            {new Date(app.created_at).toLocaleDateString()}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium space-x-2">
+                            <button
+                              onClick={() => setSelectedApp(app)}
+                              className="text-emerald-600 hover:text-emerald-900 transition-colors"
+                            >
+                              View
+                            </button>
+                            <button
+                              onClick={() => deleteApplication(app.id)}
+                              className="text-red-600 hover:text-red-900 transition-colors"
+                            >
+                              Delete
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'reports' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6"
+            >
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
+                <FileText className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Reports & Analytics</h3>
+                <p className="text-gray-600 mb-6">Generate detailed reports and view analytics for applications.</p>
+                <button className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
+                  Generate Report
+                </button>
+              </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'settings' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6"
+            >
+              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
+                <Settings className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Account Settings</h3>
+                <p className="text-gray-600 mb-6">Manage your account preferences and settings.</p>
+                <button className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
+                  Update Settings
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </main>
+      </div>
+
+      {/* Application Details Modal */}
+      <AnimatePresence>
+        {selectedApp && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+            <motion.div
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {/* Modal Header */}
+              <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white p-6">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold">Application Details</h3>
+                    <p className="text-emerald-100 mt-1">Complete student information</p>
+                  </div>
                   <button
-                    className="px-4 py-2 border rounded hover:bg-gray-50"
                     onClick={() => setSelectedApp(null)}
+                    className="p-2 hover:bg-emerald-700 rounded-lg transition-colors"
                   >
-                    Close
-                  </button>
-                  <button
-                    className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
-                    onClick={() => { deleteApplication(selectedApp.id); setSelectedApp(null); }}
-                  >
-                    Delete
+                    <X className="h-6 w-6" />
                   </button>
                 </div>
               </div>
-            </div>
-          )}
 
-          <div className="mt-8 text-center">
-            <button
-              onClick={() => {
-                signOut().finally(() => window.location.reload());
-              }}
-              className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors"
-            >
-              Sign Out
-            </button>
-          </div>
-        </motion.div>
-      </div>
+              {/* Modal Content */}
+              <div className="p-6 max-h-[calc(90vh-200px)] overflow-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {/* Student Information */}
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                        <User className="h-5 w-5 mr-2 text-emerald-600" />
+                        Student Information
+                      </h4>
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Full Name</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.full_name}</p>
+                          </div>
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Serial Number</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.serial_number || '—'}</p>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Email</label>
+                            <p className="text-gray-900 font-medium flex items-center">
+                              <Mail className="h-4 w-4 mr-2 text-gray-400" />
+                              {selectedApp.email || '—'}
+                            </p>
+                          </div>
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Mobile</label>
+                            <p className="text-gray-900 font-medium flex items-center">
+                              <Phone className="h-4 w-4 mr-2 text-gray-400" />
+                              {selectedApp.mobile || '—'}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">WhatsApp</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.whatsapp || '—'}</p>
+                          </div>
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Date of Birth</label>
+                            <p className="text-gray-900 font-medium flex items-center">
+                              <Calendar className="h-4 w-4 mr-2 text-gray-400" />
+                              {selectedApp.date_of_birth ? new Date(selectedApp.date_of_birth).toLocaleDateString() : '—'}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Academic Information */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                        <GraduationCap className="h-5 w-5 mr-2 text-emerald-600" />
+                        Academic Information
+                      </h4>
+                      <div className="space-y-4">
+                        <div>
+                          <label className="text-sm font-medium text-gray-500">Interested Course</label>
+                          <p className="text-gray-900 font-medium">{selectedApp.interested_course || '—'}</p>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-gray-500">School Name</label>
+                          <p className="text-gray-900 font-medium">{selectedApp.school_name || '—'}</p>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Subjects</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.subjects_name || '—'}</p>
+                          </div>
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Passing Year</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.passing_year || '—'}</p>
+                          </div>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-gray-500">Subjects Appeared</label>
+                          <p className="text-gray-900 font-medium">{selectedApp.subjects_appeared || '—'}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Parent/Guardian Information */}
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                        <Users className="h-5 w-5 mr-2 text-emerald-600" />
+                        Parent/Guardian Information
+                      </h4>
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Father's Name</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.father_name || '—'}</p>
+                          </div>
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Mother's Name</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.mother_name || '—'}</p>
+                          </div>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Parent Mobile</label>
+                            <p className="text-gray-900 font-medium flex items-center">
+                              <Phone className="h-4 w-4 mr-2 text-gray-400" />
+                              {selectedApp.parent_mobile || '—'}
+                            </p>
+                          </div>
+                          <div>
+                            <label className="text-sm font-medium text-gray-500">Parent WhatsApp</label>
+                            <p className="text-gray-900 font-medium">{selectedApp.parent_whatsapp || '—'}</p>
+                          </div>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-gray-500">Parent Email</label>
+                          <p className="text-gray-900 font-medium flex items-center">
+                            <Mail className="h-4 w-4 mr-2 text-gray-400" />
+                            {selectedApp.parent_email || '—'}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Application Status */}
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                        <FileText className="h-5 w-5 mr-2 text-emerald-600" />
+                        Application Status
+                      </h4>
+                      <div className="space-y-4">
+                        <div>
+                          <label className="text-sm font-medium text-gray-500 mb-2 block">Current Status</label>
+                          <select
+                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+                            value={selectedApp.status}
+                            onChange={(e) => updateStatus(selectedApp.id, e.target.value as any)}
+                          >
+                            <option value="new">New</option>
+                            <option value="in_review">In Review</option>
+                            <option value="accepted">Accepted</option>
+                            <option value="rejected">Rejected</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-gray-500">Submitted On</label>
+                          <p className="text-gray-900 font-medium flex items-center">
+                            <Calendar className="h-4 w-4 mr-2 text-gray-400" />
+                            {new Date(selectedApp.created_at).toLocaleString()}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Modal Footer */}
+              <div className="bg-gray-50 px-6 py-4 flex items-center justify-between border-t border-gray-200">
+                <div className="flex items-center space-x-4">
+                  <button
+                    onClick={() => setSelectedApp(null)}
+                    className="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  >
+                    Close
+                  </button>
+                  <button className="px-4 py-2 text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg hover:bg-emerald-100 transition-colors flex items-center space-x-2">
+                    <Download className="h-4 w-4" />
+                    <span>Export</span>
+                  </button>
+                </div>
+                <button
+                  onClick={() => {
+                    deleteApplication(selectedApp.id);
+                    setSelectedApp(null);
+                  }}
+                  className="px-4 py-2 text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors"
+                >
+                  Delete Application
+                </button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
