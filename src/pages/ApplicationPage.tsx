@@ -1,6 +1,7 @@
 import { useState } from 'react';
+import { supabase } from '../lib/supabase';
 import { motion } from 'framer-motion';
-import { Send, User, Phone, Mail, Calendar, BookOpen, GraduationCap, Users } from 'lucide-react';
+import { Send, User, GraduationCap, Users } from 'lucide-react';
 import Navigation from '../components/ui/Navigation';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
 
@@ -29,6 +30,8 @@ const ApplicationPage = () => {
     parentEmail: ''
   });
 
+  const [submitting, setSubmitting] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -37,11 +40,57 @@ const ApplicationPage = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    alert('Application submitted successfully! We will contact you soon.');
+    if (submitting) return;
+    setSubmitting(true);
+
+    const payload = {
+      serial_number: formData.serialNumber || null,
+      full_name: formData.fullName,
+      mobile: formData.mobile || null,
+      whatsapp: formData.whatsapp || null,
+      email: formData.email || null,
+      date_of_birth: formData.dateOfBirth ? new Date(formData.dateOfBirth).toISOString().slice(0, 10) : null,
+      interested_course: formData.interestedCourse || null,
+      school_name: formData.schoolName || null,
+      subjects_name: formData.subjectsName || null,
+      passing_year: formData.passingYear || null,
+      subjects_appeared: formData.subjectsAppeared || null,
+      father_name: formData.fatherName || null,
+      mother_name: formData.motherName || null,
+      parent_mobile: formData.parentMobile || null,
+      parent_whatsapp: formData.parentWhatsapp || null,
+      parent_email: formData.parentEmail || null,
+    };
+
+    const { error } = await supabase.from('applications').insert([payload]);
+
+    if (error) {
+      alert(`Failed to submit application: ${error.message}`);
+    } else {
+      alert('Application submitted successfully! We will contact you soon.');
+      setFormData({
+        serialNumber: '',
+        fullName: '',
+        mobile: '',
+        whatsapp: '',
+        email: '',
+        dateOfBirth: '',
+        interestedCourse: '',
+        schoolName: '',
+        subjectsName: '',
+        passingYear: '',
+        subjectsAppeared: '',
+        fatherName: '',
+        motherName: '',
+        parentMobile: '',
+        parentWhatsapp: '',
+        parentEmail: ''
+      });
+    }
+
+    setSubmitting(false);
   };
 
   return (
@@ -330,12 +379,13 @@ const ApplicationPage = () => {
               <div className="flex justify-center pt-6">
                 <motion.button
                   type="submit"
-                  className="bg-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-200 flex items-center space-x-2"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  disabled={submitting}
+                  className="bg-emerald-600 disabled:opacity-60 disabled:cursor-not-allowed text-white px-8 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors duration-200 flex items-center space-x-2"
+                  whileHover={{ scale: submitting ? 1 : 1.05 }}
+                  whileTap={{ scale: submitting ? 1 : 0.95 }}
                 >
                   <Send className="h-5 w-5" />
-                  <span>Submit Application</span>
+                  <span>{submitting ? 'Submitting...' : 'Submit Application'}</span>
                 </motion.button>
               </div>
             </form>
