@@ -31,7 +31,7 @@ const Logo: React.FC<LogoProps> = ({ className = '', size = 'md' }) => {
       {/* Company Name */}
       <div className="flex flex-col">
         <span className="text-emerald-600 font-bold text-lg">DIONIS</span>
-        <span className="text-orange-600 text-xs font-semibold">COMPANY MEDITECH SUPPLY</span>
+        <span className="text-[#161f6d] text-xs font-semibold">COMPANY MEDITECH SUPPLY</span>
       </div>
     </motion.div>
   );

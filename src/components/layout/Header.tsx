@@ -2,7 +2,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Phone, Mail, ArrowLeft } from 'lucide-react';
-import Logo from '../ui/Logo';
 
 interface HeaderProps {
   showBackButton?: boolean;
@@ -34,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({
             </Link>
           )}
           <div className="text-white">
-            <Logo size="sm" className="text-white" />
+            {/* Logo removed as requested */}
           </div>
         </div>
         <div className="hidden sm:flex items-center space-x-6 text-white text-sm">

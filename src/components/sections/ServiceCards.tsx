@@ -1,7 +1,8 @@
 
 import { Link } from 'react-router-dom';
 import { motion, easeOut, easeInOut } from 'framer-motion';
-import { Stethoscope, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import LogoOnly from '../ui/LogoOnly';
 
 const ServiceCards: React.FC = () => {
   const containerVariants = {
@@ -90,7 +91,7 @@ const ServiceCards: React.FC = () => {
                className="bg-slate-500/20 rounded-full p-4 w-20 h-20 mx-auto mb-6 flex items-center justify-center group-hover:bg-slate-500/30 transition-colors"
                variants={iconVariants}
              >
-               <Stethoscope className="h-10 w-10 text-slate-300" />
+               <LogoOnly size="md" className="w-12 h-12" />
              </motion.div>
                          <motion.div variants={textVariants}>
                <h3 className="text-2xl font-bold text-white mb-4">MediTech Supply</h3>
