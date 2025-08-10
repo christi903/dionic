@@ -47,35 +47,35 @@ const ScholarshipPage = () => {
   }, [backgroundImages.length]);
 
   const stats = [
-    { icon: <Users className="h-8 w-8" />, number: '500+', label: 'Students Placed' },
-    { icon: <Globe className="h-8 w-8" />, number: '25+', label: 'Countries' },
-    { icon: <Award className="h-8 w-8" />, number: '100+', label: 'Partner Universities' },
-    { icon: <DollarSign className="h-8 w-8" />, number: '$5M+', label: 'Scholarships Secured' }
+    { icon: <Users className="h-8 w-8 text-blue-500" />, number: '500+', label: 'Students Placed' },
+    { icon: <Globe className="h-8 w-8 text-emerald-500" />, number: '25+', label: 'Countries' },
+    { icon: <Award className="h-8 w-8 text-amber-500" />, number: '100+', label: 'Partner Universities' },
+    { icon: <DollarSign className="h-8 w-8 text-green-600" />, number: '$5M+', label: 'Scholarships Secured' }
   ];
 
   const services = [
     {
-      icon: <BookOpen className="h-8 w-8" />,
+      icon: <BookOpen className="h-8 w-8 text-blue-600" />,
       title: 'Personalized Study Abroad Counseling',
       description: 'Matching your goals, strengths, and interests with countries, universities, and programs. Popular destinations: India, China, Malaysia, Turkey.'
     },
     {
-      icon: <FileText className="h-8 w-8" />,
+      icon: <FileText className="h-8 w-8 text-emerald-600" />,
       title: 'University Admissions Assistance',
       description: 'Shortlisting universities, preparing documents, tracking deadlines, SOP/LOR writing & editing, application form filling, document verification, timely submission follow-up.'
     },
     {
-      icon: <Globe className="h-8 w-8" />,
+      icon: <Globe className="h-8 w-8 text-amber-600" />,
       title: 'Visa Guidance & Processing',
       description: 'Expertise in visa processes, complete support for visa success rate, visa interview preparation, financial documentation support, statement of purpose review, real-time updates and application monitoring.'
     },
     {
-      icon: <Award className="h-8 w-8" />,
+      icon: <Award className="h-8 w-8 text-green-600" />,
       title: 'Scholarships & Financial Aid (Up to 100%)',
       description: 'We help you apply for partial (50%) to full (100%) scholarships, based on merit, need, or country-specific criteria.'
     },
     {
-      icon: <Plane className="h-8 w-8" />,
+      icon: <Plane className="h-8 w-8 text-indigo-600" />,
       title: 'Pre-Departure & Post-Arrival Support',
       description: 'Help with settling in and succeeding, cultural orientation & student life briefing, packing, travel, and insurance advice, accommodation booking, airport pickup assistance, local emergency contact support.'
     }
@@ -125,7 +125,7 @@ const ScholarshipPage = () => {
              </motion.div>
              
               <motion.h1 
-                className="text-4xl sm:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-amber-200 to-emerald-300"
+               className="text-4xl sm:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-amber-300 to-emerald-400"
                initial={{ y: 20, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.6, delay: 0.3 }}
@@ -133,13 +133,13 @@ const ScholarshipPage = () => {
                Your Gateway to Global Education & Opportunities
              </motion.h1>
               <motion.p 
-                className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed"
+                className="text-xl text-blue-100 max-w-4xl mx-auto leading-relaxed"
                initial={{ y: 20, opacity: 0 }}
                animate={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.6, delay: 0.5 }}
              >
-               Are you dreaming of studying abroad but unsure where to begin? GoLearn Global is your trusted partner in turning that dream into success. 
-               We believe education should be accessible to everyone, regardless of their background.
+               Are you dreaming of <span className="text-amber-300 font-semibold">studying abroad</span> but unsure where to begin? <span className="text-emerald-300 font-semibold">GoLearn Global</span> is your trusted partner in turning that dream into success. 
+               We believe <span className="text-blue-300 font-semibold">education should be accessible to everyone</span>, regardless of their background.
              </motion.p>
            </div>
          </div>
@@ -156,8 +156,8 @@ const ScholarshipPage = () => {
             >
               <h2 className="text-3xl font-extrabold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">What is GoLearn Global?</h2>
              <p className="text-gray-700 text-lg leading-relaxed text-center max-w-4xl mx-auto">
-               GoLearn Global is a premier international education consultancy that helps students explore academic opportunities worldwide. 
-               We guide you through every step of your study abroad journey—from choosing the right course to securing scholarships, visas, and more.
+               <span className="text-blue-700 font-semibold">GoLearn Global</span> is a premier <span className="text-emerald-700 font-semibold">international education consultancy</span> that helps students explore <span className="text-amber-700 font-semibold">academic opportunities worldwide</span>. 
+               We guide you through every step of your <span className="text-blue-700 font-semibold">study abroad journey</span>—from choosing the right course to securing <span className="text-green-700 font-semibold">scholarships, visas, and more</span>.
              </p>
            </motion.div>
          </div>
@@ -176,12 +176,12 @@ const ScholarshipPage = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="mb-3 flex justify-center">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 via-amber-400 to-emerald-500 text-white flex items-center justify-center shadow-lg">
+                  <div className="w-12 h-12 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shadow-lg">
                     <span className="[&_svg]:h-6 [&_svg]:w-6">{stat.icon}</span>
                   </div>
                 </div>
                 <div className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600 mb-1">{stat.number}</div>
-                <div className="text-gray-600 text-sm">{stat.label}</div>
+                <div className="text-gray-700 text-sm font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -242,9 +242,9 @@ const ScholarshipPage = () => {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
              <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Types of Scholarships We Assist With</h2>
-             <p className="text-gray-600 max-w-2xl mx-auto mb-8">
-               Studying abroad doesn't have to break the bank. We help you apply for partial (50%) to full (100%) scholarships, 
-               based on merit, need, or country-specific criteria.
+             <p className="text-gray-700 max-w-2xl mx-auto mb-8">
+               <span className="text-blue-700 font-semibold">Studying abroad</span> doesn't have to break the bank. We help you apply for <span className="text-emerald-700 font-semibold">partial (50%) to full (100%) scholarships</span>, 
+               based on <span className="text-amber-700 font-semibold">merit, need, or country-specific criteria</span>.
              </p>
              <div className="bg-white rounded-lg shadow-lg p-8">
                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -256,15 +256,15 @@ const ScholarshipPage = () => {
                      animate={{ x: 0, opacity: 1 }}
                      transition={{ duration: 0.5, delay: index * 0.1 }}
                    >
-                     <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
-                     <span className="text-gray-700 font-medium">{type}</span>
+                     <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                     <span className="text-gray-800 font-medium">{type}</span>
                    </motion.div>
                  ))}
                </div>
                <div className="mt-8 p-4 bg-emerald-100 rounded-lg">
-                 <p className="text-emerald-800 font-semibold text-center">
-                   "Several of our students have secured scholarships covering up to 100% of tuition, 
-                   saving thousands of dollars while gaining a world-class education."
+                 <p className="text-emerald-900 font-semibold text-center">
+                   "Several of our students have secured <span className="text-amber-800">scholarships covering up to 100% of tuition</span>, 
+                   saving <span className="text-blue-800">thousands of dollars</span> while gaining a <span className="text-green-800">world-class education</span>."
                  </p>
                </div>
              </div>
@@ -277,8 +277,8 @@ const ScholarshipPage = () => {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
              <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">What We Offer: End-to-End Support</h2>
-             <p className="text-gray-600 max-w-2xl mx-auto">
-               For your global academic journey
+             <p className="text-gray-700 max-w-2xl mx-auto text-lg">
+               For your <span className="text-blue-700 font-semibold">global academic journey</span>
              </p>
            </div>
            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -291,12 +291,12 @@ const ScholarshipPage = () => {
                  transition={{ duration: 0.5, delay: index * 0.1 }}
                >
                   <div className="mb-4 flex justify-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 via-amber-400 to-emerald-500 text-white flex items-center justify-center shadow">
+                    <div className="w-12 h-12 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center shadow">
                       <span className="[&_svg]:h-6 [&_svg]:w-6">{service.icon}</span>
                     </div>
                   </div>
-                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                 <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                 <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-amber-600 to-emerald-700 mb-2">{service.title}</h3>
+                 <p className="text-gray-700 text-sm leading-relaxed">{service.description}</p>
                </motion.div>
              ))}
            </div>
@@ -308,8 +308,8 @@ const ScholarshipPage = () => {
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-200 via-amber-100 to-emerald-200">Ready to Start Your Journey?</h2>
-              <p className="text-white/90 text-lg max-w-2xl mx-auto">
-               Contact us today to begin your path to global education success.
+              <p className="text-blue-100 text-lg max-w-2xl mx-auto">
+               Contact us today to begin your path to <span className="text-amber-200 font-semibold">global education success</span>.
              </p>
            </div>
            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -319,9 +319,9 @@ const ScholarshipPage = () => {
                animate={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.6 }}
              >
-               <Phone className="h-8 w-8 mx-auto mb-4" />
-               <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                <p className="text-white/90">+255693641585</p>
+               <Phone className="h-8 w-8 mx-auto mb-4 text-blue-300" />
+               <h3 className="text-xl font-semibold mb-2 text-blue-200">Call Us</h3>
+                <p className="text-white font-medium">+255693641585</p>
              </motion.div>
               <motion.div
                className="text-center p-6 rounded-lg bg-white/10 backdrop-blur"
@@ -329,9 +329,9 @@ const ScholarshipPage = () => {
                animate={{ y: 0, opacity: 1 }}
                transition={{ duration: 0.6, delay: 0.2 }}
              >
-               <Mail className="h-8 w-8 mx-auto mb-4" />
-               <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-                <p className="text-white/90">Musadionis58@gmail.com</p>
+               <Mail className="h-8 w-8 mx-auto mb-4 text-emerald-300" />
+               <h3 className="text-xl font-semibold mb-2 text-emerald-200">Email Us</h3>
+                <p className="text-white font-medium">Musadionis58@gmail.com</p>
              </motion.div>
            </div>
            
@@ -343,9 +343,9 @@ const ScholarshipPage = () => {
                  whileHover={{ scale: 1.05 }}
                  whileTap={{ scale: 0.95 }}
                >
-                 <FileText className="h-6 w-6" />
+                 <FileText className="h-6 w-6 text-white" />
                  <span>Start Application</span>
-                 <ArrowRight className="h-6 w-6" />
+                 <ArrowRight className="h-6 w-6 text-white" />
                </motion.button>
              </Link>
            </div>
