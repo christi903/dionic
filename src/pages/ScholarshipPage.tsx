@@ -1,16 +1,18 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Globe, Award, DollarSign, BookOpen, CheckCircle, Plane, FileText, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Users, Globe, Award, DollarSign, BookOpen, CheckCircle, Plane, FileText, Phone, Mail, ArrowRight, UserCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/ui/Navigation';
 import ScholarshipCard from '../components/ui/ScholarshipCard';
 import DiplomaCourseCard from '../components/ui/DiplomaCourseCard';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
+import TeamModal from '../components/ui/TeamModal';
 import { scholarships, programTypes, diplomaCourses } from '../data/scholarships';
 
 const ScholarshipPage = () => {
   const [selectedProgram, setSelectedProgram] = useState('diploma');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTeamModalOpen, setIsTeamModalOpen] = useState(false);
 
   // Background images of students and universities in Asia and India
   const backgroundImages = [
@@ -303,6 +305,35 @@ const ScholarshipPage = () => {
          </div>
        </section>
 
+       {/* Meet Our Team Section */}
+       <section className="py-12 bg-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+           <motion.div
+             initial={{ y: 20, opacity: 0 }}
+             animate={{ y: 0, opacity: 1 }}
+             transition={{ duration: 0.6 }}
+           >
+             <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">
+               Meet Our Expert Team
+             </h2>
+             <p className="text-gray-700 max-w-2xl mx-auto mb-8 text-lg">
+               Our experienced counselors and specialists are here to guide you every step of the way on your 
+               <span className="text-blue-700 font-semibold"> global education journey</span>.
+             </p>
+             <motion.button
+               onClick={() => setIsTeamModalOpen(true)}
+               className="bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:via-amber-600 hover:to-emerald-700 transition-all duration-200 flex items-center space-x-3 mx-auto shadow-lg"
+               whileHover={{ scale: 1.05 }}
+               whileTap={{ scale: 0.95 }}
+             >
+               <UserCheck className="h-6 w-6" />
+               <span>Meet Our Team</span>
+               <ArrowRight className="h-6 w-6" />
+             </motion.button>
+           </motion.div>
+         </div>
+       </section>
+
        {/* Contact Section */}
        <section className="py-16 text-white relative bg-gradient-to-r from-blue-700 via-amber-600 to-emerald-700">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -351,6 +382,9 @@ const ScholarshipPage = () => {
            </div>
          </div>
        </section>
+
+      {/* Team Modal */}
+      <TeamModal isOpen={isTeamModalOpen} onClose={() => setIsTeamModalOpen(false)} />
     </div>
   );
 };
