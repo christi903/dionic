@@ -13,7 +13,7 @@ export const products: Product[] = [
     id: 1,
     name: 'Surgical Scalpel Set',
     category: 'hospital-equipment',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Precision surgical scalpels with disposable blades for various surgical procedures.',
     features: ['Stainless steel handle', 'Disposable blades', 'Ergonomic design', 'Sterile packaging']
   },
@@ -21,7 +21,7 @@ export const products: Product[] = [
     id: 2,
     name: 'Patient Monitor',
     category: 'hospital-equipment',
-    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Multi-parameter patient monitor with ECG, SpO2, blood pressure, and temperature monitoring.',
     features: ['Multi-parameter monitoring', 'Alarm system', 'Data storage', 'Wireless connectivity']
   },
@@ -101,7 +101,7 @@ export const products: Product[] = [
     id: 12,
     name: 'Surgical Scissors Set',
     category: 'hospital-equipment',
-    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Professional surgical scissors set for cutting tissues and sutures.',
     features: ['Sharp blades', 'Ergonomic handles', 'Various types', 'Autoclave safe']
   },
@@ -117,7 +117,7 @@ export const products: Product[] = [
     id: 14,
     name: 'Surgical Suction Unit',
     category: 'hospital-equipment',
-    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-performance surgical suction unit for fluid and debris removal.',
     features: ['High suction power', 'Quiet operation', 'Easy maintenance', 'Overflow protection']
   },
@@ -135,7 +135,7 @@ export const products: Product[] = [
     id: 16,
     name: 'Disposable Syringes',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile disposable syringes in various sizes for medical injections.',
     features: ['Sterile packaging', 'Luer lock tip', 'Clear barrel', 'Various sizes available']
   },
@@ -167,7 +167,7 @@ export const products: Product[] = [
     id: 20,
     name: 'IV Cannulas',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile intravenous cannulas for fluid and medication administration.',
     features: ['Sharp needle', 'Smooth insertion', 'Color-coded', 'Safety cap']
   },
@@ -175,7 +175,7 @@ export const products: Product[] = [
     id: 21,
     name: 'Alcohol Swabs',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Pre-saturated alcohol swabs for skin disinfection.',
     features: ['70% isopropyl alcohol', 'Individual packaging', 'Quick drying', 'Lint-free']
   },
@@ -183,7 +183,7 @@ export const products: Product[] = [
     id: 22,
     name: 'Surgical Drapes',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile surgical drapes for maintaining sterile field during procedures.',
     features: ['Sterile barrier', 'Fluid resistant', 'Easy positioning', 'Adhesive strips']
   },
@@ -191,7 +191,7 @@ export const products: Product[] = [
     id: 23,
     name: 'Bandages',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Elastic bandages for wound support and compression.',
     features: ['Elastic material', 'Self-adhesive', 'Breathable', 'Various widths']
   },
@@ -199,7 +199,7 @@ export const products: Product[] = [
     id: 24,
     name: 'Catheter Tubes',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile urinary catheters for bladder drainage.',
     features: ['Sterile packaging', 'Smooth insertion', 'Drainage bag included', 'Various sizes']
   },
@@ -207,7 +207,7 @@ export const products: Product[] = [
     id: 25,
     name: 'Suture Materials',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Surgical sutures for wound closure in various materials and sizes.',
     features: ['Various materials', 'Absorbable/non-absorbable', 'Precision needles', 'Sterile packaging']
   },
@@ -215,7 +215,7 @@ export const products: Product[] = [
     id: 26,
     name: 'Specimen Containers',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile containers for collecting biological specimens.',
     features: ['Leak-proof seal', 'Clear labeling area', 'Sterile interior', 'Various volumes']
   },
@@ -223,7 +223,7 @@ export const products: Product[] = [
     id: 27,
     name: 'Disposable Gowns',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Disposable isolation gowns for infection control.',
     features: ['Fluid resistant', 'Comfortable fit', 'Tie closures', 'Full coverage']
   },
@@ -231,7 +231,7 @@ export const products: Product[] = [
     id: 28,
     name: 'Lancets',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile disposable lancets for blood sampling.',
     features: ['Sharp point', 'Safety mechanism', 'Sterile packaging', 'Various gauges']
   },
@@ -239,7 +239,7 @@ export const products: Product[] = [
     id: 29,
     name: 'Oxygen Masks',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Disposable oxygen masks for respiratory support.',
     features: ['Clear plastic', 'Adjustable strap', 'Oxygen tubing', 'Various sizes']
   },
@@ -247,7 +247,7 @@ export const products: Product[] = [
     id: 30,
     name: 'Thermometer Covers',
     category: 'consumables',
-    image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Disposable probe covers for digital thermometers.',
     features: ['Hygienic protection', 'Easy application', 'Accurate readings', 'Bulk packaging']
   },
@@ -257,7 +257,7 @@ export const products: Product[] = [
     id: 31,
     name: 'Blood Collection Tubes',
     category: 'laboratory',
-    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Vacuum blood collection tubes with various additives for different tests.',
     features: ['Vacuum sealed', 'Color-coded caps', 'Various additives', 'Sterile interior']
   },
@@ -265,7 +265,7 @@ export const products: Product[] = [
     id: 32,
     name: 'Microscope Slides',
     category: 'laboratory',
-    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-quality glass microscope slides for specimen examination.',
     features: ['Optical glass', 'Ground edges', 'Pre-cleaned', 'Standard dimensions']
   },
@@ -297,7 +297,7 @@ export const products: Product[] = [
     id: 36,
     name: 'Laboratory Reagents',
     category: 'laboratory',
-    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-purity chemical reagents for various laboratory analyses.',
     features: ['Analytical grade', 'Certified purity', 'Proper labeling', 'Safety data sheets']
   },
@@ -329,7 +329,7 @@ export const products: Product[] = [
     id: 40,
     name: 'Culture Media',
     category: 'laboratory',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile culture media for bacterial and fungal growth.',
     features: ['Sterile preparation', 'Various formulations', 'Ready-to-use', 'Long shelf life']
   },
