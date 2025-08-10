@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { MapPin, Calendar, DollarSign, CheckCircle } from 'lucide-react';
+import { MapPin, Calendar, CheckCircle } from 'lucide-react';
 
 interface Scholarship {
   id: number;
@@ -47,11 +47,7 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({ scholarship }) => {
         
         <p className="text-gray-600 text-sm mb-4">{scholarship.description}</p>
         
-        <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
-          <div className="flex items-center text-gray-600">
-            <DollarSign className="h-4 w-4 mr-1" />
-            <span>{scholarship.value}</span>
-          </div>
+        <div className="mb-4 text-sm">
           <div className="flex items-center text-gray-600">
             <Calendar className="h-4 w-4 mr-1" />
             <span>{scholarship.duration}</span>
@@ -70,11 +66,7 @@ const ScholarshipCard: React.FC<ScholarshipCardProps> = ({ scholarship }) => {
           </div>
         </div>
         
-        <div className="mt-4 pt-4 border-t">
-          <p className="text-sm text-red-600 font-medium">
-            Deadline: {scholarship.deadline}
-          </p>
-        </div>
+
       </div>
     </motion.div>
   );

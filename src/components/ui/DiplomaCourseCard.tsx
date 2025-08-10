@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, MapPin, BookOpen } from 'lucide-react';
 import { DiplomaCourse } from '../../data/scholarships';
+import SpecializationsModal from './SpecializationsModal';
 
 interface DiplomaCourseCardProps {
   course: DiplomaCourse;
 }
 
 const DiplomaCourseCard: React.FC<DiplomaCourseCardProps> = ({ course }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleViewAllSpecializations = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
+    <>
+      <SpecializationsModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        courseName={course.name}
+        specializations={course.specializations}
+      />
     <motion.div
       className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
       whileHover={{ y: -5 }}
@@ -50,9 +68,17 @@ const DiplomaCourseCard: React.FC<DiplomaCourseCardProps> = ({ course }) => {
 
         {/* Specializations */}
         <div className="mb-4">
-          <div className="flex items-center mb-2">
-            <BookOpen className="h-4 w-4 mr-2 text-green-600" />
-            <span className="text-sm font-medium text-gray-800">Specializations:</span>
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center">
+              <BookOpen className="h-4 w-4 mr-2 text-green-600" />
+              <span className="text-sm font-medium text-gray-800">Specializations:</span>
+            </div>
+            <button
+              onClick={handleViewAllSpecializations}
+              className="text-green-600 hover:text-green-700 text-xs font-medium px-3 py-1 rounded-full border border-green-200 hover:border-green-300 transition-colors duration-200"
+            >
+              View All ({course.specializations.length})
+            </button>
           </div>
           <div className="flex flex-wrap gap-1">
             {course.specializations.slice(0, 3).map((spec, index) => (
@@ -64,9 +90,12 @@ const DiplomaCourseCard: React.FC<DiplomaCourseCardProps> = ({ course }) => {
               </span>
             ))}
             {course.specializations.length > 3 && (
-              <span className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">
+              <button
+                onClick={handleViewAllSpecializations}
+                className="bg-green-600 hover:bg-green-700 text-white text-xs px-3 py-1 rounded-full transition-colors duration-200"
+              >
                 +{course.specializations.length - 3} more
-              </span>
+              </button>
             )}
           </div>
         </div>
@@ -74,6 +103,7 @@ const DiplomaCourseCard: React.FC<DiplomaCourseCardProps> = ({ course }) => {
 
       </div>
     </motion.div>
+    </>
   );
 };
 
