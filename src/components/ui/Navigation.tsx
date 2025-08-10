@@ -8,7 +8,7 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', href: '/scholarships', icon: null },
+    { name: 'Home', href: '/', icon: null },
     { name: 'Start Application', href: '/application', icon: <FileText className="h-4 w-4" /> },
     { name: 'Staff Portal', href: '/staff-portal', icon: <Users className="h-4 w-4" /> },
   ];

@@ -10,7 +10,7 @@ import Navigation from '../components/ui/Navigation';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
 import { useAuth } from '../hooks/useAuth';
 import { supabase } from '../lib/supabase';
-import { User as SupabaseUser } from '@supabase/supabase-js';
+import { User as SupabaseUser, RealtimeChannel } from '@supabase/supabase-js';
 
 type AuthMode = 'login' | 'register' | 'forgot-password';
 
@@ -419,13 +419,36 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
     };
     loadApplications();
 
-    const channel = supabase
-      .channel('applications-changes')
-      .on('postgres_changes', { event: '*', schema: 'public', table: 'applications' }, loadApplications)
-      .subscribe();
+    // Handle realtime subscription with proper error handling
+    let channel: any = null;
+    try {
+      // Check if the supabase client supports realtime
+      if (supabase.channel && typeof supabase.channel === 'function') {
+        // Use type assertion to bypass strict typing for mock client
+        const supabaseAny = supabase as any;
+        channel = supabaseAny
+          .channel('applications-changes')
+          .on('postgres_changes', { 
+            event: '*', 
+            schema: 'public', 
+            table: 'applications' 
+          }, () => {
+            loadApplications();
+          })
+          .subscribe();
+      }
+    } catch (error) {
+      console.warn('Realtime subscription failed:', error);
+    }
 
     return () => {
-      supabase.removeChannel(channel);
+      if (channel && supabase.removeChannel && typeof supabase.removeChannel === 'function') {
+        try {
+          (supabase as any).removeChannel(channel);
+        } catch (error) {
+          console.warn('Failed to remove channel:', error);
+        }
+      }
     };
   }, []);
 

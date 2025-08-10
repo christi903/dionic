@@ -14,10 +14,21 @@ const createMockClient = () => ({
     onAuthStateChange: () => ({ data: { subscription: null } })
   },
   from: () => ({
+    select: () => ({
+      order: () => Promise.resolve({ data: [], error: null })
+    }),
     insert: async () => ({ error: new Error('Supabase not configured') }),
-    update: async () => ({ error: new Error('Supabase not configured') }),
-    delete: async () => ({ error: new Error('Supabase not configured') }),
-    eq: function() { return this; }
+    update: () => ({
+      eq: () => Promise.resolve({ error: null })
+    }),
+    delete: () => ({
+      eq: () => Promise.resolve({ error: null })
+    })
+  }),
+  channel: () => ({
+    on: () => ({
+      subscribe: () => ({})
+    })
   }),
   removeChannel: () => {}
 });
