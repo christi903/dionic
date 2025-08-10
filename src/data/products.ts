@@ -77,7 +77,7 @@ export const products: Product[] = [
     id: 9,
     name: 'Surgical Retractors',
     category: 'hospital-equipment',
-    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Self-retaining surgical retractors for maintaining surgical site exposure.',
     features: ['Self-retaining', 'Adjustable tension', 'Stainless steel', 'Various sizes']
   },
