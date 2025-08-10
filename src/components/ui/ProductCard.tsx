@@ -6,7 +6,6 @@ interface Product {
   id: number;
   name: string;
   category: string;
-  price: string;
   image: string;
   description: string;
   features: string[];
@@ -33,9 +32,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         />
       </div>
       <div className="p-6">
-        <div className="flex justify-between items-start mb-2">
+        <div className="mb-2">
           <h3 className="text-lg font-semibold text-gray-900">{product.name}</h3>
-          <span className="text-slate-600 font-bold">{product.price}</span>
         </div>
         <p className="text-gray-600 text-sm mb-4">{product.description}</p>
         <div className="space-y-2">
