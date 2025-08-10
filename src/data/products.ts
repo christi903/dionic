@@ -13,7 +13,7 @@ export const products: Product[] = [
     id: 1,
     name: 'Surgical Scalpel Set',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Precision surgical scalpels with disposable blades for various surgical procedures.',
     features: ['Stainless steel handle', 'Disposable blades', 'Ergonomic design', 'Sterile packaging']
   },
@@ -21,7 +21,7 @@ export const products: Product[] = [
     id: 2,
     name: 'Patient Monitor',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Multi-parameter patient monitor with ECG, SpO2, blood pressure, and temperature monitoring.',
     features: ['Multi-parameter monitoring', 'Alarm system', 'Data storage', 'Wireless connectivity']
   },
@@ -29,7 +29,7 @@ export const products: Product[] = [
     id: 3,
     name: 'Digital Stethoscope',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Advanced digital stethoscope with noise cancellation and recording capabilities.',
     features: ['Bluetooth connectivity', 'Noise reduction', 'Audio recording', 'Amplification']
   },
@@ -37,7 +37,7 @@ export const products: Product[] = [
     id: 4,
     name: 'Ultrasound Machine',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/8376334/pexels-photo-8376334.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable ultrasound machine with high-resolution imaging for diagnostic procedures.',
     features: ['High resolution imaging', 'Portable design', 'Multiple probes', 'Real-time imaging']
   },
@@ -45,7 +45,7 @@ export const products: Product[] = [
     id: 5,
     name: 'Electrocautery Unit',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-frequency electrocautery unit for cutting and coagulation during surgery.',
     features: ['Dual functionality', 'Safety features', 'Precise control', 'Foot pedal operation']
   },
@@ -53,7 +53,7 @@ export const products: Product[] = [
     id: 6,
     name: 'Surgical Forceps Set',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Complete set of surgical forceps for tissue handling and manipulation.',
     features: ['Various sizes', 'Stainless steel', 'Autoclave safe', 'Precision tips']
   },
@@ -61,7 +61,7 @@ export const products: Product[] = [
     id: 7,
     name: 'Anesthesia Machine',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Advanced anesthesia delivery system with ventilator and monitoring capabilities.',
     features: ['Integrated ventilator', 'Gas monitoring', 'Safety alarms', 'Touch screen interface']
   },
@@ -69,7 +69,7 @@ export const products: Product[] = [
     id: 8,
     name: 'X-Ray Machine',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/8376334/pexels-photo-8376334.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Digital X-ray system for high-quality diagnostic imaging with low radiation exposure.',
     features: ['Digital imaging', 'Low radiation', 'Quick processing', 'PACS compatible']
   },
@@ -77,7 +77,7 @@ export const products: Product[] = [
     id: 9,
     name: 'Surgical Retractors',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Self-retaining surgical retractors for maintaining surgical site exposure.',
     features: ['Self-retaining', 'Adjustable tension', 'Stainless steel', 'Various sizes']
   },
@@ -85,7 +85,7 @@ export const products: Product[] = [
     id: 10,
     name: 'Infusion Pump',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Programmable infusion pump for accurate medication and fluid delivery.',
     features: ['Programmable rates', 'Safety alarms', 'Battery backup', 'Drug library']
   },
@@ -93,7 +93,7 @@ export const products: Product[] = [
     id: 11,
     name: 'ECG Machine',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
     description: '12-lead ECG machine for cardiac rhythm analysis and diagnosis.',
     features: ['12-lead capability', 'Automatic analysis', 'Thermal printer', 'Data storage']
   },
@@ -101,7 +101,7 @@ export const products: Product[] = [
     id: 12,
     name: 'Surgical Scissors Set',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Professional surgical scissors set for cutting tissues and sutures.',
     features: ['Sharp blades', 'Ergonomic handles', 'Various types', 'Autoclave safe']
   },
@@ -109,7 +109,7 @@ export const products: Product[] = [
     id: 13,
     name: 'Pulse Oximeter',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Fingertip pulse oximeter for monitoring oxygen saturation and pulse rate.',
     features: ['LED display', 'Battery operated', 'Automatic shut-off', 'Accuracy ±2%']
   },
@@ -117,7 +117,7 @@ export const products: Product[] = [
     id: 14,
     name: 'Surgical Suction Unit',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-performance surgical suction unit for fluid and debris removal.',
     features: ['High suction power', 'Quiet operation', 'Easy maintenance', 'Overflow protection']
   },
@@ -125,7 +125,7 @@ export const products: Product[] = [
     id: 15,
     name: 'Blood Pressure Monitor',
     category: 'hospital-equipment',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Automatic digital blood pressure monitor with large LCD display.',
     features: ['Digital display', 'Memory storage', 'Irregular heartbeat detection', 'Cuff size indicator']
   },
@@ -135,7 +135,7 @@ export const products: Product[] = [
     id: 16,
     name: 'Disposable Syringes',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile disposable syringes in various sizes for medical injections.',
     features: ['Sterile packaging', 'Luer lock tip', 'Clear barrel', 'Various sizes available']
   },
@@ -143,7 +143,7 @@ export const products: Product[] = [
     id: 17,
     name: 'Nitrile Gloves',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Powder-free nitrile examination gloves for medical procedures.',
     features: ['Powder-free', 'Latex-free', 'Textured fingertips', 'Chemical resistant']
   },
@@ -151,7 +151,7 @@ export const products: Product[] = [
     id: 18,
     name: 'Surgical Masks',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300&q=80',
     description: '3-ply surgical masks with ear loops for infection control.',
     features: ['3-layer protection', 'Fluid resistant', 'Comfortable ear loops', 'Breathable material']
   },
@@ -159,7 +159,7 @@ export const products: Product[] = [
     id: 19,
     name: 'Gauze Pads',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1603398938235-b8b9c9e8f7a3?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile gauze pads for wound dressing and cleaning.',
     features: ['Sterile packaging', 'High absorbency', 'Non-adherent', 'Various sizes']
   },
@@ -167,7 +167,7 @@ export const products: Product[] = [
     id: 20,
     name: 'IV Cannulas',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile intravenous cannulas for fluid and medication administration.',
     features: ['Sharp needle', 'Smooth insertion', 'Color-coded', 'Safety cap']
   },
@@ -175,7 +175,7 @@ export const products: Product[] = [
     id: 21,
     name: 'Alcohol Swabs',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Pre-saturated alcohol swabs for skin disinfection.',
     features: ['70% isopropyl alcohol', 'Individual packaging', 'Quick drying', 'Lint-free']
   },
@@ -183,7 +183,7 @@ export const products: Product[] = [
     id: 22,
     name: 'Surgical Drapes',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile surgical drapes for maintaining sterile field during procedures.',
     features: ['Sterile barrier', 'Fluid resistant', 'Easy positioning', 'Adhesive strips']
   },
@@ -191,7 +191,7 @@ export const products: Product[] = [
     id: 23,
     name: 'Bandages',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Elastic bandages for wound support and compression.',
     features: ['Elastic material', 'Self-adhesive', 'Breathable', 'Various widths']
   },
@@ -199,7 +199,7 @@ export const products: Product[] = [
     id: 24,
     name: 'Catheter Tubes',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile urinary catheters for bladder drainage.',
     features: ['Sterile packaging', 'Smooth insertion', 'Drainage bag included', 'Various sizes']
   },
@@ -207,7 +207,7 @@ export const products: Product[] = [
     id: 25,
     name: 'Suture Materials',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Surgical sutures for wound closure in various materials and sizes.',
     features: ['Various materials', 'Absorbable/non-absorbable', 'Precision needles', 'Sterile packaging']
   },
@@ -215,7 +215,7 @@ export const products: Product[] = [
     id: 26,
     name: 'Specimen Containers',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile containers for collecting biological specimens.',
     features: ['Leak-proof seal', 'Clear labeling area', 'Sterile interior', 'Various volumes']
   },
@@ -223,7 +223,7 @@ export const products: Product[] = [
     id: 27,
     name: 'Disposable Gowns',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Disposable isolation gowns for infection control.',
     features: ['Fluid resistant', 'Comfortable fit', 'Tie closures', 'Full coverage']
   },
@@ -231,7 +231,7 @@ export const products: Product[] = [
     id: 28,
     name: 'Lancets',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile disposable lancets for blood sampling.',
     features: ['Sharp point', 'Safety mechanism', 'Sterile packaging', 'Various gauges']
   },
@@ -239,7 +239,7 @@ export const products: Product[] = [
     id: 29,
     name: 'Oxygen Masks',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Disposable oxygen masks for respiratory support.',
     features: ['Clear plastic', 'Adjustable strap', 'Oxygen tubing', 'Various sizes']
   },
@@ -247,7 +247,7 @@ export const products: Product[] = [
     id: 30,
     name: 'Thermometer Covers',
     category: 'consumables',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Disposable probe covers for digital thermometers.',
     features: ['Hygienic protection', 'Easy application', 'Accurate readings', 'Bulk packaging']
   },
@@ -257,7 +257,7 @@ export const products: Product[] = [
     id: 31,
     name: 'Blood Collection Tubes',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Vacuum blood collection tubes with various additives for different tests.',
     features: ['Vacuum sealed', 'Color-coded caps', 'Various additives', 'Sterile interior']
   },
@@ -265,7 +265,7 @@ export const products: Product[] = [
     id: 32,
     name: 'Microscope Slides',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-quality glass microscope slides for specimen examination.',
     features: ['Optical glass', 'Ground edges', 'Pre-cleaned', 'Standard dimensions']
   },
@@ -273,7 +273,7 @@ export const products: Product[] = [
     id: 33,
     name: 'Pipette Tips',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile pipette tips for accurate liquid handling in laboratory work.',
     features: ['Sterile packaging', 'Various volumes', 'Universal fit', 'Low retention']
   },
@@ -281,7 +281,7 @@ export const products: Product[] = [
     id: 34,
     name: 'pH Test Strips',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'pH indicator strips for quick acidity/alkalinity testing.',
     features: ['Wide pH range', 'Color chart included', 'Quick results', 'Waterproof packaging']
   },
@@ -289,7 +289,7 @@ export const products: Product[] = [
     id: 35,
     name: 'Centrifuge Tubes',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-quality centrifuge tubes for sample separation and storage.',
     features: ['Chemical resistant', 'Graduated markings', 'Leak-proof caps', 'Various sizes']
   },
@@ -297,7 +297,7 @@ export const products: Product[] = [
     id: 36,
     name: 'Laboratory Reagents',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-purity chemical reagents for various laboratory analyses.',
     features: ['Analytical grade', 'Certified purity', 'Proper labeling', 'Safety data sheets']
   },
@@ -305,7 +305,7 @@ export const products: Product[] = [
     id: 37,
     name: 'Petri Dishes',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile petri dishes for microbiology culture work.',
     features: ['Sterile packaging', 'Clear plastic', 'Stackable design', 'Ventilation tabs']
   },
@@ -313,7 +313,7 @@ export const products: Product[] = [
     id: 38,
     name: 'Test Tube Racks',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Durable test tube racks for organizing laboratory samples.',
     features: ['Multiple tube sizes', 'Chemical resistant', 'Stable base', 'Easy cleaning']
   },
@@ -321,7 +321,7 @@ export const products: Product[] = [
     id: 39,
     name: 'Laboratory Glassware',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Borosilicate glass beakers, flasks, and measuring cylinders.',
     features: ['Borosilicate glass', 'Graduated markings', 'Heat resistant', 'Chemical inert']
   },
@@ -329,7 +329,7 @@ export const products: Product[] = [
     id: 40,
     name: 'Culture Media',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile culture media for bacterial and fungal growth.',
     features: ['Sterile preparation', 'Various formulations', 'Ready-to-use', 'Long shelf life']
   },
@@ -337,7 +337,7 @@ export const products: Product[] = [
     id: 41,
     name: 'Staining Reagents',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Histological and cytological staining reagents for microscopy.',
     features: ['High quality dyes', 'Consistent results', 'Ready-to-use', 'Proper storage']
   },
@@ -345,7 +345,7 @@ export const products: Product[] = [
     id: 42,
     name: 'Disposable Pipettes',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Sterile disposable pipettes for liquid transfer and measurement.',
     features: ['Sterile packaging', 'Graduated markings', 'Various volumes', 'Flexible material']
   },
@@ -353,7 +353,7 @@ export const products: Product[] = [
     id: 43,
     name: 'Laboratory Labels',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Waterproof laboratory labels for sample identification.',
     features: ['Waterproof', 'Chemical resistant', 'Strong adhesive', 'Various sizes']
   },
@@ -361,7 +361,7 @@ export const products: Product[] = [
     id: 44,
     name: 'Buffer Solutions',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Calibrated buffer solutions for pH meter calibration and testing.',
     features: ['Certified values', 'Temperature stable', 'Long shelf life', 'Various pH values']
   },
@@ -369,7 +369,7 @@ export const products: Product[] = [
     id: 45,
     name: 'Sample Vials',
     category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'High-quality sample vials for specimen storage and transport.',
     features: ['Leak-proof seals', 'Chemical resistant', 'Clear visibility', 'Various volumes']
   },
@@ -379,7 +379,7 @@ export const products: Product[] = [
     id: 46,
     name: 'Defibrillator',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Automated external defibrillator for cardiac emergency response.',
     features: ['Voice prompts', 'Automatic analysis', 'Portable design', 'Long battery life']
   },
@@ -387,7 +387,7 @@ export const products: Product[] = [
     id: 47,
     name: 'Emergency Stretcher',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Lightweight emergency stretcher for patient transport.',
     features: ['Foldable design', 'Weight capacity 350lbs', 'Quick deployment', 'Durable materials']
   },
@@ -395,7 +395,7 @@ export const products: Product[] = [
     id: 48,
     name: 'Oxygen Tank',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable oxygen tank for respiratory emergency support.',
     features: ['High-pressure storage', 'Regulator included', 'Portable size', 'Safety valve']
   },
@@ -403,7 +403,7 @@ export const products: Product[] = [
     id: 49,
     name: 'Emergency Medical Kit',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1603398938235-b8b9c9e8f7a3?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Comprehensive first aid kit for emergency medical response.',
     features: ['Complete supplies', 'Organized compartments', 'Waterproof case', 'Emergency manual']
   },
@@ -411,7 +411,7 @@ export const products: Product[] = [
     id: 50,
     name: 'Spine Board',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Spinal immobilization board for trauma patient transport.',
     features: ['X-ray translucent', 'Multiple handholds', 'Easy cleaning', 'Patient restraints']
   },
@@ -419,7 +419,7 @@ export const products: Product[] = [
     id: 51,
     name: 'Emergency Ventilator',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable emergency ventilator for respiratory support.',
     features: ['Battery powered', 'Multiple modes', 'Alarm systems', 'Compact design']
   },
@@ -427,7 +427,7 @@ export const products: Product[] = [
     id: 52,
     name: 'Trauma Shears',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Heavy-duty emergency scissors for cutting clothing and materials.',
     features: ['Sharp blades', 'Safety tips', 'Comfortable grip', 'Corrosion resistant']
   },
@@ -435,7 +435,7 @@ export const products: Product[] = [
     id: 53,
     name: 'Emergency Blanket',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Thermal emergency blanket for hypothermia prevention.',
     features: ['Heat retention', 'Waterproof', 'Compact storage', 'Reflective material']
   },
@@ -443,7 +443,7 @@ export const products: Product[] = [
     id: 54,
     name: 'Cervical Collar',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable cervical collar for neck immobilization.',
     features: ['Adjustable sizing', 'Comfortable padding', 'Easy application', 'X-ray compatible']
   },
@@ -451,7 +451,7 @@ export const products: Product[] = [
     id: 55,
     name: 'Emergency Suction Unit',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable suction unit for airway clearance.',
     features: ['Battery powered', 'Variable suction', 'Quiet operation', 'Easy maintenance']
   },
@@ -459,7 +459,7 @@ export const products: Product[] = [
     id: 56,
     name: 'Splint Set',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Complete splint set for fracture immobilization.',
     features: ['Various sizes', 'Moldable material', 'Lightweight', 'Radiolucent']
   },
@@ -467,7 +467,7 @@ export const products: Product[] = [
     id: 57,
     name: 'Emergency Medications',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Essential emergency medications for critical care.',
     features: ['Long shelf life', 'Temperature stable', 'Pre-loaded syringes', 'Clear labeling']
   },
@@ -475,7 +475,7 @@ export const products: Product[] = [
     id: 58,
     name: 'Rescue Basket',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Patient extraction basket for rescue operations.',
     features: ['High strength', 'Patient restraints', 'Lifting points', 'Weather resistant']
   },
@@ -483,7 +483,7 @@ export const products: Product[] = [
     id: 59,
     name: 'Emergency Monitor',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable patient monitoring device for emergency care.',
     features: ['Multi-parameter', 'Battery powered', 'Data storage', 'Alarm functions']
   },
@@ -491,7 +491,7 @@ export const products: Product[] = [
     id: 60,
     name: 'Tourniquet',
     category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Medical tourniquet for severe bleeding control.',
     features: ['Quick application', 'Effective pressure', 'Time indicator', 'Single-use design']
   },
@@ -501,7 +501,7 @@ export const products: Product[] = [
     id: 61,
     name: 'Home Blood Pressure Monitor',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Digital blood pressure monitor with smartphone connectivity.',
     features: ['Bluetooth connectivity', 'Large display', 'Memory storage', 'Irregular heartbeat detection']
   },
@@ -509,7 +509,7 @@ export const products: Product[] = [
     id: 62,
     name: 'Glucose Meter',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Blood glucose monitoring device for diabetes management.',
     features: ['Fast results', 'Small blood sample', 'Data tracking', 'Easy-to-read display']
   },
@@ -517,7 +517,7 @@ export const products: Product[] = [
     id: 63,
     name: 'Nebulizer',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable nebulizer for respiratory medication delivery.',
     features: ['Quiet operation', 'Efficient medication delivery', 'Easy cleaning', 'Compact design']
   },
@@ -525,7 +525,7 @@ export const products: Product[] = [
     id: 64,
     name: 'Digital Thermometer',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Non-contact infrared thermometer for temperature monitoring.',
     features: ['Non-contact measurement', 'Fast readings', 'Fever alarm', 'Memory recall']
   },
@@ -533,7 +533,7 @@ export const products: Product[] = [
     id: 65,
     name: 'Wheelchair',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Lightweight folding wheelchair for mobility assistance.',
     features: ['Lightweight frame', 'Foldable design', 'Comfortable seating', 'Easy maneuverability']
   },
@@ -541,7 +541,7 @@ export const products: Product[] = [
     id: 66,
     name: 'Walking Aid',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable walking frame with wheels for mobility support.',
     features: ['Height adjustable', 'Locking wheels', 'Lightweight', 'Foldable design']
   },
@@ -549,7 +549,7 @@ export const products: Product[] = [
     id: 67,
     name: 'Compression Stockings',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Medical compression stockings for circulation improvement.',
     features: ['Graduated compression', 'Breathable fabric', 'Various sizes', 'Easy to wear']
   },
@@ -557,7 +557,7 @@ export const products: Product[] = [
     id: 68,
     name: 'TENS Unit',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Transcutaneous electrical nerve stimulation unit for pain management.',
     features: ['Multiple programs', 'Adjustable intensity', 'Portable design', 'Rechargeable battery']
   },
@@ -565,7 +565,7 @@ export const products: Product[] = [
     id: 69,
     name: 'Home Oxygen Concentrator',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Stationary oxygen concentrator for home oxygen therapy.',
     features: ['Continuous flow', 'Low maintenance', 'Quiet operation', 'Energy efficient']
   },
@@ -573,7 +573,7 @@ export const products: Product[] = [
     id: 70,
     name: 'Pill Dispenser',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Automatic medication dispenser for medication management.',
     features: ['Programmable alarms', 'Multiple compartments', 'Tamper-resistant', 'Easy loading']
   },
@@ -581,7 +581,7 @@ export const products: Product[] = [
     id: 71,
     name: 'Hospital Bed',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable hospital bed for home care use.',
     features: ['Electric adjustment', 'Side rails', 'Comfortable mattress', 'Easy controls']
   },
@@ -589,7 +589,7 @@ export const products: Product[] = [
     id: 72,
     name: 'Shower Chair',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable shower chair for bathing assistance.',
     features: ['Height adjustable', 'Non-slip feet', 'Drainage holes', 'Comfortable seating']
   },
@@ -597,7 +597,7 @@ export const products: Product[] = [
     id: 73,
     name: 'Blood Oxygen Monitor',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Fingertip pulse oximeter for oxygen saturation monitoring.',
     features: ['Instant readings', 'LED display', 'Low battery indicator', 'Automatic shut-off']
   },
@@ -605,7 +605,7 @@ export const products: Product[] = [
     id: 74,
     name: 'Heating Pad',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Electric heating pad for pain relief and comfort.',
     features: ['Multiple heat settings', 'Auto shut-off', 'Washable cover', 'Even heat distribution']
   },
@@ -613,7 +613,7 @@ export const products: Product[] = [
     id: 75,
     name: 'Bedside Commode',
     category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
+    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable bedside commode for mobility assistance.',
     features: ['Adjustable height', 'Removable bucket', 'Armrests', 'Easy assembly']
   }
