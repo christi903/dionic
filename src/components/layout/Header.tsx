@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <span>Musadionis58@gmail.com</span>
+            <span>musadionis58@gmail.com</span>
           </div>
         </div>
       </div>
