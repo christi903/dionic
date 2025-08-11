@@ -5,9 +5,10 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/ui/Navigation';
 import ScholarshipCard from '../components/ui/ScholarshipCard';
 import DiplomaCourseCard from '../components/ui/DiplomaCourseCard';
+import UndergraduateCourseCard from '../components/ui/UndergraduateCourseCard';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
 import TeamModal from '../components/ui/TeamModal';
-import { scholarships, programTypes, diplomaCourses } from '../data/scholarships';
+import { scholarships, programTypes, diplomaCourses, undergraduateCourses } from '../data/scholarships';
 
 const ScholarshipPage = () => {
   const [selectedProgram, setSelectedProgram] = useState('diploma');
@@ -214,20 +215,38 @@ const ScholarshipPage = () => {
       {/* Programs Grid */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Dynamic Section Title */}
+          {selectedProgram === 'diploma' && (
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Available Diploma Programs</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Explore our comprehensive diploma programs offered by prestigious universities worldwide. 
+                Each program is designed to provide practical skills and industry-relevant knowledge.
+              </p>
+            </div>
+          )}
+          
+          {selectedProgram === 'undergraduate' && (
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Available Undergraduate Programs</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Discover a wide range of undergraduate programs from top universities globally. 
+                These programs are designed to provide a solid foundation for your academic and career aspirations.
+              </p>
+            </div>
+          )}
+
           {selectedProgram === 'diploma' ? (
-            <div>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Available Diploma Programs</h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                  Explore our comprehensive diploma programs offered by prestigious universities worldwide. 
-                  Each program is designed to provide practical skills and industry-relevant knowledge.
-                </p>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {diplomaCourses.map((course) => (
-                  <DiplomaCourseCard key={course.id} course={course} />
-                ))}
-              </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {diplomaCourses.map((course) => (
+                <DiplomaCourseCard key={course.id} course={course} />
+              ))}
+            </div>
+          ) : selectedProgram === 'undergraduate' ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {undergraduateCourses.map((course) => (
+                <UndergraduateCourseCard key={course.id} course={course} />
+              ))}
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

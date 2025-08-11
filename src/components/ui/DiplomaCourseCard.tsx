@@ -26,6 +26,7 @@ const DiplomaCourseCard: React.FC<DiplomaCourseCardProps> = ({ course }) => {
         onClose={handleCloseModal}
         courseName={course.name}
         specializations={course.specializations}
+        courseType="diploma"
       />
     <motion.div
       className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"

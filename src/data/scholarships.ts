@@ -612,6 +612,165 @@ export const diplomaCourses: DiplomaCourse[] = [
   }
 ];
 
+export interface UndergraduateCourse {
+  id: number;
+  name: string;
+  duration: string;
+  cost: string;
+  specializations: string[];
+  university: string;
+  country: string;
+  image: string;
+  description: string;
+}
+
+export const undergraduateCourses: UndergraduateCourse[] = [
+  {
+    id: 1,
+    name: 'Bachelor of Medicine',
+    duration: '6 Years',
+    cost: '$45,000 per year',
+    specializations: [
+      'General Medicine',
+      'Cardiology',
+      'Neurology',
+      'Pediatrics',
+      'Psychiatry',
+      'Surgery',
+      'Internal Medicine',
+      'Emergency Medicine',
+      'Oncology',
+      'Dermatology',
+      'Orthopedics',
+      'Radiology'
+    ],
+    university: 'University of Oxford',
+    country: 'United Kingdom',
+    image: 'https://images.pexels.com/photos/3376790/pexels-photo-3376790.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive medical program preparing students for medical practice with extensive clinical training.'
+  },
+  {
+    id: 2,
+    name: 'Bachelor of Engineering',
+    duration: '4 Years',
+    cost: '$38,000 per year',
+    specializations: [
+      'Mechanical Engineering',
+      'Electrical Engineering',
+      'Civil Engineering',
+      'Chemical Engineering',
+      'Computer Engineering',
+      'Biomedical Engineering',
+      'Aerospace Engineering',
+      'Environmental Engineering',
+      'Industrial Engineering',
+      'Materials Science',
+      'Robotics & Automation',
+      'Nuclear Engineering'
+    ],
+    university: 'Massachusetts Institute of Technology',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Advanced engineering program with cutting-edge research and practical applications.'
+  },
+  {
+    id: 3,
+    name: 'Bachelor of Business Administration',
+    duration: '4 Years',
+    cost: '$35,000 per year',
+    specializations: [
+      'Finance',
+      'Marketing',
+      'Human Resources',
+      'International Business',
+      'Entrepreneurship',
+      'Supply Chain Management',
+      'Information Systems',
+      'Accounting',
+      'Economics',
+      'Strategic Management',
+      'Business Analytics',
+      'Hospitality Management'
+    ],
+    university: 'Harvard University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive business program developing leadership and management skills for global markets.'
+  },
+  {
+    id: 4,
+    name: 'Bachelor of Computer Science',
+    duration: '4 Years',
+    cost: '$40,000 per year',
+    specializations: [
+      'Software Engineering',
+      'Artificial Intelligence',
+      'Data Science',
+      'Cybersecurity',
+      'Computer Networks',
+      'Database Systems',
+      'Game Development',
+      'Web Development',
+      'Mobile App Development',
+      'Machine Learning',
+      'Cloud Computing',
+      'Human-Computer Interaction'
+    ],
+    university: 'Stanford University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Innovative computer science program with focus on emerging technologies and practical applications.'
+  },
+  {
+    id: 5,
+    name: 'Bachelor of Architecture',
+    duration: '5 Years',
+    cost: '$42,000 per year',
+    specializations: [
+      'Architectural Design',
+      'Urban Planning',
+      'Interior Architecture',
+      'Sustainable Design',
+      'Landscape Architecture',
+      'Historic Preservation',
+      'Digital Fabrication',
+      'Building Technology',
+      'Environmental Design',
+      'Cultural Heritage',
+      'Parametric Design',
+      'Smart Cities'
+    ],
+    university: 'Royal Melbourne Institute of Technology',
+    country: 'Australia',
+    image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Creative architecture program emphasizing sustainable design and innovative construction techniques.'
+  },
+  {
+    id: 6,
+    name: 'Bachelor of Arts',
+    duration: '3 Years',
+    cost: '$32,000 per year',
+    specializations: [
+      'English Literature',
+      'History',
+      'Philosophy',
+      'Political Science',
+      'Sociology',
+      'Psychology',
+      'Economics',
+      'International Relations',
+      'Media Studies',
+      'Cultural Studies',
+      'Linguistics',
+      'Anthropology'
+    ],
+    university: 'University of Cambridge',
+    country: 'United Kingdom',
+    image: 'https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Liberal arts program fostering critical thinking and cultural understanding across disciplines.'
+  }
+];
+
 export const programTypes = [
   { id: 'diploma', name: 'Diploma' },
   { id: 'undergraduate', name: 'Undergraduate' },
