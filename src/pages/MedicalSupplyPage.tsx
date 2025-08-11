@@ -4,10 +4,14 @@ import { Shield, Heart, Activity } from 'lucide-react';
 import Header from '../components/layout/Header';
 import ProductCard from '../components/ui/ProductCard';
 import { products, categories } from '../data/products';
+import { additionalProducts } from '../data/additionalProducts';
 
 const MedicalSupplyPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // Combine all products
+  const allProducts = [...products, ...additionalProducts];
 
   // Medication-related background images
   const medicationImages = [
@@ -47,8 +51,8 @@ const MedicalSupplyPage = () => {
   ];
 
   const filteredProducts = activeCategory === 'all' 
-    ? products 
-    : products.filter(product => product.category === activeCategory);
+    ? allProducts 
+    : allProducts.filter(product => product.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gray-50">
