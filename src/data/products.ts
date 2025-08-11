@@ -129,6 +129,86 @@ export const products: Product[] = [
     description: 'Automatic digital blood pressure monitor with large LCD display.',
     features: ['Digital display', 'Memory storage', 'Irregular heartbeat detection', 'Cuff size indicator']
   },
+  {
+    id: 106,
+    name: 'MRI Scanner',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'High-field MRI scanner for detailed anatomical and functional imaging.',
+    features: ['1.5T magnetic field', 'Advanced imaging sequences', 'Patient comfort features', 'Fast scan protocols']
+  },
+  {
+    id: 107,
+    name: 'CT Scanner',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Multi-slice CT scanner for rapid diagnostic imaging with low radiation dose.',
+    features: ['64-slice capability', 'Low dose protocols', 'Cardiac imaging', 'Advanced reconstruction']
+  },
+  {
+    id: 108,
+    name: 'Ventilator',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Advanced mechanical ventilator for critical care respiratory support.',
+    features: ['Multiple ventilation modes', 'Lung protective strategies', 'Integrated monitoring', 'Turbine technology']
+  },
+  {
+    id: 109,
+    name: 'Dialysis Machine',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Hemodialysis machine for renal replacement therapy with advanced safety features.',
+    features: ['Automated disinfection', 'Blood leak detection', 'Pressure monitoring', 'Touch screen interface']
+  },
+  {
+    id: 110,
+    name: 'Surgical Microscope',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'High-precision surgical microscope for microsurgery and delicate procedures.',
+    features: ['LED illumination', 'Variable magnification', 'Ergonomic design', 'HD camera integration']
+  },
+  {
+    id: 111,
+    name: 'Endoscopy System',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Complete endoscopy system for minimally invasive diagnostic and therapeutic procedures.',
+    features: ['4K ultra-high definition', 'Flexible endoscopes', 'Image enhancement', 'Recording capability']
+  },
+  {
+    id: 112,
+    name: 'Mammography Unit',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Digital mammography system for breast cancer screening and diagnosis.',
+    features: ['Digital detector', 'Tomosynthesis capability', 'Compression paddle', 'DICOM compatibility']
+  },
+  {
+    id: 113,
+    name: 'Cardiac Monitor',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Advanced cardiac monitoring system for continuous heart rhythm surveillance.',
+    features: ['12-lead ECG', 'Arrhythmia detection', 'ST segment analysis', 'Wireless connectivity']
+  },
+  {
+    id: 114,
+    name: 'Surgical Table',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Multi-position surgical table with advanced positioning capabilities.',
+    features: ['Electric positioning', 'Radiolucent top', 'Weight capacity 300kg', 'Memory positions']
+  },
+  {
+    id: 115,
+    name: 'Laser Surgery System',
+    category: 'hospital-equipment',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Multi-wavelength laser system for various surgical applications.',
+    features: ['Multiple wavelengths', 'Precise beam control', 'Safety interlocks', 'Fiber delivery system']
+  },
 
   // Consumables & Disposables (15 items)
   {
