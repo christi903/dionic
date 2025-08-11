@@ -5,13 +5,14 @@ import Header from '../components/layout/Header';
 import ProductCard from '../components/ui/ProductCard';
 import { products, categories } from '../data/products';
 import { additionalProducts } from '../data/additionalProducts';
+import { additionalMedicalSupplies, advancedMedicalEquipment } from '../data/remainingCategories';
 
 const MedicalSupplyPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Combine all products
-  const allProducts = [...products, ...additionalProducts];
+  const allProducts = [...products, ...additionalProducts, ...additionalMedicalSupplies, ...advancedMedicalEquipment];
 
   // Medication-related background images
   const medicationImages = [

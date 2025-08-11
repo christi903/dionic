@@ -1,371 +1,247 @@
-// Laboratory Reagent & Supplies (15 items)
-export const laboratoryProducts = [
+// Additional Medical Supplies & Equipment (15 items)
+export const additionalMedicalSupplies = [
   {
-    id: 31,
-    name: 'Blood Collection Tubes',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Vacuum blood collection tubes with various additives for different tests.',
-    features: ['Vacuum sealed', 'Color-coded caps', 'Various additives', 'Sterile interior']
+    id: 76,
+    name: 'Medical Tape',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Hypoallergenic medical tape for securing dressings and medical devices.',
+    features: ['Hypoallergenic', 'Breathable', 'Easy removal', 'Various widths']
   },
   {
-    id: 32,
-    name: 'Microscope Slides',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'High-quality glass microscope slides for specimen examination.',
-    features: ['Optical glass', 'Ground edges', 'Pre-cleaned', 'Standard dimensions']
+    id: 77,
+    name: 'Cotton Balls',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1603398938235-b8b9c9e8f7a3?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Sterile cotton balls for wound cleaning and medication application.',
+    features: ['Sterile packaging', 'High absorbency', 'Soft texture', 'Bulk packaging']
   },
   {
-    id: 33,
-    name: 'Pipette Tips',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Sterile pipette tips for accurate liquid handling in laboratory work.',
-    features: ['Sterile packaging', 'Various volumes', 'Universal fit', 'Low retention']
+    id: 78,
+    name: 'Medical Scissors',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Disposable medical scissors for cutting bandages and medical materials.',
+    features: ['Sharp blades', 'Safety tips', 'Single-use', 'Sterile packaging']
   },
   {
-    id: 34,
-    name: 'pH Test Strips',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'pH indicator strips for quick acidity/alkalinity testing.',
-    features: ['Wide pH range', 'Color chart included', 'Quick results', 'Waterproof packaging']
+    id: 79,
+    name: 'Medical Tweezers',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Precision medical tweezers for removing splinters and foreign objects.',
+    features: ['Fine tips', 'Stainless steel', 'Sterile packaging', 'Various sizes']
   },
   {
-    id: 35,
-    name: 'Centrifuge Tubes',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'High-quality centrifuge tubes for sample separation and storage.',
-    features: ['Chemical resistant', 'Graduated markings', 'Leak-proof caps', 'Various sizes']
+    id: 80,
+    name: 'Medical Sponges',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1603398938235-b8b9c9e8f7a3?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Sterile medical sponges for surgical procedures and wound care.',
+    features: ['Sterile packaging', 'High absorbency', 'Non-linting', 'Various sizes']
   },
   {
-    id: 36,
-    name: 'Laboratory Reagents',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'High-purity chemical reagents for various laboratory analyses.',
-    features: ['Analytical grade', 'Certified purity', 'Proper labeling', 'Safety data sheets']
+    id: 81,
+    name: 'Microscope Cover Slips',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Thin glass cover slips for microscope slide preparation.',
+    features: ['Optical quality', 'Standard thickness', 'Pre-cleaned', 'Bulk packaging']
   },
   {
-    id: 37,
-    name: 'Petri Dishes',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Sterile petri dishes for microbiology culture work.',
-    features: ['Sterile packaging', 'Clear plastic', 'Stackable design', 'Ventilation tabs']
+    id: 82,
+    name: 'Laboratory Timers',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Precision laboratory timers for accurate experiment timing.',
+    features: ['Digital display', 'Multiple timers', 'Battery powered', 'Audible alarms']
   },
   {
-    id: 38,
-    name: 'Test Tube Racks',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Durable test tube racks for organizing laboratory samples.',
-    features: ['Multiple tube sizes', 'Chemical resistant', 'Stable base', 'Easy cleaning']
+    id: 83,
+    name: 'Laboratory Markers',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Permanent markers for labeling laboratory equipment and samples.',
+    features: ['Permanent ink', 'Fine tip', 'Chemical resistant', 'Various colors']
   },
   {
-    id: 39,
-    name: 'Laboratory Glassware',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Borosilicate glass beakers, flasks, and measuring cylinders.',
-    features: ['Borosilicate glass', 'Graduated markings', 'Heat resistant', 'Chemical inert']
+    id: 84,
+    name: 'Laboratory Notebooks',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Bound laboratory notebooks for recording experiments and data.',
+    features: ['Bound pages', 'Numbered pages', 'Acid-free paper', 'Professional format']
   },
   {
-    id: 40,
-    name: 'Culture Media',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Sterile culture media for bacterial and fungal growth.',
-    features: ['Sterile preparation', 'Various formulations', 'Ready-to-use', 'Long shelf life']
+    id: 85,
+    name: 'Laboratory Pens',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Specialized pens for laboratory documentation and labeling.',
+    features: ['Permanent ink', 'Fine point', 'Chemical resistant', 'Professional quality']
   },
   {
-    id: 41,
-    name: 'Staining Reagents',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Histological and cytological staining reagents for microscopy.',
-    features: ['High quality dyes', 'Consistent results', 'Ready-to-use', 'Proper storage']
+    id: 86,
+    name: 'Emergency Lighting',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Portable emergency lighting for power outage situations.',
+    features: ['LED technology', 'Battery powered', 'Multiple modes', 'Durable construction']
   },
   {
-    id: 42,
-    name: 'Disposable Pipettes',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Sterile disposable pipettes for liquid transfer and measurement.',
-    features: ['Sterile packaging', 'Graduated markings', 'Various volumes', 'Flexible material']
+    id: 87,
+    name: 'Emergency Communication Device',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Emergency communication device for crisis situations.',
+    features: ['Satellite connectivity', 'GPS tracking', 'Emergency alerts', 'Long battery life']
   },
   {
-    id: 43,
-    name: 'Laboratory Labels',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Waterproof laboratory labels for sample identification.',
-    features: ['Waterproof', 'Chemical resistant', 'Strong adhesive', 'Various sizes']
+    id: 88,
+    name: 'Emergency Water Supply',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Emergency water supply for disaster preparedness.',
+    features: ['Long shelf life', 'Portable containers', 'Purification tablets', 'Bulk packaging']
   },
   {
-    id: 44,
-    name: 'Buffer Solutions',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Calibrated buffer solutions for pH meter calibration and testing.',
-    features: ['Certified values', 'Temperature stable', 'Long shelf life', 'Various pH values']
+    id: 89,
+    name: 'Emergency Food Rations',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Emergency food rations for disaster survival situations.',
+    features: ['Long shelf life', 'Nutrient dense', 'Easy preparation', 'Compact packaging']
   },
   {
-    id: 45,
-    name: 'Sample Vials',
-    category: 'laboratory',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'High-quality sample vials for specimen storage and transport.',
-    features: ['Leak-proof seals', 'Chemical resistant', 'Clear visibility', 'Various volumes']
+    id: 90,
+    name: 'Emergency Shelter Kit',
+    category: 'additional-supplies',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Portable emergency shelter for temporary protection.',
+    features: ['Lightweight', 'Quick setup', 'Weather resistant', 'Compact storage']
   }
 ];
 
-// Emergency & Rescue Equipment (15 items)
-export const emergencyProducts = [
+// Advanced Medical Equipment (15 items)
+export const advancedMedicalEquipment = [
   {
-    id: 46,
-    name: 'Defibrillator',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Automated external defibrillator with voice prompts and LCD display.',
-    features: ['Voice prompts', 'LCD display', 'Automatic analysis', 'Battery backup']
+    id: 91,
+    name: 'Home Medical Scale',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Digital medical scale for accurate weight monitoring.',
+    features: ['Digital display', 'High capacity', 'Memory storage', 'Easy to read']
   },
   {
-    id: 47,
-    name: 'Emergency Stretcher',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Lightweight emergency stretcher for patient transport.',
-    features: ['Lightweight aluminum', 'Foldable design', 'Safety straps', 'Weather resistant']
+    id: 92,
+    name: 'Home Medical Alert System',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Personal emergency response system for home safety.',
+    features: ['24/7 monitoring', 'GPS tracking', 'Fall detection', 'Two-way communication']
   },
   {
-    id: 48,
-    name: 'Oxygen Tank',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Portable oxygen tank with regulator for emergency respiratory support.',
-    features: ['High-pressure tank', 'Flow regulator', 'Pressure gauge', 'Portable design']
+    id: 93,
+    name: 'Home Medical Cart',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Mobile medical cart for organizing home healthcare supplies.',
+    features: ['Wheeled design', 'Multiple drawers', 'Locking mechanism', 'Easy mobility']
   },
   {
-    id: 49,
-    name: 'Emergency Medical Kit',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Comprehensive emergency medical kit for first aid and trauma care.',
-    features: ['Complete supplies', 'Organized compartments', 'Waterproof case', 'Quick access']
+    id: 94,
+    name: 'Home Medical Waste Container',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Safe medical waste disposal container for home use.',
+    features: ['Puncture resistant', 'Locking lid', 'Biohazard labeling', 'Easy disposal']
   },
   {
-    id: 50,
-    name: 'Spine Board',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Rigid spine board for spinal immobilization during transport.',
-    features: ['X-ray translucent', 'Multiple handholds', 'Easy cleaning', 'Lightweight']
+    id: 95,
+    name: 'Home Medical Storage Cabinet',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Secure storage cabinet for medical supplies and medications.',
+    features: ['Locking doors', 'Adjustable shelves', 'Child safety', 'Organized storage']
   },
   {
-    id: 51,
-    name: 'Emergency Ventilator',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Portable emergency ventilator for respiratory support.',
-    features: ['Battery operated', 'Multiple modes', 'Alarm system', 'Compact design']
+    id: 96,
+    name: 'Medical Refrigerator',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Temperature-controlled medical refrigerator for medication storage.',
+    features: ['Temperature monitoring', 'Alarm system', 'Locking mechanism', 'Digital display']
   },
   {
-    id: 52,
-    name: 'Trauma Shears',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Heavy-duty trauma shears for cutting clothing and bandages.',
-    features: ['Sharp blades', 'Safety tips', 'Ergonomic handles', 'Autoclave safe']
+    id: 97,
+    name: 'Medical Freezer',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Ultra-low temperature medical freezer for biological samples.',
+    features: ['Ultra-low temperature', 'Temperature monitoring', 'Alarm system', 'Locking mechanism']
   },
   {
-    id: 53,
-    name: 'Emergency Blanket',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Thermal emergency blanket for hypothermia prevention.',
-    features: ['Heat retention', 'Waterproof', 'Compact size', 'Reflective material']
+    id: 98,
+    name: 'Medical Incubator',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Temperature-controlled incubator for laboratory cultures.',
+    features: ['Temperature control', 'Humidity control', 'CO2 control', 'Digital display']
   },
   {
-    id: 54,
-    name: 'Cervical Collar',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Adjustable cervical collar for neck immobilization.',
-    features: ['Adjustable size', 'Comfortable padding', 'X-ray translucent', 'Easy application']
+    id: 99,
+    name: 'Medical Centrifuge',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'High-speed centrifuge for sample separation.',
+    features: ['Variable speed', 'Digital display', 'Safety features', 'Multiple rotors']
   },
   {
-    id: 55,
-    name: 'Emergency Suction Unit',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Portable suction unit for airway clearance in emergencies.',
-    features: ['Battery powered', 'High suction power', 'Disposable canisters', 'Lightweight']
+    id: 100,
+    name: 'Medical Autoclave',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Sterilization autoclave for medical instruments.',
+    features: ['High temperature', 'Pressure control', 'Timer control', 'Safety features']
   },
   {
-    id: 56,
-    name: 'Splint Set',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Complete splint set for fracture immobilization.',
-    features: ['Various sizes', 'Moldable material', 'Radiolucent', 'Easy application']
+    id: 101,
+    name: 'Medical Microscope',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Professional medical microscope for specimen examination.',
+    features: ['High magnification', 'LED illumination', 'Adjustable focus', 'Professional quality']
   },
   {
-    id: 57,
-    name: 'Emergency Medications',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Essential emergency medications for critical care.',
-    features: ['Pre-loaded syringes', 'Long shelf life', 'Temperature stable', 'Quick access']
+    id: 102,
+    name: 'Medical Spectrophotometer',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'UV-Vis spectrophotometer for medical analysis.',
+    features: ['UV-Vis range', 'Digital display', 'Data storage', 'High accuracy']
   },
   {
-    id: 58,
-    name: 'Rescue Basket',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Rigid rescue basket for difficult terrain patient extraction.',
-    features: ['Lightweight construction', 'Patient restraints', 'All-terrain use', 'Durable materials']
+    id: 103,
+    name: 'Medical pH Meter',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Precision pH meter for medical laboratory use.',
+    features: ['High accuracy', 'Calibration features', 'Digital display', 'Temperature compensation']
   },
   {
-    id: 59,
-    name: 'Emergency Monitor',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Portable patient monitor for emergency transport.',
-    features: ['Battery operated', 'Multi-parameter', 'Rugged design', 'Data recording']
+    id: 104,
+    name: 'Medical Balance Scale',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Precision balance scale for medical measurements.',
+    features: ['High precision', 'Digital display', 'Calibration features', 'Multiple units']
   },
   {
-    id: 60,
-    name: 'Tourniquet',
-    category: 'emergency',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Combat application tourniquet for severe bleeding control.',
-    features: ['One-handed application', 'Windlass system', 'Time strip', 'Proven effectiveness']
-  }
-];
-
-// Homecare Medical Devices (15 items)
-export const homecareProducts = [
-  {
-    id: 61,
-    name: 'Home Blood Pressure Monitor',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Digital blood pressure monitor for home use with smartphone connectivity.',
-    features: ['Bluetooth connectivity', 'Mobile app', 'Large display', 'Memory storage']
-  },
-  {
-    id: 62,
-    name: 'Glucose Meter',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Blood glucose meter with test strips for diabetes management.',
-    features: ['Quick results', 'Small blood sample', 'Data logging', 'Easy to use']
-  },
-  {
-    id: 63,
-    name: 'Nebulizer',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Portable nebulizer for respiratory medication delivery at home.',
-    features: ['Quiet operation', 'Rechargeable battery', 'Multiple masks', 'Easy cleaning']
-  },
-  {
-    id: 64,
-    name: 'Digital Thermometer',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Non-contact infrared thermometer for safe temperature measurement.',
-    features: ['Non-contact measurement', 'Instant reading', 'Fever alarm', 'Memory function']
-  },
-  {
-    id: 65,
-    name: 'Wheelchair',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Lightweight folding wheelchair for mobility assistance.',
-    features: ['Foldable design', 'Lightweight frame', 'Comfortable seating', 'Easy transport']
-  },
-  {
-    id: 66,
-    name: 'Walking Aid',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Adjustable walking frame with wheels for mobility support.',
-    features: ['Height adjustable', 'Four wheels', 'Hand brakes', 'Storage basket']
-  },
-  {
-    id: 67,
-    name: 'Compression Stockings',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Medical compression stockings for circulation improvement.',
-    features: ['Graduated compression', 'Breathable fabric', 'Various sizes', 'Easy to wear']
-  },
-  {
-    id: 68,
-    name: 'TENS Unit',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Transcutaneous electrical nerve stimulation unit for pain management.',
-    features: ['Multiple programs', 'Adjustable intensity', 'Portable design', 'Rechargeable battery']
-  },
-  {
-    id: 69,
-    name: 'Home Oxygen Concentrator',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/8376205/pexels-photo-8376205.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Stationary oxygen concentrator for home oxygen therapy.',
-    features: ['Continuous flow', 'Quiet operation', 'Low maintenance', 'Energy efficient']
-  },
-  {
-    id: 70,
-    name: 'Pill Dispenser',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Automatic pill dispenser with alarm for medication management.',
-    features: ['Multiple compartments', 'Alarm reminders', 'Secure locking', 'Easy programming']
-  },
-  {
-    id: 71,
-    name: 'Hospital Bed',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Adjustable hospital bed for home care with electric controls.',
-    features: ['Electric adjustment', 'Side rails', 'Comfortable mattress', 'Easy controls']
-  },
-  {
-    id: 72,
-    name: 'Shower Chair',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Adjustable shower chair for safe bathing assistance.',
-    features: ['Height adjustable', 'Non-slip feet', 'Drainage holes', 'Comfortable seating']
-  },
-  {
-    id: 73,
-    name: 'Blood Oxygen Monitor',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021942/pexels-photo-4021942.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Fingertip pulse oximeter for home oxygen saturation monitoring.',
-    features: ['OLED display', 'Battery indicator', 'Auto shut-off', 'Carrying case']
-  },
-  {
-    id: 74,
-    name: 'Heating Pad',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Electric heating pad for pain relief and muscle relaxation.',
-    features: ['Multiple heat settings', 'Auto shut-off', 'Washable cover', 'Large size']
-  },
-  {
-    id: 75,
-    name: 'Bedside Commode',
-    category: 'homecare',
-    image: 'https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1',
-    description: 'Portable bedside commode for patients with limited mobility.',
-    features: ['Adjustable height', 'Removable bucket', 'Splash guard', 'Sturdy construction']
+    id: 105,
+    name: 'Medical Water Bath',
+    category: 'advanced-equipment',
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Temperature-controlled water bath for medical procedures.',
+    features: ['Temperature control', 'Digital display', 'Safety features', 'Stainless steel']
   }
 ];
