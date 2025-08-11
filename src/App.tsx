@@ -4,6 +4,7 @@ import MedicalSupplyPage from './pages/MedicalSupplyPage';
 import ScholarshipPage from './pages/ScholarshipPage';
 import ApplicationPage from './pages/ApplicationPage';
 import StaffPortalPage from './pages/StaffPortalPage';
+import WhatsAppButton from './components/ui/WhatsAppButton';
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
           <Route path="/application" element={<ApplicationPage />} />
           <Route path="/staff-portal" element={<StaffPortalPage />} />
         </Routes>
+        <WhatsAppButton 
+          phoneNumber="+255693641585" 
+          message="Hello! I need assistance with your services." 
+        />
       </div>
     </Router>
   );

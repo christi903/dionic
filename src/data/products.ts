@@ -379,7 +379,7 @@ export const products: Product[] = [
     id: 46,
     name: 'Defibrillator',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Automated external defibrillator for cardiac emergency response.',
     features: ['Voice prompts', 'Automatic analysis', 'Portable design', 'Long battery life']
   },
@@ -403,7 +403,7 @@ export const products: Product[] = [
     id: 49,
     name: 'Emergency Medical Kit',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1603398938235-b8b9c9e8f7a3?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Comprehensive first aid kit for emergency medical response.',
     features: ['Complete supplies', 'Organized compartments', 'Waterproof case', 'Emergency manual']
   },
@@ -411,7 +411,7 @@ export const products: Product[] = [
     id: 50,
     name: 'Spine Board',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1603398938235-b8b9c9e8f7a3?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Spinal immobilization board for trauma patient transport.',
     features: ['X-ray translucent', 'Multiple handholds', 'Easy cleaning', 'Patient restraints']
   },
@@ -419,7 +419,7 @@ export const products: Product[] = [
     id: 51,
     name: 'Emergency Ventilator',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable emergency ventilator for respiratory support.',
     features: ['Battery powered', 'Multiple modes', 'Alarm systems', 'Compact design']
   },
@@ -427,7 +427,7 @@ export const products: Product[] = [
     id: 52,
     name: 'Trauma Shears',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Heavy-duty emergency scissors for cutting clothing and materials.',
     features: ['Sharp blades', 'Safety tips', 'Comfortable grip', 'Corrosion resistant']
   },
@@ -435,7 +435,7 @@ export const products: Product[] = [
     id: 53,
     name: 'Emergency Blanket',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Thermal emergency blanket for hypothermia prevention.',
     features: ['Heat retention', 'Waterproof', 'Compact storage', 'Reflective material']
   },
@@ -443,7 +443,7 @@ export const products: Product[] = [
     id: 54,
     name: 'Cervical Collar',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable cervical collar for neck immobilization.',
     features: ['Adjustable sizing', 'Comfortable padding', 'Easy application', 'X-ray compatible']
   },
@@ -451,7 +451,7 @@ export const products: Product[] = [
     id: 55,
     name: 'Emergency Suction Unit',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable suction unit for airway clearance.',
     features: ['Battery powered', 'Variable suction', 'Quiet operation', 'Easy maintenance']
   },
@@ -459,7 +459,7 @@ export const products: Product[] = [
     id: 56,
     name: 'Splint Set',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Complete splint set for fracture immobilization.',
     features: ['Various sizes', 'Moldable material', 'Lightweight', 'Radiolucent']
   },
@@ -467,7 +467,7 @@ export const products: Product[] = [
     id: 57,
     name: 'Emergency Medications',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Essential emergency medications for critical care.',
     features: ['Long shelf life', 'Temperature stable', 'Pre-loaded syringes', 'Clear labeling']
   },
@@ -475,7 +475,7 @@ export const products: Product[] = [
     id: 58,
     name: 'Rescue Basket',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Patient extraction basket for rescue operations.',
     features: ['High strength', 'Patient restraints', 'Lifting points', 'Weather resistant']
   },
@@ -483,7 +483,7 @@ export const products: Product[] = [
     id: 59,
     name: 'Emergency Monitor',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable patient monitoring device for emergency care.',
     features: ['Multi-parameter', 'Battery powered', 'Data storage', 'Alarm functions']
   },
@@ -491,7 +491,7 @@ export const products: Product[] = [
     id: 60,
     name: 'Tourniquet',
     category: 'emergency',
-    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1563213126-a4273aed2016?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Medical tourniquet for severe bleeding control.',
     features: ['Quick application', 'Effective pressure', 'Time indicator', 'Single-use design']
   },
@@ -499,17 +499,17 @@ export const products: Product[] = [
   // Homecare Medical Devices (15 items)
   {
     id: 61,
-    name: 'Home Blood Pressure Monitor',
+    name: 'Blood Pressure Monitor',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=400&h=300&q=80',
-    description: 'Digital blood pressure monitor with smartphone connectivity.',
-    features: ['Bluetooth connectivity', 'Large display', 'Memory storage', 'Irregular heartbeat detection']
+    image: 'https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=400&h=300&q=80',
+    description: 'Digital blood pressure monitor for home use.',
+    features: ['Large display', 'Memory storage', 'Irregular heartbeat detection', 'Easy operation']
   },
   {
     id: 62,
     name: 'Glucose Meter',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Blood glucose monitoring device for diabetes management.',
     features: ['Fast results', 'Small blood sample', 'Data tracking', 'Easy-to-read display']
   },
@@ -517,7 +517,7 @@ export const products: Product[] = [
     id: 63,
     name: 'Nebulizer',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable nebulizer for respiratory medication delivery.',
     features: ['Quiet operation', 'Efficient medication delivery', 'Easy cleaning', 'Compact design']
   },
@@ -525,7 +525,7 @@ export const products: Product[] = [
     id: 64,
     name: 'Digital Thermometer',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Non-contact infrared thermometer for temperature monitoring.',
     features: ['Non-contact measurement', 'Fast readings', 'Fever alarm', 'Memory recall']
   },
@@ -533,7 +533,7 @@ export const products: Product[] = [
     id: 65,
     name: 'Wheelchair',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Lightweight folding wheelchair for mobility assistance.',
     features: ['Lightweight frame', 'Foldable design', 'Comfortable seating', 'Easy maneuverability']
   },
@@ -541,7 +541,7 @@ export const products: Product[] = [
     id: 66,
     name: 'Walking Aid',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable walking frame with wheels for mobility support.',
     features: ['Height adjustable', 'Locking wheels', 'Lightweight', 'Foldable design']
   },
@@ -549,7 +549,7 @@ export const products: Product[] = [
     id: 67,
     name: 'Compression Stockings',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Medical compression stockings for circulation improvement.',
     features: ['Graduated compression', 'Breathable fabric', 'Various sizes', 'Easy to wear']
   },
@@ -557,7 +557,7 @@ export const products: Product[] = [
     id: 68,
     name: 'TENS Unit',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1628595351029-c2bf17511435?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Transcutaneous electrical nerve stimulation unit for pain management.',
     features: ['Multiple programs', 'Adjustable intensity', 'Portable design', 'Rechargeable battery']
   },
@@ -565,7 +565,7 @@ export const products: Product[] = [
     id: 69,
     name: 'Home Oxygen Concentrator',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Stationary oxygen concentrator for home oxygen therapy.',
     features: ['Continuous flow', 'Low maintenance', 'Quiet operation', 'Energy efficient']
   },
@@ -573,7 +573,7 @@ export const products: Product[] = [
     id: 70,
     name: 'Pill Dispenser',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Automatic medication dispenser for medication management.',
     features: ['Programmable alarms', 'Multiple compartments', 'Tamper-resistant', 'Easy loading']
   },
@@ -581,7 +581,7 @@ export const products: Product[] = [
     id: 71,
     name: 'Hospital Bed',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable hospital bed for home care use.',
     features: ['Electric adjustment', 'Side rails', 'Comfortable mattress', 'Easy controls']
   },
@@ -589,7 +589,7 @@ export const products: Product[] = [
     id: 72,
     name: 'Shower Chair',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Adjustable shower chair for bathing assistance.',
     features: ['Height adjustable', 'Non-slip feet', 'Drainage holes', 'Comfortable seating']
   },
@@ -597,7 +597,7 @@ export const products: Product[] = [
     id: 73,
     name: 'Blood Oxygen Monitor',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Fingertip pulse oximeter for oxygen saturation monitoring.',
     features: ['Instant readings', 'LED display', 'Low battery indicator', 'Automatic shut-off']
   },
@@ -605,7 +605,7 @@ export const products: Product[] = [
     id: 74,
     name: 'Heating Pad',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Electric heating pad for pain relief and comfort.',
     features: ['Multiple heat settings', 'Auto shut-off', 'Washable cover', 'Even heat distribution']
   },
@@ -613,7 +613,7 @@ export const products: Product[] = [
     id: 75,
     name: 'Bedside Commode',
     category: 'homecare',
-    image: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=400&h=300&q=80',
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=400&h=300&q=80',
     description: 'Portable bedside commode for mobility assistance.',
     features: ['Adjustable height', 'Removable bucket', 'Armrests', 'Easy assembly']
   }
