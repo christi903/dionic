@@ -24,11 +24,22 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="h-64 bg-gray-200 overflow-hidden">
+      <div className="relative w-full h-64 bg-gray-100 overflow-hidden">
         <img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
+          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            objectPosition: 'center',
+            minWidth: '100%',
+            minHeight: '100%'
+          }}
+          onError={(e) => {
+            e.currentTarget.src = 'https://via.placeholder.com/400x300?text=Image+Not+Available';
+          }}
         />
       </div>
       <div className="p-6">
