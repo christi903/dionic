@@ -10,404 +10,571 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  // Diagnostic Equipment
+  // Hospital Equipment & Devices
   {
     id: 1,
-    name: "X-Ray Machine",
-    category: "Medical Equipment",
-    image: "/medical-images/x-ray machine.jpg",
-    description: "Advanced digital radiography system for comprehensive medical imaging and diagnosis.",
-    features: ["Digital imaging technology", "High-resolution output", "Low radiation exposure", "Fast processing time"],
-    price: 125000,
-    stock: 3
+    name: 'Digital X-Ray Machine',
+    category: 'Hospital Equipment',
+    image: '/medical-images/x-ray machine.jpg',
+    description: 'Advanced digital radiography system for high-quality diagnostic imaging with reduced radiation exposure.',
+    features: [
+      'High-resolution digital imaging',
+      'Low radiation dose technology',
+      'DICOM compatibility',
+      'Automated exposure control',
+      'Touch screen interface'
+    ]
   },
   {
     id: 2,
-    name: "Ultrasound Machine",
-    category: "Medical Equipment",
-    image: "/medical-images/ultrasound machine.jpg",
-    description: "Portable ultrasound system for real-time imaging and diagnostic procedures.",
-    features: ["High-frequency transducers", "Real-time imaging", "Portable design", "Multiple scan modes"],
-    price: 45000,
-    stock: 5
+    name: 'Ultrasound Machine',
+    category: 'Hospital Equipment',
+    image: '/medical-images/ultrasound machine.jpg',
+    description: 'Portable ultrasound system with advanced imaging capabilities for various medical applications.',
+    features: [
+      'Multi-frequency transducers',
+      'Real-time imaging',
+      'Doppler capabilities',
+      'Image storage and transfer',
+      'Compact portable design'
+    ]
   },
   {
     id: 3,
-    name: "Microscope",
-    category: "Medical Equipment",
-    image: "/medical-images/microscope.jpg",
-    description: "Professional laboratory microscope for detailed cellular and tissue analysis.",
-    features: ["High magnification range", "LED illumination", "Multiple objective lenses", "Digital camera compatible"],
-    price: 8500,
-    stock: 8
+    name: 'Ventilator',
+    category: 'Hospital Equipment',
+    image: '/medical-images/ventilators.jpg',
+    description: 'Advanced mechanical ventilator for critical care and respiratory support in hospitals.',
+    features: [
+      'Multiple ventilation modes',
+      'Advanced monitoring',
+      'Alarm systems',
+      'Touch screen controls',
+      'Battery backup'
+    ]
   },
   {
     id: 4,
-    name: "Stethoscope",
-    category: "Medical Equipment",
-    image: "/medical-images/stethoscope.jpg",
-    description: "Professional acoustic stethoscope for cardiac and pulmonary auscultation.",
-    features: ["Dual-head design", "High acoustic sensitivity", "Comfortable ear tips", "Durable tubing"],
-    price: 750,
-    stock: 30
+    name: 'Defibrillator',
+    category: 'Hospital Equipment',
+    image: '/medical-images/defibrillators.jpg',
+    description: 'Automated external defibrillator for emergency cardiac care and resuscitation.',
+    features: [
+      'Automated rhythm analysis',
+      'Voice prompts guidance',
+      'Shock advisory system',
+      'Data recording capability',
+      'Portable design'
+    ]
   },
   {
     id: 5,
-    name: "Pulse Oximeter",
-    category: "Medical Equipment",
-    image: "/medical-images/pulse oximeter.jpg",
-    description: "Non-invasive device for measuring blood oxygen saturation and pulse rate.",
-    features: ["Real-time monitoring", "Digital display", "Alarm alerts", "Rechargeable battery"],
-    price: 850,
-    stock: 25
+    name: 'Hospital Bed',
+    category: 'Hospital Equipment',
+    image: '/medical-images/hospital bed.jpg',
+    description: 'Electric hospital bed with multiple positioning options for patient comfort and care.',
+    features: [
+      'Electric height adjustment',
+      'Trendelenburg positioning',
+      'Side rails for safety',
+      'Mattress platform adjustment',
+      'Nurse control panel'
+    ]
   },
   {
     id: 6,
-    name: "Blood Pressure Cuff",
-    category: "Medical Equipment",
-    image: "/medical-images/blood pressure cuff.jpg",
-    description: "Digital blood pressure monitor for accurate cardiovascular measurements.",
-    features: ["Automatic inflation", "Digital display", "Memory storage", "Multiple cuff sizes"],
-    price: 1200,
-    stock: 20
+    name: 'Infusion Pump',
+    category: 'Hospital Equipment',
+    image: '/medical-images/infusion pumps.jpg',
+    description: 'Programmable infusion pump for accurate medication and fluid delivery.',
+    features: [
+      'Precise flow rate control',
+      'Multiple infusion modes',
+      'Safety alarms',
+      'Drug library integration',
+      'Battery operation'
+    ]
   },
   {
     id: 7,
-    name: "Thermometer",
-    category: "Medical Equipment",
-    image: "/medical-images/thermometer.jpg",
-    description: "Digital thermometer for accurate body temperature measurement.",
-    features: ["Fast reading", "Digital display", "Memory recall", "Fever alarm"],
-    price: 450,
-    stock: 50
+    name: 'Anesthesia Machine',
+    category: 'Hospital Equipment',
+    image: '/medical-images/anesthesia machine.jpg',
+    description: 'Complete anesthesia workstation for surgical procedures and patient monitoring.',
+    features: [
+      'Gas mixing and delivery',
+      'Ventilator integration',
+      'Patient monitoring',
+      'Scavenging system',
+      'Electronic controls'
+    ]
   },
-
-  // Surgical Equipment
   {
     id: 8,
-    name: "Surgical Scalpel",
-    category: "Medical Equipment",
-    image: "/medical-images/scalpel.jpg",
-    description: "Precision surgical scalpel for medical procedures and tissue dissection.",
-    features: ["Stainless steel blade", "Ergonomic handle", "Sterile packaging", "Multiple blade sizes"],
-    price: 150,
-    stock: 200
+    name: 'Surgical Lights',
+    category: 'Hospital Equipment',
+    image: '/medical-images/surgical lights .jpg',
+    description: 'LED surgical lighting system providing optimal illumination for surgical procedures.',
+    features: [
+      'LED technology',
+      'Shadow-free illumination',
+      'Adjustable intensity',
+      'Sterile handles',
+      'Long lifespan'
+    ]
   },
   {
     id: 9,
-    name: "Surgical Scissors",
-    category: "Medical Equipment",
-    image: "/medical-images/surgical scissors.jpg",
-    description: "Medical-grade surgical scissors for cutting tissues and sutures.",
-    features: ["Sharp precision blades", "Stainless steel construction", "Multiple tip styles", "Autoclavable"],
-    price: 350,
-    stock: 100
+    name: 'Suction Unit',
+    category: 'Hospital Equipment',
+    image: '/medical-images/suction unit.jpg',
+    description: 'Medical suction apparatus for airway clearance and surgical procedures.',
+    features: [
+      'High vacuum performance',
+      'Adjustable suction levels',
+      'Collection jar system',
+      'Portable design',
+      'Easy maintenance'
+    ]
   },
   {
     id: 10,
-    name: "Forceps",
-    category: "Medical Equipment",
-    image: "/medical-images/forceps.jpg",
-    description: "Medical forceps for grasping and manipulating tissues during procedures.",
-    features: ["Precision tips", "Locking mechanism", "Stainless steel", "Multiple sizes"],
-    price: 280,
-    stock: 150
+    name: 'Incubator',
+    category: 'Hospital Equipment',
+    image: '/medical-images/incubators.jpg',
+    description: 'Neonatal incubator providing controlled environment for premature infants.',
+    features: [
+      'Temperature control',
+      'Humidity regulation',
+      'Oxygen monitoring',
+      'Access ports',
+      'Alarm systems'
+    ]
   },
+
+  // Laboratory Equipment & Supplies
   {
     id: 11,
-    name: "Surgical Gloves",
-    category: "Medical Equipment",
-    image: "/medical-images/surgical gloves.png",
-    description: "Sterile surgical gloves for medical procedures and surgery.",
-    features: ["Sterile packaging", "Powder-free", "Textured grip", "Multiple sizes"],
-    price: 35,
-    stock: 300
+    name: 'Laboratory Microscope',
+    category: 'Laboratory Equipment',
+    image: '/medical-images/microscope.jpg',
+    description: 'High-resolution laboratory microscope for medical diagnostics and research.',
+    features: [
+      'Multiple magnification levels',
+      'LED illumination',
+      'Fine focus adjustment',
+      'Binocular viewing',
+      'Camera attachment ready'
+    ]
   },
   {
     id: 12,
-    name: "Surgical Lights",
-    category: "Medical Equipment",
-    image: "/medical-images/surgical lights .jpg",
-    description: "LED surgical lighting system for optimal visibility during procedures.",
-    features: ["LED technology", "Adjustable brightness", "Shadow-free illumination", "Flexible positioning"],
-    price: 8500,
-    stock: 8
+    name: 'Centrifuge',
+    category: 'Laboratory Equipment',
+    image: '/medical-images/centrifuge.jpg',
+    description: 'High-speed laboratory centrifuge for sample separation and analysis.',
+    features: [
+      'Variable speed control',
+      'Digital display',
+      'Safety lid lock',
+      'Multiple rotor options',
+      'Quiet operation'
+    ]
   },
-
-  // Life Support Equipment
   {
     id: 13,
-    name: "Ventilator",
-    category: "Medical Equipment",
-    image: "/medical-images/ventilators.jpg",
-    description: "Advanced mechanical ventilator for respiratory support in critical care situations.",
-    features: ["Multiple ventilation modes", "Touchscreen interface", "Alarm systems", "Battery backup"],
-    price: 75000,
-    stock: 2
+    name: 'Autoclave Sterilizer',
+    category: 'Laboratory Equipment',
+    image: '/medical-images/autoclave.jpg',
+    description: 'Steam sterilization system for medical instruments and laboratory equipment.',
+    features: [
+      'Steam sterilization',
+      'Programmable cycles',
+      'Temperature monitoring',
+      'Safety interlocks',
+      'Validation ports'
+    ]
   },
   {
     id: 14,
-    name: "Defibrillator",
-    category: "Medical Equipment",
-    image: "/medical-images/defibrillators.jpg",
-    description: "Automated external defibrillator for emergency cardiac care and resuscitation.",
-    features: ["Biphasic technology", "Voice prompts", "ECG monitoring", "Rechargeable battery"],
-    price: 25000,
-    stock: 6
+    name: 'Laboratory Pipette',
+    category: 'Laboratory Equipment',
+    image: '/medical-images/pipette.jpg',
+    description: 'Precision micropipette for accurate liquid handling in laboratory applications.',
+    features: [
+      'Variable volume settings',
+      'Ergonomic design',
+      'High accuracy',
+      'Autoclavable components',
+      'Easy calibration'
+    ]
   },
   {
     id: 15,
-    name: "Incubator",
-    category: "Medical Equipment",
-    image: "/medical-images/incubators.jpg",
-    description: "Neonatal incubator for premature and critically ill newborns.",
-    features: ["Temperature control", "Humidity regulation", "Oxygen monitoring", "Access ports"],
-    price: 35000,
-    stock: 4
+    name: 'Blood Collection Tubes',
+    category: 'Laboratory Equipment',
+    image: '/medical-images/blood collection tubes.jpg',
+    description: 'Vacuum blood collection tubes for various laboratory tests and analyses.',
+    features: [
+      'Sterile and vacuum-sealed',
+      'Color-coded caps',
+      'Various additives available',
+      'Leak-proof design',
+      'Compatible with standard holders'
+    ]
   },
   {
     id: 16,
-    name: "Oxygen Tank",
-    category: "Medical Equipment",
-    image: "/medical-images/oxygen tank.jpg",
-    description: "Medical oxygen delivery system for respiratory therapy and emergency care.",
-    features: ["High-capacity tank", "Pressure regulator", "Flow meter", "Safety valve"],
-    price: 1200,
-    stock: 15
+    name: 'Reagent Test Kits',
+    category: 'Laboratory Equipment',
+    image: '/medical-images/reagent kits.jpg',
+    description: 'Diagnostic reagent kits for various medical laboratory tests and analyses.',
+    features: [
+      'Ready-to-use format',
+      'Quality controlled',
+      'Extended shelf life',
+      'Comprehensive instructions',
+      'Multiple test parameters'
+    ]
   },
 
-  // Hospital Furniture
+  // Medical Instruments & Tools
   {
     id: 17,
-    name: "Hospital Bed",
-    category: "Medical Equipment",
-    image: "/medical-images/hospital bed.jpg",
-    description: "Adjustable hospital bed for patient care and comfort.",
-    features: ["Electric adjustment", "Side rails", "Wheels with brakes", "IV pole mount"],
-    price: 12000,
-    stock: 10
+    name: 'Digital Stethoscope',
+    category: 'Medical Instruments',
+    image: '/medical-images/stethoscope.jpg',
+    description: 'Electronic stethoscope with amplification and recording capabilities.',
+    features: [
+      'Sound amplification',
+      'Noise reduction',
+      'Recording capability',
+      'Bluetooth connectivity',
+      'Long battery life'
+    ]
   },
   {
     id: 18,
-    name: "Emergency Stretcher",
-    category: "Medical Equipment",
-    image: "/medical-images/emergency stretcher.jpg",
-    description: "Portable emergency stretcher for patient transport and emergency situations.",
-    features: ["Lightweight aluminum", "Foldable design", "Safety straps", "Wheels for mobility"],
-    price: 3500,
-    stock: 12
+    name: 'Digital Thermometer',
+    category: 'Medical Instruments',
+    image: '/medical-images/thermometer.jpg',
+    description: 'Fast and accurate digital thermometer for body temperature measurement.',
+    features: [
+      'Fast 10-second reading',
+      'Fever alarm',
+      'Memory recall',
+      'Waterproof design',
+      'Auto shut-off'
+    ]
   },
-
-  // Laboratory Equipment
   {
     id: 19,
-    name: "Centrifuge",
-    category: "Medical Equipment",
-    image: "/medical-images/centrifuge.jpg",
-    description: "Laboratory centrifuge for separating substances of different densities.",
-    features: ["Variable speed control", "Digital display", "Safety lid lock", "Multiple rotor options"],
-    price: 4500,
-    stock: 7
+    name: 'Pulse Oximeter',
+    category: 'Medical Instruments',
+    image: '/medical-images/pulse oximeter.jpg',
+    description: 'Fingertip pulse oximeter for measuring oxygen saturation and pulse rate.',
+    features: [
+      'SpO2 and pulse rate display',
+      'OLED display',
+      'Low battery indicator',
+      'Automatic shut-off',
+      'Portable design'
+    ]
   },
   {
     id: 20,
-    name: "Anesthesia Machine",
-    category: "Medical Equipment",
-    image: "/medical-images/anesthesia machine.jpg",
-    description: "Advanced anesthesia delivery system for surgical procedures.",
-    features: ["Precise gas control", "Ventilator integration", "Monitoring systems", "Safety alarms"],
-    price: 95000,
-    stock: 3
+    name: 'Blood Pressure Monitor',
+    category: 'Medical Instruments',
+    image: '/medical-images/blood pressure cuff.jpg',
+    description: 'Automatic digital blood pressure monitor with large display and memory.',
+    features: [
+      'Automatic inflation',
+      'Large LCD display',
+      'Memory storage',
+      'Irregular heartbeat detection',
+      'Multiple cuff sizes'
+    ]
   },
   {
     id: 21,
-    name: "Autoclave",
-    category: "Medical Equipment",
-    image: "/medical-images/autoclave.jpg",
-    description: "Steam sterilization autoclave for medical instruments and supplies.",
-    features: ["High-pressure steam", "Digital controls", "Multiple cycle options", "Safety interlocks"],
-    price: 15000,
-    stock: 5
+    name: 'Surgical Scissors',
+    category: 'Medical Instruments',
+    image: '/medical-images/surgical scissors.jpg',
+    description: 'High-quality stainless steel surgical scissors for medical procedures.',
+    features: [
+      'Stainless steel construction',
+      'Sharp precision blades',
+      'Ergonomic handles',
+      'Autoclavable',
+      'Various sizes available'
+    ]
   },
-
-  // Infusion & IV Therapy
   {
     id: 22,
-    name: "Infusion Pump",
-    category: "Medical Equipment",
-    image: "/medical-images/infusion pumps.jpg",
-    description: "Precision infusion pump for controlled medication and fluid delivery.",
-    features: ["Programmable flow rates", "Alarm systems", "Battery backup", "Multiple channels"],
-    price: 8500,
-    stock: 8
+    name: 'Surgical Forceps',
+    category: 'Medical Instruments',
+    image: '/medical-images/forceps.jpg',
+    description: 'Precision surgical forceps for grasping and manipulating tissues.',
+    features: [
+      'Fine tip precision',
+      'Non-slip grip',
+      'Corrosion resistant',
+      'Reusable design',
+      'Multiple tip configurations'
+    ]
   },
   {
     id: 23,
-    name: "IV Catheters",
-    category: "Medical Equipment",
-    image: "/medical-images/iv catheters.jpg",
-    description: "Sterile intravenous catheters for fluid and medication administration.",
-    features: ["Multiple sizes", "Safety needles", "Smooth insertion", "Sterile packaging"],
-    price: 25,
-    stock: 500
+    name: 'Surgical Scalpel',
+    category: 'Medical Instruments',
+    image: '/medical-images/scalpel.jpg',
+    description: 'Disposable surgical scalpel with sharp carbon steel blade.',
+    features: [
+      'Ultra-sharp blade',
+      'Ergonomic handle',
+      'Single-use design',
+      'Sterile packaging',
+      'Various blade sizes'
+    ]
   },
   {
     id: 24,
-    name: "Syringe",
-    category: "Medical Equipment",
-    image: "/medical-images/syringe.jpg",
-    description: "Medical syringes for precise medication delivery and fluid aspiration.",
-    features: ["Clear barrel", "Smooth plunger", "Multiple sizes", "Sterile packaging"],
-    price: 15,
-    stock: 1000
+    name: 'Medical Flashlight',
+    category: 'Medical Instruments',
+    image: '/medical-images/flashlight.jpg',
+    description: 'LED medical penlight for pupil examination and general illumination.',
+    features: [
+      'Bright LED light',
+      'Pupil gauge',
+      'Pocket clip',
+      'Battery operated',
+      'Durable construction'
+    ]
   },
 
-  // Emergency & First Aid
+  // Consumables & Disposables
   {
     id: 25,
-    name: "First Aid Kit",
-    category: "Medical Equipment",
-    image: "/medical-images/first aid kit.jpg",
-    description: "Comprehensive first aid kit for emergency medical situations.",
-    features: ["Complete supplies", "Organized compartments", "Portable case", "Wall mountable"],
-    price: 850,
-    stock: 50
+    name: 'Disposable Syringes',
+    category: 'Consumables',
+    image: '/medical-images/syringe.jpg',
+    description: 'Sterile disposable syringes for injections and medication administration.',
+    features: [
+      'Sterile and single-use',
+      'Luer lock connection',
+      'Clear barrel markings',
+      'Smooth plunger action',
+      'Various sizes available'
+    ]
   },
   {
     id: 26,
-    name: "Emergency Blankets",
-    category: "Medical Equipment",
-    image: "/medical-images/emergency blankets.jpg",
-    description: "Thermal emergency blankets for patient warmth and shock prevention.",
-    features: ["Heat reflective", "Waterproof", "Compact storage", "Disposable"],
-    price: 25,
-    stock: 200
+    name: 'IV Catheters',
+    category: 'Consumables',
+    image: '/medical-images/iv catheters.jpg',
+    description: 'Peripheral IV catheters for intravenous access and fluid administration.',
+    features: [
+      'Sharp needle insertion',
+      'Flexible catheter material',
+      'Color-coded by size',
+      'Safety features',
+      'Sterile packaging'
+    ]
   },
   {
     id: 27,
-    name: "Tourniquet",
-    category: "Medical Equipment",
-    image: "/medical-images/tourniquet.jpg",
-    description: "Medical tourniquet for emergency bleeding control.",
-    features: ["Quick application", "Adjustable pressure", "Durable material", "Compact size"],
-    price: 150,
-    stock: 100
+    name: 'Surgical Gloves',
+    category: 'Consumables',
+    image: '/medical-images/surgical gloves.png',
+    description: 'Sterile latex surgical gloves for medical procedures and examinations.',
+    features: [
+      'Powder-free latex',
+      'Sterile packaging',
+      'Textured fingertips',
+      'Anatomical shape',
+      'Various sizes available'
+    ]
   },
-
-  // Medical Supplies
   {
     id: 28,
-    name: "Disposable Gloves",
-    category: "Medical Equipment",
-    image: "/medical-images/disposable gloves.jpg",
-    description: "Medical-grade disposable gloves for infection control.",
-    features: ["Latex/nitrile options", "Powder-free", "Multiple sizes", "Sterile packaging"],
-    price: 8,
-    stock: 2000
+    name: 'Disposable Gloves',
+    category: 'Consumables',
+    image: '/medical-images/disposable gloves.jpg',
+    description: 'Nitrile examination gloves for medical examinations and procedures.',
+    features: [
+      'Nitrile material',
+      'Powder-free',
+      'Puncture resistant',
+      'Ambidextrous design',
+      'Box of 100 pieces'
+    ]
   },
   {
     id: 29,
-    name: "Disposable Masks",
-    category: "Medical Equipment",
-    image: "/medical-images/disposable masks.jpg",
-    description: "Medical face masks for respiratory protection and infection control.",
-    features: ["3-layer protection", "Comfortable fit", "Breathable material", "Ear loops"],
-    price: 5,
-    stock: 5000
+    name: 'Disposable Face Masks',
+    category: 'Consumables',
+    image: '/medical-images/disposable masks.jpg',
+    description: '3-ply surgical face masks for infection control and protection.',
+    features: [
+      '3-layer filtration',
+      'Fluid resistant',
+      'Comfortable ear loops',
+      'Nose bridge wire',
+      'Breathable material'
+    ]
   },
   {
     id: 30,
-    name: "Gauze Pads",
-    category: "Medical Equipment",
-    image: "/medical-images/gauze pads.jpg",
-    description: "Sterile gauze pads for wound care and dressing.",
-    features: ["Sterile packaging", "Multiple sizes", "Highly absorbent", "Non-stick"],
-    price: 12,
-    stock: 1000
+    name: 'Sterile Gauze Pads',
+    category: 'Consumables',
+    image: '/medical-images/sterile gauze.jpg',
+    description: 'Sterile gauze pads for wound dressing and medical applications.',
+    features: [
+      'Sterile and absorbent',
+      '100% cotton',
+      'Non-adherent',
+      'Various sizes',
+      'Individual packaging'
+    ]
   },
   {
     id: 31,
-    name: "Sterile Gauze",
-    category: "Medical Equipment",
-    image: "/medical-images/sterile gauze.jpg",
-    description: "Medical-grade sterile gauze for wound dressing and surgical use.",
-    features: ["Sterile packaging", "High absorbency", "Multiple ply options", "Soft texture"],
-    price: 18,
-    stock: 800
+    name: 'Gauze Pads',
+    category: 'Consumables',
+    image: '/medical-images/gauze pads.jpg',
+    description: 'Non-sterile gauze pads for general wound care and cleaning.',
+    features: [
+      'Highly absorbent',
+      'Soft cotton material',
+      'Non-linting',
+      'Multiple sizes',
+      'Bulk packaging'
+    ]
   },
   {
     id: 32,
-    name: "Medical Tape",
-    category: "Medical Equipment",
-    image: "/medical-images/medical tape.jpg",
-    description: "Hypoallergenic medical tape for securing dressings and devices.",
-    features: ["Hypoallergenic adhesive", "Breathable material", "Easy tear", "Multiple widths"],
-    price: 15,
-    stock: 500
+    name: 'Medical Tape',
+    category: 'Consumables',
+    image: '/medical-images/medical tape.jpg',
+    description: 'Hypoallergenic medical tape for securing dressings and devices.',
+    features: [
+      'Hypoallergenic adhesive',
+      'Breathable material',
+      'Easy tear application',
+      'Residue-free removal',
+      'Various widths'
+    ]
   },
   {
     id: 33,
-    name: "Blood Collection Tubes",
-    category: "Medical Equipment",
-    image: "/medical-images/blood collection tubes.jpg",
-    description: "Vacuum blood collection tubes for laboratory testing.",
-    features: ["Multiple additives", "Color-coded caps", "Sterile interior", "Vacuum sealed"],
-    price: 45,
-    stock: 1000
+    name: 'Tourniquet',
+    category: 'Consumables',
+    image: '/medical-images/tourniquet.jpg',
+    description: 'Latex tourniquet for blood drawing and IV insertion procedures.',
+    features: [
+      'Latex construction',
+      'Quick release design',
+      'Reusable',
+      'Comfortable application',
+      'Standard length'
+    ]
   },
   {
     id: 34,
-    name: "Reagent Kits",
-    category: "Medical Equipment",
-    image: "/medical-images/reagent kits.jpg",
-    description: "Medical diagnostic reagent kits for laboratory testing.",
-    features: ["Ready-to-use", "Accurate results", "Long shelf life", "Multiple test types"],
-    price: 250,
-    stock: 200
+    name: 'Tongue Depressors',
+    category: 'Consumables',
+    image: '/medical-images/tongue depressors.jpg',
+    description: 'Wooden tongue depressors for oral examinations and procedures.',
+    features: [
+      'Smooth wooden construction',
+      'Splinter-free edges',
+      'Non-sterile',
+      'Disposable',
+      'Box of 100 pieces'
+    ]
   },
+
+  // Emergency & Rescue Equipment
   {
     id: 35,
-    name: "Pipette",
-    category: "Medical Equipment",
-    image: "/medical-images/pipette.jpg",
-    description: "Precision pipettes for accurate liquid handling in laboratories.",
-    features: ["Adjustable volume", "High accuracy", "Ergonomic design", "Autoclavable"],
-    price: 180,
-    stock: 150
+    name: 'First Aid Kit',
+    category: 'Emergency Equipment',
+    image: '/medical-images/first aid kit.jpg',
+    description: 'Comprehensive first aid kit for emergency medical care and treatment.',
+    features: [
+      'Complete medical supplies',
+      'Portable carrying case',
+      'Emergency medications',
+      'Instruction manual',
+      'Workplace compliant'
+    ]
   },
   {
     id: 36,
-    name: "Bed Sheets",
-    category: "Medical Equipment",
-    image: "/medical-images/bed sheets.jpg",
-    description: "Medical-grade bed sheets for patient comfort and hygiene.",
-    features: ["Cotton/polyester blend", "Machine washable", "Multiple sizes", "Durable fabric"],
-    price: 45,
-    stock: 200
+    name: 'Emergency Stretcher',
+    category: 'Emergency Equipment',
+    image: '/medical-images/emergency stretcher.jpg',
+    description: 'Lightweight emergency stretcher for patient transport and rescue operations.',
+    features: [
+      'Lightweight aluminum frame',
+      'Foldable design',
+      'Safety straps included',
+      'Weather resistant',
+      'Easy to carry'
+    ]
   },
   {
     id: 37,
-    name: "Flashlight",
-    category: "Medical Equipment",
-    image: "/medical-images/flashlight.jpg",
-    description: "Medical examination flashlight for patient assessment.",
-    features: ["LED technology", "Bright illumination", "Compact size", "Battery operated"],
-    price: 120,
-    stock: 75
+    name: 'Emergency Blankets',
+    category: 'Emergency Equipment',
+    image: '/medical-images/emergency blankets.jpg',
+    description: 'Thermal emergency blankets for hypothermia prevention and patient warming.',
+    features: [
+      'Heat retention technology',
+      'Waterproof material',
+      'Compact storage',
+      'Reusable design',
+      'Emergency situations'
+    ]
   },
   {
     id: 38,
-    name: "Tongue Depressors",
-    category: "Medical Equipment",
-    image: "/medical-images/tongue depressors.jpg",
-    description: "Wooden tongue depressors for oral examinations.",
-    features: ["Smooth finish", "Sterile packaging", "Single-use", "Multiple sizes"],
-    price: 8,
-    stock: 1000
+    name: 'Oxygen Tank',
+    category: 'Emergency Equipment',
+    image: '/medical-images/oxygen tank.jpg',
+    description: 'Portable oxygen cylinder for emergency respiratory support and therapy.',
+    features: [
+      'High-pressure storage',
+      'Pressure gauge included',
+      'Portable design',
+      'Safety valve system',
+      'Medical grade oxygen'
+    ]
+  },
+
+  // Homecare Medical Devices
+  {
+    id: 39,
+    name: 'Hospital Bed Sheets',
+    category: 'Homecare',
+    image: '/medical-images/bed sheets.jpg',
+    description: 'Medical-grade bed sheets for hospitals and homecare applications.',
+    features: [
+      'Antimicrobial treatment',
+      'Easy care fabric',
+      'Stain resistant',
+      'Comfortable fit',
+      'Various sizes available'
+    ]
   }
 ];
 
 export const categories = [
   { id: 'all', name: 'All Products' },
-  { id: 'Medical Equipment', name: 'Medical Equipment' }
+  { id: 'Hospital Equipment', name: 'Hospital Equipment & Devices' },
+  { id: 'Laboratory Equipment', name: 'Laboratory Equipment & Supplies' },
+  { id: 'Medical Instruments', name: 'Medical Instruments & Tools' },
+  { id: 'Consumables', name: 'Consumables & Disposables' },
+  { id: 'Emergency Equipment', name: 'Emergency & Rescue Equipment' },
+  { id: 'Homecare', name: 'Homecare Medical Devices' }
 ];
