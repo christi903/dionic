@@ -24,11 +24,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="h-48 bg-gray-200 overflow-hidden">
+      <div className="h-64 bg-gray-200 overflow-hidden">
         <img 
           src={product.image} 
           alt={product.name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain p-4 hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="p-6">
