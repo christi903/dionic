@@ -566,6 +566,132 @@ export const products: Product[] = [
       'Comfortable fit',
       'Various sizes available'
     ]
+  },
+  {
+    id: 40,
+    name: 'Walking Cane',
+    category: 'Homecare',
+    image: '/medical-images/walking cane.jpg',
+    description: 'Lightweight walking cane for support and stability.',
+    features: [
+      'Adjustable height',
+      'Ergonomic handle',
+      'Durable construction',
+      'Non-slip tip',
+      'Lightweight design'
+    ]
+  },
+  {
+    id: 41,
+    name: 'Wearable Heart Rate Monitor',
+    category: 'Homecare',
+    image: '/medical-images/wearable heart rate monitor.jpg',
+    description: 'Wearable device for continuous heart rate monitoring.',
+    features: [
+      'Real-time heart rate tracking',
+      'Bluetooth connectivity',
+      'Long battery life',
+      'Water-resistant',
+      'Comfortable fit'
+    ]
+  },
+  {
+    id: 42,
+    name: 'Weighing Scale',
+    category: 'Homecare',
+    image: '/medical-images/weighing scale.jpg',
+    description: 'Digital weighing scale for accurate weight measurement.',
+    features: [
+      'High precision sensors',
+      'Large LCD display',
+      'Auto-calibration',
+      'Slim design',
+      'Multiple unit options'
+    ]
+  },
+  {
+    id: 43,
+    name: 'Nebulizer',
+    category: 'Homecare',
+    image: '/medical-images/nebulizer.jpg',
+    description: 'Portable nebulizer for respiratory therapy.',
+    features: [
+      'Compact design',
+      'Quiet operation',
+      'Easy to use',
+      'Includes masks and tubing',
+      'Fast medication delivery'
+    ]
+  },
+  {
+    id: 44,
+    name: 'Blood Pressure Monitor',
+    category: 'Homecare',
+    image: '/medical-images/blood pressure cuff.jpg',
+    description: 'Automatic digital blood pressure monitor for home use.',
+    features: [
+      'Large display',
+      'Memory storage',
+      'Irregular heartbeat detection',
+      'Multiple cuff sizes',
+      'User-friendly interface'
+    ]
+  },
+  {
+    id: 45,
+    name: 'Digital Thermometer',
+    category: 'Homecare',
+    image: '/medical-images/thermometer.jpg',
+    description: 'Fast and accurate digital thermometer for home use.',
+    features: [
+      'Quick readings',
+      'Fever alarm',
+      'Memory recall',
+      'Waterproof design',
+      'Auto shut-off'
+    ]
+  },
+  {
+    id: 46,
+    name: 'Pulse Oximeter',
+    category: 'Homecare',
+    image: '/medical-images/pulse oximeter.jpg',
+    description: 'Fingertip pulse oximeter for measuring oxygen saturation.',
+    features: [
+      'SpO2 and pulse rate display',
+      'Compact design',
+      'Low battery indicator',
+      'Automatic shut-off',
+      'User-friendly'
+    ]
+  },
+  {
+    id: 47,
+    name: 'Disposable Gloves',
+    category: 'Homecare',
+    image: '/medical-images/disposable gloves.jpg',
+    description: 'Nitrile examination gloves for homecare use.',
+    features: [
+      'Powder-free',
+      'Puncture resistant',
+      'Ambidextrous design',
+      'Comfortable fit',
+      'Box of 100 pieces'
+    ]
+  },
+  {
+    id: 48,
+    name: 'First Aid Kit',
+    category: 'Homecare',
+    image: '/medical-images/first aid kit.jpg',
+    description: 'Comprehensive first aid kit for home emergencies.',
+    features: [
+      'Complete medical supplies',
+      'Portable carrying case',
+      'Emergency medications',
+      'Instruction manual',
+      'Workplace compliant'
+    ]
   }
 ];
 
