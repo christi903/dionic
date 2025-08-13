@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { UserCheck } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { useAuth } from '../hooks/useAuth';
 import { supabase } from '../lib/supabase';
 import Navigation from '../components/ui/Navigation';
@@ -9,16 +7,17 @@ import DashboardOverview from '../features/staff-portal/components/DashboardOver
 import ApplicationsTable from '../features/staff-portal/components/ApplicationsTable';
 import ApplicationDetailsModal from '../features/staff-portal/components/ApplicationDetailsModal';
 import StaffPortalLayout from '../features/staff-portal/StaffPortalLayout';
+import HeaderBar from '../features/staff-portal/components/HeaderBar';
+import AuthCard from '../features/auth/AuthCard';
 import { Application, StaffPortalView } from '../features/staff-portal/types';
 
 const StaffPortalPage = () => {
-  const { user, loading: authLoading, signIn, signOut } = useAuth();
+  const { user, loading: authLoading, signIn, signOut, signUp, resetPassword } = useAuth();
   const [applications, setApplications] = useState<Application[]>([]);
   const [loading, setLoading] = useState(false);
   const [selectedApplication, setSelectedApplication] = useState<Application | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [credentials, setCredentials] = useState({ email: '', password: '' });
-  const [signingIn, setSigningIn] = useState(false);
+  // deprecated local auth form state removed in favor of AuthCard
   const [view, setView] = useState<StaffPortalView>('dashboard');
 
   useEffect(() => {
@@ -44,22 +43,7 @@ const StaffPortalPage = () => {
     }
   };
 
-  const handleSignIn = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setSigningIn(true);
-    
-    try {
-      const { error } = await signIn(credentials.email, credentials.password);
-      if (error) {
-        alert(`Sign in failed: ${error.message}`);
-      }
-    } catch (error) {
-      console.error('Sign in error:', error);
-      alert('An unexpected error occurred during sign in');
-    } finally {
-      setSigningIn(false);
-    }
-  };
+  // sign in handled by AuthCard
 
   const handleSignOut = async () => {
     try {
@@ -134,54 +118,7 @@ const StaffPortalPage = () => {
   if (!user) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-emerald-50 flex items-center justify-center p-4">
-        <motion.div
-          className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md border border-gray-100"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <UserCheck className="h-8 w-8 text-white" />
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-2">Staff Portal</h1>
-            <p className="text-gray-600">Sign in to access the application management system</p>
-          </div>
-
-          <form onSubmit={handleSignIn} className="space-y-6">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-              <input
-                type="email"
-                value={credentials.email}
-                onChange={(e) => setCredentials(prev => ({ ...prev, email: e.target.value }))}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
-              <input
-                type="password"
-                value={credentials.password}
-                onChange={(e) => setCredentials(prev => ({ ...prev, password: e.target.value }))}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-                placeholder="Enter your password"
-                required
-              />
-            </div>
-
-            <button
-              type="submit"
-              disabled={signingIn}
-              className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-            >
-              {signingIn ? 'Signing In...' : 'Sign In'}
-            </button>
-          </form>
-        </motion.div>
+        <AuthCard signIn={signIn} signUp={signUp} resetPassword={resetPassword} />
       </div>
     );
   }
@@ -192,9 +129,11 @@ const StaffPortalPage = () => {
       <StaffPortalLayout>
         <Sidebar activeView={view} onChangeView={setView} onSignOut={handleSignOut} />
         <main className="flex-1 min-w-0">
-          <div className="h-16 bg-white border-b flex items-center px-4 md:px-6">
-            <h1 className="text-xl md:text-2xl font-bold text-gray-900">{view === 'dashboard' ? 'Dashboard' : 'Applications'}</h1>
-          </div>
+          <HeaderBar
+            title={view === 'dashboard' ? 'Dashboard' : 'Applications'}
+            userName={(user.user_metadata as any)?.fullName || null}
+            userEmail={user.email}
+          />
           <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">
             {view === 'dashboard' ? (
               <DashboardOverview applications={applications} />

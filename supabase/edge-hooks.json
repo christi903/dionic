@@ -1,0 +1,15 @@
+{
+  "events": [
+    {
+      "event": "signup",
+      "schema": "auth",
+      "table": "users",
+      "hook": {
+        "method": "POST",
+        "endpoint": "/validate-signup"
+      }
+    }
+  ]
+}
+
+

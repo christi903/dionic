@@ -381,7 +381,7 @@ const ScholarshipPage = () => {
              >
                <Mail className="h-8 w-8 mx-auto mb-4 text-emerald-300" />
                <h3 className="text-xl font-semibold mb-2 text-emerald-200">Email Us</h3>
-                <p className="text-white font-medium">Musadionis58@gmail.com</p>
+                <p className="text-white font-medium">musadionis58@gmail.com</p>
              </motion.div>
            </div>
            
