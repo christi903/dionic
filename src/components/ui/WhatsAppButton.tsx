@@ -7,7 +7,7 @@ interface WhatsAppButtonProps {
 
 const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({ 
   phoneNumber, 
-  message = "Hello! I need assistance." 
+  message = "Hello! I need assistance with attaining scholarship." 
 }) => {
   const handleWhatsAppClick = () => {
     // Format phone number (remove any spaces, dashes, or special characters)

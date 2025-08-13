@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Plus } from 'lucide-react';
 
 interface Product {
   id: number;
@@ -13,9 +13,10 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  onAdd?: (product: Product) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product, onAdd }) => {
   return (
     <motion.div 
       className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
@@ -55,6 +56,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             </div>
           ))}
         </div>
+        {onAdd && (
+          <div className="mt-4">
+            <button onClick={() => onAdd(product)} className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium">
+              <Plus className="h-4 w-4" /> Add to cart
+            </button>
+          </div>
+        )}
       </div>
     </motion.div>
   );

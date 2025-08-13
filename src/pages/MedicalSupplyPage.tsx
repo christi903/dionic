@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Heart, Activity, ShoppingCart, X, Send } from 'lucide-react';
+import { Shield, Heart, Activity, ShoppingCart } from 'lucide-react';
 import Header from '../components/layout/Header';
 import ProductCard from '../components/ui/ProductCard';
 import { products, categories } from '../data/products';
 import { additionalProducts } from '../data/additionalProducts';
 import { additionalMedicalSupplies, advancedMedicalEquipment } from '../data/remainingCategories';
+import { useCart } from '../features/med-supply/hooks/useCart';
+import QuantityModal from '../features/med-supply/components/QuantityModal';
+import CartDrawer from '../features/med-supply/components/CartDrawer';
+import SearchBar from '../features/med-supply/components/SearchBar';
 
 const MedicalSupplyPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
-  const [orderText, setOrderText] = useState('');
+  const [quantityModal, setQuantityModal] = useState<{ open: boolean; productName: string; productId: number | null }>({ open: false, productName: '', productId: null });
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const { items, totalItems, addProduct, addCustom, updateQuantity, removeItem, toWhatsAppText } = useCart();
+  const [search, setSearch] = useState('');
 
   // Combine all products
   const allProducts = [...products, ...additionalProducts, ...additionalMedicalSupplies, ...advancedMedicalEquipment];
@@ -53,23 +59,17 @@ const MedicalSupplyPage = () => {
     }
   ];
 
-  const filteredProducts = activeCategory === 'all' 
+  const filteredProducts = (activeCategory === 'all' 
     ? allProducts 
-    : allProducts.filter(product => product.category === activeCategory);
+    : allProducts.filter(product => product.category === activeCategory))
+    .filter(p => p.name.toLowerCase().includes(search.toLowerCase()) || p.description.toLowerCase().includes(search.toLowerCase()));
 
   const handleSendOrder = () => {
-    if (!orderText.trim()) {
-      alert('Please enter your medical equipment requirements.');
-      return;
-    }
-
-    const message = `Hello! I would like to order the following medical equipment:\n\n${orderText}\n\nPlease provide pricing and availability information. Thank you!`;
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/+255752006879?text=${encodedMessage}`;
-    
-    window.open(whatsappUrl, '_blank');
-    setOrderText('');
-    setIsOrderModalOpen(false);
+    const text = toWhatsAppText();
+    if (!text) { alert('Your cart is empty. Add items first.'); return; }
+    const encoded = encodeURIComponent(text);
+    const url = `https://wa.me/+255769558797?text=${encoded}`;
+    window.open(url, '_blank');
   };
   return (
     <div className="min-h-screen bg-gray-50">
@@ -136,6 +136,9 @@ const MedicalSupplyPage = () => {
         </div>
       </section>
 
+      {/* Search */}
+      <SearchBar value={search} onChange={setSearch} />
+
       {/* Category Filter */}
       <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,7 +165,7 @@ const MedicalSupplyPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+              <ProductCard key={product.id} product={product} onAdd={(p) => setQuantityModal({ open: true, productName: p.name, productId: p.id })} />
             ))}
           </div>
         </div>
@@ -197,84 +200,39 @@ const MedicalSupplyPage = () => {
         </div>
       </section>
 
-      {/* Floating Order Button */}
+      {/* Floating Cart Button */}
       <div className="fixed bottom-6 left-6 z-50">
         <motion.button
-          onClick={() => setIsOrderModalOpen(true)}
-          className="bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-slate-300"
+          onClick={() => setDrawerOpen(true)}
+          className="bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-slate-300 relative"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           title="Order Medical Equipment"
         >
           <ShoppingCart className="w-6 h-6" />
+          {totalItems > 0 && <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-2 py-0.5">{totalItems}</span>}
         </motion.button>
       </div>
+      <QuantityModal
+        isOpen={quantityModal.open}
+        productName={quantityModal.productName}
+        onClose={() => setQuantityModal({ open: false, productName: '', productId: null })}
+        onConfirm={(q) => {
+          const product = allProducts.find(p => p.id === quantityModal.productId);
+          if (product) addProduct(product as any, q);
+          setDrawerOpen(true);
+        }}
+      />
 
-      {/* Order Modal */}
-      {isOrderModalOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <motion.div
-            className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[80vh] overflow-hidden"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.3 }}
-          >
-            {/* Modal Header */}
-            <div className="bg-gradient-to-r from-slate-600 to-slate-700 text-white px-6 py-4">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
-                  <ShoppingCart className="h-6 w-6 mr-3" />
-                  <h2 className="text-xl font-bold">Order Medical Equipment</h2>
-                </div>
-                <button
-                  onClick={() => setIsOrderModalOpen(false)}
-                  className="p-2 hover:bg-slate-800 rounded-full transition-colors duration-200"
-                >
-                  <X className="h-5 w-5" />
-                </button>
-              </div>
-            </div>
-
-            {/* Modal Content */}
-            <div className="p-6">
-              <p className="text-gray-700 mb-4">
-                Please describe the medical equipment you need. Include quantities, specifications, and any other requirements.
-              </p>
-              
-              <textarea
-                value={orderText}
-                onChange={(e) => setOrderText(e.target.value)}
-                placeholder="Example: 
-- 5x Digital Thermometers
-- 2x Blood Pressure Monitors
-- 10x Surgical Gloves (Size L)
-- 1x Pulse Oximeter
-
-Please include pricing and delivery information."
-                className="w-full h-40 px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all duration-200 resize-none"
-                rows={8}
-              />
-              
-              <div className="flex justify-end space-x-3 mt-6">
-                <button
-                  onClick={() => setIsOrderModalOpen(false)}
-                  className="px-6 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                >
-                  Cancel
-                </button>
-                <button
-                  onClick={handleSendOrder}
-                  className="px-6 py-3 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white rounded-lg transition-all duration-200 flex items-center space-x-2"
-                >
-                  <Send className="h-4 w-4" />
-                  <span>Send Order via WhatsApp</span>
-                </button>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      )}
+      <CartDrawer
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        items={items}
+        onUpdateQty={updateQuantity}
+        onRemove={removeItem}
+        onAddCustom={addCustom}
+        onSendWhatsApp={handleSendOrder}
+      />
     </div>
   );
 };
