@@ -64,13 +64,7 @@ const UndergraduateCourseCard: React.FC<UndergraduateCourseCardProps> = ({ cours
             <span className="text-sm">Duration: {course.duration}</span>
           </div>
 
-          {/* Cost */}
-          <div className="flex items-center text-gray-600 mb-3">
-            <BookOpen className="h-4 w-4 mr-2" />
-            <span className="text-sm">Cost: {course.cost}</span>
-          </div>
-
-          {/* Description */}
+{/* Description */}
           <p className="text-gray-700 text-sm mb-4 line-clamp-3">{course.description}</p>
 
           {/* Specializations */}

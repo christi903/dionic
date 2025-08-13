@@ -4,7 +4,6 @@ export interface Scholarship {
   university: string;
   country: string;
   type: string;
-  value: string;
   duration: string;
   deadline: string;
   image: string;
@@ -20,7 +19,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Edinburgh',
     country: 'United Kingdom',
     type: 'undergraduate',
-    value: '$35,000 per year',
     duration: '3 Years',
     deadline: 'March 31, 2025',
     image: 'https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -33,7 +31,6 @@ export const scholarships: Scholarship[] = [
     university: 'Technical University of Munich',
     country: 'Germany',
     type: 'undergraduate',
-    value: '$32,000 per year',
     duration: '4 Years',
     deadline: 'January 15, 2025',
     image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -46,7 +43,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Toronto',
     country: 'Canada',
     type: 'undergraduate',
-    value: '$28,000 per year',
     duration: '4 Years',
     deadline: 'December 1, 2024',
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -59,7 +55,6 @@ export const scholarships: Scholarship[] = [
     university: 'Royal College of Art',
     country: 'United Kingdom',
     type: 'undergraduate',
-    value: '$30,000 per year',
     duration: '3 Years',
     deadline: 'February 28, 2025',
     image: 'https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -72,7 +67,6 @@ export const scholarships: Scholarship[] = [
     university: 'Wageningen University',
     country: 'Netherlands',
     type: 'undergraduate',
-    value: '$25,000 per year',
     duration: '3 Years',
     deadline: 'March 1, 2025',
     image: 'https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -85,7 +79,6 @@ export const scholarships: Scholarship[] = [
     university: 'Parsons School of Design',
     country: 'United States',
     type: 'undergraduate',
-    value: '$38,000 per year',
     duration: '4 Years',
     deadline: 'February 1, 2025',
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -98,7 +91,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Oxford',
     country: 'United Kingdom',
     type: 'undergraduate',
-    value: '$42,000 per year',
     duration: '3 Years',
     deadline: 'March 15, 2025',
     image: 'https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -111,7 +103,6 @@ export const scholarships: Scholarship[] = [
     university: 'MIT',
     country: 'United States',
     type: 'undergraduate',
-    value: '$45,000 per year',
     duration: '4 Years',
     deadline: 'April 1, 2025',
     image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -124,7 +115,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Toronto',
     country: 'Canada',
     type: 'undergraduate',
-    value: '$26,000 per year',
     duration: '4 Years',
     deadline: 'January 31, 2025',
     image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -137,7 +127,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Melbourne',
     country: 'Australia',
     type: 'undergraduate',
-    value: '$33,000 per year',
     duration: '3 Years',
     deadline: 'May 1, 2025',
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -150,7 +139,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Waterloo',
     country: 'Canada',
     type: 'undergraduate',
-    value: '$31,000 per year',
     duration: '4 Years',
     deadline: 'February 15, 2025',
     image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -163,7 +151,6 @@ export const scholarships: Scholarship[] = [
     university: 'Delft University of Technology',
     country: 'Netherlands',
     type: 'undergraduate',
-    value: '$27,000 per year',
     duration: '3 Years',
     deadline: 'March 30, 2025',
     image: 'https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -176,7 +163,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Sydney',
     country: 'Australia',
     type: 'undergraduate',
-    value: '$29,000 per year',
     duration: '3 Years',
     deadline: 'April 15, 2025',
     image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -189,7 +175,6 @@ export const scholarships: Scholarship[] = [
     university: 'Swiss Hotel Management School',
     country: 'Switzerland',
     type: 'undergraduate',
-    value: '$34,000 per year',
     duration: '3 Years',
     deadline: 'May 15, 2025',
     image: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -202,7 +187,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Edinburgh',
     country: 'United Kingdom',
     type: 'undergraduate',
-    value: '$36,000 per year',
     duration: '4 Years',
     deadline: 'June 1, 2025',
     image: 'https://images.pexels.com/photos/4050320/pexels-photo-4050320.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -217,7 +201,6 @@ export const scholarships: Scholarship[] = [
     university: 'University of Edinburgh',
     country: 'United Kingdom',
     type: 'graduate',
-    value: '$31,000 per year',
     duration: '2 Years',
     deadline: 'April 15, 2025',
     image: 'https://images.pexels.com/photos/4050320/pexels-photo-4050320.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
@@ -479,7 +462,6 @@ export interface DiplomaCourse {
   id: number;
   name: string;
   duration: string;
-  cost: string;
   specializations: string[];
   university: string;
   country: string;
@@ -492,7 +474,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 1,
     name: 'Diploma in Engineering',
     duration: '3 Years',
-    cost: '$18,000 per year',
     specializations: [
       'Chemical Engineering',
       'Civil Engineering', 
@@ -516,7 +497,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 2,
     name: 'Diploma in Architecture',
     duration: '3 Years',
-    cost: '$16,000 per year',
     specializations: ['Architectural Design', 'Urban Planning', 'Interior Design', 'Sustainable Architecture'],
     university: 'Royal Melbourne Institute of Technology',
     country: 'Australia',
@@ -527,7 +507,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 3,
     name: 'Diploma in Design',
     duration: '3 Years',
-    cost: '$22,000 per year',
     specializations: ['Fashion Design & Technology', 'Interior & Furniture Design', 'Product Design', 'Visual Communication', 'Graphic Design'],
     university: 'Parsons School of Design',
     country: 'United States',
@@ -538,7 +517,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 4,
     name: 'Diploma in Pharmacy',
     duration: '2 Years',
-    cost: '$14,000 per year',
     specializations: ['Clinical Pharmacy', 'Pharmaceutical Sciences', 'Drug Development', 'Hospital Pharmacy'],
     university: 'University of Toronto',
     country: 'Canada',
@@ -549,7 +527,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 5,
     name: 'Diploma in Paramedical & Health Science',
     duration: '3 Years',
-    cost: '$15,000 per year',
     specializations: [
       'Cardiac Care Technology',
       'Emergency Medical Services',
@@ -570,7 +547,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 6,
     name: 'Diploma in Hotel Management',
     duration: '3 Years',
-    cost: '$19,000 per year',
     specializations: ['Hotel Operations', 'Culinary Arts', 'Event Management', 'Tourism Management', 'Food & Beverage Service'],
     university: 'Swiss Hotel Management School',
     country: 'Switzerland',
@@ -581,7 +557,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 7,
     name: 'Diploma in Performing Arts',
     duration: '2 Years',
-    cost: '$25,000 per year',
     specializations: ['Dance', 'Drama & Theatre', 'Music Performance', 'Choreography', 'Stage Management'],
     university: 'Juilliard School',
     country: 'United States',
@@ -592,7 +567,6 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 8,
     name: 'General Nursing Midwifery',
     duration: '3 Years',
-    cost: '$12,000 per year',
     specializations: ['General Nursing', 'Midwifery Care', 'Community Health', 'Pediatric Care'],
     university: 'University of Edinburgh',
     country: 'United Kingdom',
@@ -603,12 +577,74 @@ export const diplomaCourses: DiplomaCourse[] = [
     id: 9,
     name: 'Auxiliary Nursing Midwifery',
     duration: '2 Years',
-    cost: '$8,000 per year',
     specializations: ['Basic Nursing Care', 'Maternal Health', 'Community Outreach', 'First Aid'],
     university: 'University of Cape Town',
     country: 'South Africa',
     image: 'https://images.pexels.com/photos/4173624/pexels-photo-4173624.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
     description: 'Essential nursing program focusing on primary healthcare and community service.'
+  },
+  {
+    id: 10,
+    name: 'Diploma in Digital Marketing',
+    duration: '1 Year',
+    specializations: [
+      'Social Media Marketing',
+      'Search Engine Optimization',
+      'Content Marketing',
+      'Email Marketing',
+      'Digital Analytics',
+      'E-commerce Marketing',
+      'Mobile Marketing',
+      'Inbound Marketing',
+      'Video Marketing',
+      'Marketing Automation'
+    ],
+    university: 'New York University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive digital marketing program covering all aspects of online marketing strategies and tools.'
+  },
+  {
+    id: 11,
+    name: 'Diploma in Artificial Intelligence',
+    duration: '2 Years',
+    specializations: [
+      'Machine Learning',
+      'Deep Learning',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Robotics',
+      'Neural Networks',
+      'AI Ethics',
+      'Reinforcement Learning',
+      'AI for Business',
+      'AI in Healthcare'
+    ],
+    university: 'Massachusetts Institute of Technology',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Cutting-edge program in artificial intelligence covering both theoretical foundations and practical applications.'
+  },
+  {
+    id: 12,
+    name: 'Diploma in Environmental Science',
+    duration: '2 Years',
+    specializations: [
+      'Conservation Biology',
+      'Climate Change Studies',
+      'Environmental Policy',
+      'Renewable Energy',
+      'Waste Management',
+      'Water Resource Management',
+      'Environmental Impact Assessment',
+      'Sustainability Studies',
+      'Marine Conservation',
+      'Environmental Education'
+    ],
+    university: 'University of British Columbia',
+    country: 'Canada',
+    image: 'https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Interdisciplinary program focusing on environmental challenges and sustainable solutions for a better future.'
   }
 ];
 
@@ -616,7 +652,6 @@ export interface UndergraduateCourse {
   id: number;
   name: string;
   duration: string;
-  cost: string;
   specializations: string[];
   university: string;
   country: string;
@@ -629,7 +664,6 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     id: 1,
     name: 'Bachelor of Medicine',
     duration: '6 Years',
-    cost: '$45,000 per year',
     specializations: [
       'General Medicine',
       'Cardiology',
@@ -653,7 +687,6 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     id: 2,
     name: 'Bachelor of Engineering',
     duration: '4 Years',
-    cost: '$38,000 per year',
     specializations: [
       'Mechanical Engineering',
       'Electrical Engineering',
@@ -677,7 +710,6 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     id: 3,
     name: 'Bachelor of Business Administration',
     duration: '4 Years',
-    cost: '$35,000 per year',
     specializations: [
       'Finance',
       'Marketing',
@@ -701,7 +733,6 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     id: 4,
     name: 'Bachelor of Computer Science',
     duration: '4 Years',
-    cost: '$40,000 per year',
     specializations: [
       'Software Engineering',
       'Artificial Intelligence',
@@ -725,7 +756,6 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     id: 5,
     name: 'Bachelor of Architecture',
     duration: '5 Years',
-    cost: '$42,000 per year',
     specializations: [
       'Architectural Design',
       'Urban Planning',
@@ -749,7 +779,6 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     id: 6,
     name: 'Bachelor of Arts',
     duration: '3 Years',
-    cost: '$32,000 per year',
     specializations: [
       'English Literature',
       'History',
@@ -768,6 +797,144 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     country: 'United Kingdom',
     image: 'https://images.pexels.com/photos/256490/pexels-photo-256490.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
     description: 'Liberal arts program fostering critical thinking and cultural understanding across disciplines.'
+  },
+  {
+    id: 7,
+    name: 'Bachelor of Science in Data Science',
+    duration: '4 Years',
+    specializations: [
+      'Machine Learning',
+      'Big Data Analytics',
+      'Business Intelligence',
+      'Statistical Analysis',
+      'Data Visualization',
+      'Natural Language Processing',
+      'Predictive Analytics',
+      'Data Engineering',
+      'Deep Learning',
+      'Data Mining',
+      'AI in Data Science',
+      'Cloud Computing for Data'
+    ],
+    university: 'Carnegie Mellon University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive program focusing on extracting insights from complex data using cutting-edge computational and statistical methods.'
+  },
+  {
+    id: 8,
+    name: 'Bachelor of Science in Environmental Engineering',
+    duration: '4 Years',
+    specializations: [
+      'Water Resources',
+      'Air Quality Control',
+      'Waste Management',
+      'Sustainable Energy',
+      'Environmental Policy',
+      'Climate Change',
+      'Ecological Engineering',
+      'Environmental Chemistry',
+      'Hazardous Waste Management',
+      'Environmental Impact Assessment',
+      'Renewable Energy Systems',
+      'Water Treatment Technologies'
+    ],
+    university: 'ETH Zurich',
+    country: 'Switzerland',
+    image: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Program focused on developing sustainable solutions for environmental challenges through engineering principles.'
+  },
+  {
+    id: 9,
+    name: 'Bachelor of Science in Neuroscience',
+    duration: '4 Years',
+    specializations: [
+      'Cognitive Neuroscience',
+      'Behavioral Neuroscience',
+      'Clinical Neuroscience',
+      'Computational Neuroscience',
+      'Developmental Neuroscience',
+      'Molecular Neuroscience',
+      'Neuropharmacology',
+      'Neuropsychology',
+      'Systems Neuroscience',
+      'Neurological Disorders',
+      'Neuroimaging',
+      'Neurobiology'
+    ],
+    university: 'Johns Hopkins University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Interdisciplinary program exploring the structure and function of the nervous system and its impact on behavior and cognition.'
+  },
+  {
+    id: 10,
+    name: 'Bachelor of Science in Aerospace Engineering',
+    duration: '4 Years',
+    specializations: [
+      'Aerodynamics',
+      'Aircraft Design',
+      'Spacecraft Systems',
+      'Propulsion',
+      'Flight Dynamics',
+      'Aerospace Materials',
+      'Avionics',
+      'Space Mission Design',
+      'Satellite Technology',
+      'Unmanned Aerial Systems',
+      'Aerospace Structures',
+      'Hypersonics'
+    ],
+    university: 'California Institute of Technology',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Program focused on the design, development, and testing of aircraft and spacecraft, combining engineering principles with space exploration technologies.'
+  },
+  {
+    id: 11,
+    name: 'Bachelor of Science in Biomedical Engineering',
+    duration: '4 Years',
+    specializations: [
+      'Biomechanics',
+      'Biomaterials',
+      'Medical Imaging',
+      'Tissue Engineering',
+      'Neural Engineering',
+      'Prosthetics',
+      'Medical Device Design',
+      'Rehabilitation Engineering',
+      'Biomedical Instrumentation',
+      'Clinical Engineering',
+      'Cellular Engineering',
+      'Biomedical Data Science'
+    ],
+    university: 'Johns Hopkins University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Program that applies engineering principles to healthcare and medical devices, combining biology and medicine with engineering.'
+  },
+  {
+    id: 12,
+    name: 'Bachelor of Science in Robotics',
+    duration: '4 Years',
+    specializations: [
+      'Autonomous Systems',
+      'Robot Dynamics',
+      'Computer Vision',
+      'Human-Robot Interaction',
+      'Robotic Manipulation',
+      'Swarm Robotics',
+      'Medical Robotics',
+      'Industrial Robotics',
+      'Field Robotics',
+      'Robot Learning',
+      'Soft Robotics',
+      'Robot Perception'
+    ],
+    university: 'Carnegie Mellon University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Interdisciplinary program focusing on the design, construction, and application of robots and intelligent systems.'
   }
 ];
 
