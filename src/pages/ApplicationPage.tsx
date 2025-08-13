@@ -8,7 +8,6 @@ import GoLearnLogo from '../components/ui/GoLearnLogo';
 const ApplicationPage = () => {
   const [formData, setFormData] = useState({
     // Student Details
-    serialNumber: '',
     fullName: '',
     mobile: '',
     whatsapp: '',
@@ -46,7 +45,6 @@ const ApplicationPage = () => {
     setSubmitting(true);
 
     const payload = {
-      serial_number: formData.serialNumber || null,
       full_name: formData.fullName,
       mobile: formData.mobile || null,
       whatsapp: formData.whatsapp || null,
@@ -71,7 +69,6 @@ const ApplicationPage = () => {
     } else {
       alert('Application submitted successfully! We will contact you soon.');
       setFormData({
-        serialNumber: '',
         fullName: '',
         mobile: '',
         whatsapp: '',
@@ -179,23 +176,6 @@ const ApplicationPage = () => {
             </div>
 
             <form onSubmit={handleSubmit} className="p-8 space-y-10">
-              {/* Serial Number - Enhanced Styling */}
-              <div className="flex justify-end">
-                <div className="w-48">
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Sr. No:
-                  </label>
-                  <input
-                    type="text"
-                    name="serialNumber"
-                    value={formData.serialNumber}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-gray-50 hover:bg-white"
-                    placeholder="Enter serial number"
-                  />
-                </div>
-              </div>
-
               {/* Student Details Section - Enhanced */}
               <div className="bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl p-6 border border-blue-100">
                 <div className="flex items-center mb-6">
