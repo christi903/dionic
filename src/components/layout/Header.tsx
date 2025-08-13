@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({
         <div className="hidden sm:flex items-center space-x-6 text-white text-sm">
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4" />
-            <span>+255693641585</span>
+            <span>+255752006879</span>
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
