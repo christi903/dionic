@@ -7,7 +7,7 @@ interface SpecializationsModalProps {
   onClose: () => void;
   courseName: string;
   specializations: string[];
-  courseType?: 'diploma' | 'undergraduate';
+  courseType?: 'diploma' | 'undergraduate' | 'graduate' | 'phd';
 }
 
 const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
@@ -18,25 +18,55 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
   courseType = 'diploma'
 }) => {
   // Color scheme based on course type
-  const colors = courseType === 'undergraduate' ? {
-    primary: 'blue',
-    primary600: 'blue-600',
-    primary700: 'blue-700',
-    primary800: 'blue-800',
-    primary50: 'blue-50',
-    primary100: 'blue-100',
-    primary200: 'blue-200',
-    primary500: 'blue-500'
-  } : {
-    primary: 'green',
-    primary600: 'green-600',
-    primary700: 'green-700',
-    primary800: 'green-800',
-    primary50: 'green-50',
-    primary100: 'green-100',
-    primary200: 'green-200',
-    primary500: 'green-500'
-  };
+  const colors = (() => {
+    switch(courseType) {
+      case 'undergraduate':
+        return {
+          primary: 'blue',
+          primary600: 'blue-600',
+          primary700: 'blue-700',
+          primary800: 'blue-800',
+          primary50: 'blue-50',
+          primary100: 'blue-100',
+          primary200: 'blue-200',
+          primary500: 'blue-500'
+        };
+      case 'graduate':
+        return {
+          primary: 'purple',
+          primary600: 'purple-600',
+          primary700: 'purple-700',
+          primary800: 'purple-800',
+          primary50: 'purple-50',
+          primary100: 'purple-100',
+          primary200: 'purple-200',
+          primary500: 'purple-500'
+        };
+      case 'phd':
+        return {
+          primary: 'amber',
+          primary600: 'amber-600',
+          primary700: 'amber-700',
+          primary800: 'amber-800',
+          primary50: 'amber-50',
+          primary100: 'amber-100',
+          primary200: 'amber-200',
+          primary500: 'amber-500'
+        };
+      case 'diploma':
+      default:
+        return {
+          primary: 'green',
+          primary600: 'green-600',
+          primary700: 'green-700',
+          primary800: 'green-800',
+          primary50: 'green-50',
+          primary100: 'green-100',
+          primary200: 'green-200',
+          primary500: 'green-500'
+        };
+    }
+  })();
 
   return (
     <AnimatePresence>

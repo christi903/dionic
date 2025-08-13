@@ -684,6 +684,144 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     description: 'Comprehensive medical program preparing students for medical practice with extensive clinical training.'
   },
   {
+    id: 5,
+    name: 'Bachelor of Law (LLB)',
+    duration: '3 Years',
+    specializations: [
+      'Corporate Law',
+      'International Law',
+      'Criminal Law',
+      'Human Rights Law',
+      'Environmental Law',
+      'Intellectual Property Law',
+      'Tax Law',
+      'Constitutional Law',
+      'Maritime Law',
+      'Cyber Law',
+      'Family Law',
+      'Labor Law'
+    ],
+    university: 'Yale University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive legal education program preparing students for diverse legal careers with a global perspective.'
+  },
+  {
+    id: 6,
+    name: 'Bachelor of Commerce',
+    duration: '3 Years',
+    specializations: [
+      'Accounting',
+      'Finance',
+      'Marketing',
+      'International Business',
+      'Business Analytics',
+      'E-Commerce',
+      'Supply Chain Management',
+      'Entrepreneurship',
+      'Banking and Insurance',
+      'Financial Technology',
+      'Human Resource Management',
+      'Risk Management'
+    ],
+    university: 'University of Melbourne',
+    country: 'Australia',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Dynamic business program combining theoretical knowledge with practical skills for the global marketplace.'
+  },
+  {
+    id: 7,
+    name: 'Bachelor of Science in Design',
+    duration: '4 Years',
+    specializations: [
+      'Graphic Design',
+      'Industrial Design',
+      'Fashion Design',
+      'Interior Design',
+      'User Experience (UX) Design',
+      'Motion Graphics',
+      'Game Design',
+      'Product Design',
+      'Environmental Design',
+      'Interaction Design',
+      'Textile Design',
+      'Design Management'
+    ],
+    university: 'Rhode Island School of Design',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Innovative design program fostering creativity and technical skills across multiple design disciplines.'
+  },
+  {
+    id: 8,
+    name: 'Bachelor of Science in Hotel Management',
+    duration: '3 Years',
+    specializations: [
+      'Hospitality Operations',
+      'Food and Beverage Management',
+      'Event Management',
+      'Resort Management',
+      'Revenue Management',
+      'Sustainable Tourism',
+      'Cruise Line Management',
+      'Culinary Arts',
+      'Luxury Brand Management',
+      'Hospitality Real Estate',
+      'Spa and Wellness Management',
+      'International Hospitality'
+    ],
+    university: 'Ecole hôtelière de Lausanne',
+    country: 'Switzerland',
+    image: 'https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive hospitality management program combining business acumen with industry-specific knowledge.'
+  },
+  {
+    id: 9,
+    name: 'Bachelor of Business Administration',
+    duration: '4 Years',
+    specializations: [
+      'International Business',
+      'Entrepreneurship',
+      'Marketing Management',
+      'Financial Management',
+      'Human Resource Management',
+      'Operations Management',
+      'Business Analytics',
+      'Digital Marketing',
+      'Supply Chain Management',
+      'Business Economics',
+      'Management Consulting',
+      'Corporate Strategy'
+    ],
+    university: 'INSEAD',
+    country: 'France',
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive business administration program developing future business leaders with global perspectives.'
+  },
+  {
+    id: 10,
+    name: 'Bachelor of Science in Aerospace Engineering',
+    duration: '4 Years',
+    specializations: [
+      'Aerodynamics',
+      'Aircraft Design',
+      'Spacecraft Engineering',
+      'Propulsion Systems',
+      'Avionics',
+      'Flight Dynamics',
+      'Aerospace Materials',
+      'Satellite Technology',
+      'Unmanned Aerial Systems',
+      'Space Exploration',
+      'Aerospace Structures',
+      'Flight Test Engineering'
+    ],
+    university: 'California Institute of Technology',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/2399840/pexels-photo-2399840.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Cutting-edge aerospace engineering program focusing on aircraft and spacecraft design, development, and testing.'
+  },
+  {
     id: 2,
     name: 'Bachelor of Engineering',
     duration: '4 Years',
@@ -935,6 +1073,402 @@ export const undergraduateCourses: UndergraduateCourse[] = [
     country: 'United States',
     image: 'https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
     description: 'Interdisciplinary program focusing on the design, construction, and application of robots and intelligent systems.'
+  }
+];
+
+export interface GraduateCourse {
+  id: number;
+  name: string;
+  duration: string;
+  specializations: string[];
+  university: string;
+  country: string;
+  image: string;
+  description: string;
+}
+
+export interface PhDCourse {
+  id: number;
+  name: string;
+  duration: string;
+  specializations: string[];
+  university: string;
+  country: string;
+  image: string;
+  description: string;
+}
+
+export const graduateCourses: GraduateCourse[] = [
+  {
+    id: 1,
+    name: 'Master of Business Administration',
+    duration: '2 Years',
+    specializations: [
+      'Finance',
+      'Marketing',
+      'Entrepreneurship',
+      'International Business',
+      'Business Analytics',
+      'Supply Chain Management',
+      'Human Resources',
+      'Healthcare Management',
+      'Technology Management',
+      'Sustainability',
+      'Consulting',
+      'Leadership'
+    ],
+    university: 'Harvard Business School',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive MBA program focusing on leadership, strategy, and global business management.'
+  },
+  {
+    id: 2,
+    name: 'Master of Science in Computer Science',
+    duration: '2 Years',
+    specializations: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Data Science',
+      'Cybersecurity',
+      'Software Engineering',
+      'Computer Systems',
+      'Human-Computer Interaction',
+      'Robotics',
+      'Cloud Computing',
+      'Computer Vision',
+      'Natural Language Processing',
+      'Algorithms'
+    ],
+    university: 'Stanford University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Advanced study in computer science with a focus on cutting-edge technologies and research.'
+  },
+  {
+    id: 3,
+    name: 'Master of Public Health',
+    duration: '2 Years',
+    specializations: [
+      'Epidemiology',
+      'Biostatistics',
+      'Health Policy',
+      'Global Health',
+      'Environmental Health',
+      'Health Economics',
+      'Community Health',
+      'Health Promotion',
+      'Health Services Administration',
+      'Occupational Health',
+      'Maternal and Child Health',
+      'Infectious Diseases'
+    ],
+    university: 'Johns Hopkins University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive public health program focusing on disease prevention and health promotion.'
+  },
+  {
+    id: 4,
+    name: 'Master of Science in Data Science',
+    duration: '1.5-2 Years',
+    specializations: [
+      'Machine Learning Engineering',
+      'Big Data Analytics',
+      'Business Intelligence',
+      'Statistical Analysis',
+      'Data Visualization',
+      'Natural Language Processing',
+      'Predictive Modeling',
+      'Data Engineering',
+      'Deep Learning',
+      'Data Mining',
+      'AI in Data Science',
+      'Cloud Computing for Data'
+    ],
+    university: 'Massachusetts Institute of Technology',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Interdisciplinary program combining computer science, statistics, and domain expertise to extract insights from complex data.'
+  },
+  {
+    id: 5,
+    name: 'Master of Science in Artificial Intelligence',
+    duration: '2 Years',
+    specializations: [
+      'Machine Learning',
+      'Computer Vision',
+      'Natural Language Processing',
+      'Robotics',
+      'AI Ethics',
+      'Reinforcement Learning',
+      'Neural Networks',
+      'AI for Healthcare',
+      'Autonomous Systems',
+      'AI and Society',
+      'Deep Learning',
+      'AI in Finance'
+    ],
+    university: 'Carnegie Mellon University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Cutting-edge program focusing on the development and application of artificial intelligence technologies.'
+  },
+  {
+    id: 6,
+    name: 'Master of Science in Environmental Engineering',
+    duration: '2 Years',
+    specializations: [
+      'Water Resources Management',
+      'Air Quality Control',
+      'Waste Management',
+      'Sustainable Energy',
+      'Environmental Policy',
+      'Climate Change',
+      'Ecological Engineering',
+      'Environmental Chemistry',
+      'Hazardous Waste Management',
+      'Environmental Impact Assessment',
+      'Renewable Energy Systems',
+      'Water Treatment Technologies'
+    ],
+    university: 'ETH Zurich',
+    country: 'Switzerland',
+    image: 'https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Program focused on developing sustainable solutions for environmental challenges through engineering principles.'
+  },
+  {
+    id: 7,
+    name: 'Master of Science in Finance',
+    duration: '1-2 Years',
+    specializations: [
+      'Investment Management',
+      'Corporate Finance',
+      'Financial Engineering',
+      'Risk Management',
+      'FinTech',
+      'Behavioral Finance',
+      'Quantitative Finance',
+      'Private Equity',
+      'Financial Analysis',
+      'International Finance',
+      'Real Estate Finance',
+      'Sustainable Finance'
+    ],
+    university: 'London School of Economics',
+    country: 'United Kingdom',
+    image: 'https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Comprehensive finance program preparing students for careers in investment banking, asset management, and corporate finance.'
+  },
+  {
+    id: 8,
+    name: 'Master of Science in Biomedical Engineering',
+    duration: '2 Years',
+    specializations: [
+      'Biomechanics',
+      'Biomaterials',
+      'Medical Imaging',
+      'Tissue Engineering',
+      'Neural Engineering',
+      'Prosthetics',
+      'Medical Device Design',
+      'Rehabilitation Engineering',
+      'Biomedical Instrumentation',
+      'Clinical Engineering',
+      'Cellular Engineering',
+      'Biomedical Data Science'
+    ],
+    university: 'Johns Hopkins University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Program that applies engineering principles to healthcare and medical devices, combining biology and medicine with engineering.'
+  }
+];
+
+export const phdCourses: PhDCourse[] = [
+  {
+    id: 1,
+    name: 'PhD in Neuroscience',
+    duration: '4-6 Years',
+    specializations: [
+      'Cognitive Neuroscience',
+      'Molecular Neuroscience',
+      'Behavioral Neuroscience',
+      'Computational Neuroscience',
+      'Clinical Neuroscience',
+      'Developmental Neuroscience',
+      'Neuropharmacology',
+      'Neuroimaging',
+      'Neurological Disorders',
+      'Neurobiology',
+      'Systems Neuroscience',
+      'Neuroengineering'
+    ],
+    university: 'Massachusetts Institute of Technology',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/414860/pexels-photo-414860.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Research-intensive doctoral program focused on understanding the nervous system and brain function.'
+  },
+  {
+    id: 2,
+    name: 'PhD in Artificial Intelligence',
+    duration: '4-6 Years',
+    specializations: [
+      'Machine Learning',
+      'Computer Vision',
+      'Natural Language Processing',
+      'Robotics',
+      'AI Ethics',
+      'Reinforcement Learning',
+      'Neural Networks',
+      'AI for Healthcare',
+      'Autonomous Systems',
+      'AI and Society',
+      'Deep Learning',
+      'AI in Finance'
+    ],
+    university: 'Carnegie Mellon University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Cutting-edge research program in artificial intelligence and machine learning.'
+  },
+  {
+    id: 3,
+    name: 'PhD in Environmental Science',
+    duration: '4-6 Years',
+    specializations: [
+      'Climate Change',
+      'Conservation Biology',
+      'Environmental Policy',
+      'Ecosystem Science',
+      'Environmental Chemistry',
+      'Water Resources',
+      'Sustainability Science',
+      'Environmental Health',
+      'Marine Science',
+      'Atmospheric Science',
+      'Environmental Economics',
+      'Renewable Energy'
+    ],
+    university: 'ETH Zurich',
+    country: 'Switzerland',
+    image: 'https://images.pexels.com/photos/1112080/pexels-photo-1112080.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Interdisciplinary research program addressing global environmental challenges.'
+  },
+  {
+    id: 4,
+    name: 'PhD in Computer Science',
+    duration: '4-6 Years',
+    specializations: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Computer Systems',
+      'Human-Computer Interaction',
+      'Theoretical Computer Science',
+      'Computer Graphics',
+      'Databases',
+      'Computer Networks',
+      'Programming Languages',
+      'Computer Security',
+      'Software Engineering',
+      'Bioinformatics'
+    ],
+    university: 'Stanford University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Doctoral program fostering innovative research across all areas of computer science.'
+  },
+  {
+    id: 5,
+    name: 'PhD in Economics',
+    duration: '5-6 Years',
+    specializations: [
+      'Microeconomics',
+      'Macroeconomics',
+      'Econometrics',
+      'Development Economics',
+      'Labor Economics',
+      'Public Economics',
+      'International Economics',
+      'Financial Economics',
+      'Behavioral Economics',
+      'Industrial Organization',
+      'Environmental Economics',
+      'Health Economics'
+    ],
+    university: 'University of Chicago',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Rigorous doctoral program preparing students for research careers in economics.'
+  },
+  {
+    id: 6,
+    name: 'PhD in Biomedical Engineering',
+    duration: '4-6 Years',
+    specializations: [
+      'Biomechanics',
+      'Biomaterials',
+      'Medical Imaging',
+      'Tissue Engineering',
+      'Neural Engineering',
+      'Biomedical Instrumentation',
+      'Cellular Engineering',
+      'Biomedical Data Science',
+      'Drug Delivery Systems',
+      'Rehabilitation Engineering',
+      'Computational Biology',
+      'Medical Robotics'
+    ],
+    university: 'Johns Hopkins University',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/263402/pexels-photo-263402.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Interdisciplinary program at the intersection of engineering, biology, and medicine.'
+  },
+  {
+    id: 7,
+    name: 'PhD in Physics',
+    duration: '5-6 Years',
+    specializations: [
+      'Quantum Mechanics',
+      'Theoretical Physics',
+      'Particle Physics',
+      'Astrophysics',
+      'Condensed Matter Physics',
+      'Atomic, Molecular, and Optical Physics',
+      'Plasma Physics',
+      'Biophysics',
+      'Cosmology',
+      'Quantum Computing',
+      'Statistical Mechanics',
+      'High Energy Physics'
+    ],
+    university: 'California Institute of Technology',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Research-focused doctoral program exploring the fundamental laws of the universe.'
+  },
+  {
+    id: 8,
+    name: 'PhD in Business Administration',
+    duration: '4-5 Years',
+    specializations: [
+      'Accounting',
+      'Finance',
+      'Marketing',
+      'Organizational Behavior',
+      'Strategy',
+      'Operations Management',
+      'Information Systems',
+      'Entrepreneurship',
+      'International Business',
+      'Business Analytics',
+      'Supply Chain Management',
+      'Management Science'
+    ],
+    university: 'Harvard Business School',
+    country: 'United States',
+    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=500&h=300&dpr=1',
+    description: 'Doctoral program preparing scholars for academic careers in business research and education.'
   }
 ];
 

@@ -6,9 +6,11 @@ import Navigation from '../components/ui/Navigation';
 import ScholarshipCard from '../components/ui/ScholarshipCard';
 import DiplomaCourseCard from '../components/ui/DiplomaCourseCard';
 import UndergraduateCourseCard from '../components/ui/UndergraduateCourseCard';
+import GraduateCourseCard from '../components/ui/GraduateCourseCard';
+import PhDCourseCard from '../components/ui/PhDCourseCard';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
 import TeamModal from '../components/ui/TeamModal';
-import { scholarships, programTypes, diplomaCourses, undergraduateCourses } from '../data/scholarships';
+import { scholarships, programTypes, diplomaCourses, undergraduateCourses, graduateCourses, phdCourses, GraduateCourse, PhDCourse } from '../data/scholarships';
 
 const ScholarshipPage = () => {
   const [selectedProgram, setSelectedProgram] = useState('diploma');
@@ -235,6 +237,26 @@ const ScholarshipPage = () => {
               </p>
             </div>
           )}
+          
+          {selectedProgram === 'graduate' && (
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Available Graduate Programs</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Explore our advanced graduate programs designed to deepen your expertise and prepare you for 
+                leadership roles in your chosen field. These programs combine rigorous academics with practical experience.
+              </p>
+            </div>
+          )}
+          
+          {selectedProgram === 'phd' && (
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Available PhD Programs</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Pursue groundbreaking research with our PhD programs. Work alongside distinguished faculty and 
+                contribute to the advancement of knowledge in your field at world-renowned institutions.
+              </p>
+            </div>
+          )}
 
           {selectedProgram === 'diploma' ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -246,6 +268,18 @@ const ScholarshipPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {undergraduateCourses.map((course) => (
                 <UndergraduateCourseCard key={course.id} course={course} />
+              ))}
+            </div>
+          ) : selectedProgram === 'graduate' ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {graduateCourses.map((course: GraduateCourse) => (
+                <GraduateCourseCard key={course.id} course={course} />
+              ))}
+            </div>
+          ) : selectedProgram === 'phd' ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {phdCourses.map((course: PhDCourse) => (
+                <PhDCourseCard key={course.id} course={course} />
               ))}
             </div>
           ) : (
