@@ -1,16 +1,16 @@
 import { useEffect, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Lock, User, Eye, EyeOff, Mail, ArrowLeft, UserPlus, AlertCircle, CheckCircle,
-  LayoutDashboard, Users, FileText, Settings, LogOut, Search, Filter,
-  Calendar, Phone, MapPin, GraduationCap, X, Menu, Bell, Download,
-  TrendingUp, Clock, Award, Globe
+  Lock, User, Eye, EyeOff, Mail, ArrowLeft, AlertCircle, CheckCircle,
+  LayoutDashboard, Users, FileText, LogOut, Search, Filter,
+  Calendar, Phone, GraduationCap, X, Menu, Bell, Download,
+  TrendingUp, Clock, Award
 } from 'lucide-react';
 import Navigation from '../components/ui/Navigation';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
 import { useAuth } from '../hooks/useAuth';
 import { supabase } from '../lib/supabase';
-import { User as SupabaseUser, RealtimeChannel } from '@supabase/supabase-js';
+import { User as SupabaseUser } from '@supabase/supabase-js';
 
 type AuthMode = 'login' | 'register' | 'forgot-password';
 
@@ -29,7 +29,7 @@ const StaffPortalPage = () => {
     role: 'staff'
   });
 
-  const { signUp, signIn, resetPassword, user, signOut } = useAuth();
+  const { signUp, signIn, resetPassword, user } = useAuth();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -385,7 +385,7 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
     school_name: string | null;
     subjects_name: string | null;
     passing_year: string | null;
-    subjects_appeared: string | null;
+    education_level_completed: string | null;
     father_name: string | null;
     mother_name: string | null;
     parent_mobile: string | null;
@@ -499,15 +499,13 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
   const sidebarItems = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { id: 'applications', label: 'Applications', icon: Users },
-    { id: 'reports', label: 'Reports', icon: FileText },
-    { id: 'settings', label: 'Settings', icon: Settings },
+    { id: 'logout', label: 'Log Out', icon: LogOut },
   ];
 
   const handleLogout = async () => {
-    if (confirm('Are you sure you want to logout?')) {
+    if (!confirm('Are you sure you want to log out?')) return;
       await signOut();
-      window.location.reload();
-    }
+    window.location.href = '/';
   };
 
   return (
@@ -545,7 +543,13 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
           {sidebarItems.map((item) => (
             <button
               key={item.id}
-              onClick={() => setActiveTab(item.id)}
+              onClick={() => {
+                if (item.id === 'logout') {
+                  handleLogout();
+                } else {
+                  setActiveTab(item.id);
+                }
+              }}
               className={`w-full flex items-center px-4 py-3 text-left hover:bg-emerald-50 transition-colors ${
                 activeTab === item.id ? 'bg-emerald-100 border-r-2 border-emerald-600 text-emerald-700' : 'text-gray-600'
               }`}
@@ -601,19 +605,23 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
               <h1 className="text-2xl font-bold text-gray-900">
                 {activeTab === 'dashboard' && 'Dashboard'}
                 {activeTab === 'applications' && 'Applications Management'}
-                {activeTab === 'reports' && 'Reports & Analytics'}
-                {activeTab === 'settings' && 'Settings'}
               </h1>
               <p className="text-gray-600 mt-1">
                 {activeTab === 'dashboard' && 'Welcome to your staff dashboard'}
                 {activeTab === 'applications' && 'Manage student applications'}
-                {activeTab === 'reports' && 'View reports and analytics'}
-                {activeTab === 'settings' && 'Manage your account settings'}
               </p>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors">
+              <button className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors" title="Notifications">
                 <Bell className="h-5 w-5" />
+              </button>
+              <button
+                onClick={handleLogout}
+                className="px-3 py-1.5 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors flex items-center space-x-2"
+                title="Log out"
+              >
+                <LogOut className="h-4 w-4" />
+                <span>Log Out</span>
               </button>
               <div className="text-sm text-gray-600">
                 {new Date().toLocaleDateString('en-US', { 
@@ -785,7 +793,7 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
                       <tr>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Student</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">School</th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">School/College/University</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                         <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Submitted</th>
                         <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
@@ -878,41 +886,9 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
             </motion.div>
           )}
 
-          {activeTab === 'reports' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-6"
-            >
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
-                <FileText className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Reports & Analytics</h3>
-                <p className="text-gray-600 mb-6">Generate detailed reports and view analytics for applications.</p>
-                <button className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
-                  Generate Report
-                </button>
-              </div>
-            </motion.div>
-          )}
+          {/* Reports section removed */}
 
-          {activeTab === 'settings' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="space-y-6"
-            >
-              <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 text-center">
-                <Settings className="h-16 w-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Account Settings</h3>
-                <p className="text-gray-600 mb-6">Manage your account preferences and settings.</p>
-                <button className="bg-emerald-600 text-white px-6 py-2 rounded-lg hover:bg-emerald-700 transition-colors">
-                  Update Settings
-                </button>
-              </div>
-            </motion.div>
-          )}
+          {/* Settings section removed */}
         </main>
       </div>
 
@@ -1013,22 +989,22 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
                           <p className="text-gray-900 font-medium">{selectedApp.interested_course || '—'}</p>
                         </div>
                         <div>
-                          <label className="text-sm font-medium text-gray-500">School Name</label>
+                          <label className="text-sm font-medium text-gray-500">Education level completed</label>
+                          <p className="text-gray-900 font-medium">{selectedApp.education_level_completed || '—'}</p>
+                        </div>
+                        <div>
+                          <label className="text-sm font-medium text-gray-500">School/College/University Name</label>
                           <p className="text-gray-900 font-medium">{selectedApp.school_name || '—'}</p>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <label className="text-sm font-medium text-gray-500">Subjects</label>
+                            <label className="text-sm font-medium text-gray-500">Subjects/Combination/Course Taken</label>
                             <p className="text-gray-900 font-medium">{selectedApp.subjects_name || '—'}</p>
                           </div>
                           <div>
                             <label className="text-sm font-medium text-gray-500">Passing Year</label>
                             <p className="text-gray-900 font-medium">{selectedApp.passing_year || '—'}</p>
                           </div>
-                        </div>
-                        <div>
-                          <label className="text-sm font-medium text-gray-500">Subjects Appeared</label>
-                          <p className="text-gray-900 font-medium">{selectedApp.subjects_appeared || '—'}</p>
                         </div>
                       </div>
                     </div>
@@ -1117,9 +1093,25 @@ function StaffDashboard({ user }: { user: SupabaseUser }) {
                   >
                     Close
                   </button>
-                  <button className="px-4 py-2 text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg hover:bg-emerald-100 transition-colors flex items-center space-x-2">
+                <button
+                  onClick={() => {
+                    // simple wrapper to avoid missing name errors
+                    const format = (label: string, value: string | null) => `\n      <div style=\"margin: 6px 0;\">\n        <div style=\\\"font-size:12px;color:#64748b\\\">${label}</div>\n        <div style=\\\"font-size:14px;color:#0f172a;font-weight:600\\\">${value ? String(value) : '—'}</div>\n      </div>`;
+                    const app = selectedApp;
+                    if (!app) return;
+                    const html = `<!doctype html>\n      <html>\n        <head>\n          <meta charset=\\\"utf-8\\\" />\n          <title>Application - ${app.full_name}</title>\n          <style>\n            @page { size: A4; margin: 16mm; }\n            body { font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color: #111827; }\n            .header { display:flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }\n            .title { font-size: 22px; font-weight: 800; }\n            .badge { padding: 4px 8px; border-radius: 9999px; background: #eef2ff; color: #3730a3; font-weight: 600; font-size: 12px; }\n            .section { margin-top: 16px; border-top: 1px solid #e5e7eb; padding-top: 12px; }\n            .section h3 { font-size: 16px; font-weight: 700; margin: 0 0 8px; }\n            .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; }\n          </style>\n        </head>\n        <body>\n          <div class=\\\"header\\\">\n            <div class=\\\"title\\\">Application Details</div>\n            <div class=\\\"badge\\\">${app.status === 'in_review' ? 'In Review' : app.status.charAt(0).toUpperCase() + app.status.slice(1)}</div>\n          </div>\n          <div>Submitted: ${new Date(app.created_at).toLocaleString()}</div>\n\n          <div class=\\\"section\\\">\n            <h3>Student Information</h3>\n            <div class=\\\"grid\\\">\n              ${format('Full Name', app.full_name)}\n              ${format('Serial Number', app.serial_number)}\n              ${format('Email', app.email)}\n              ${format('Mobile', app.mobile)}\n              ${format('WhatsApp', app.whatsapp)}\n              ${format('Date of Birth', app.date_of_birth ? new Date(app.date_of_birth).toLocaleDateString() : null)}\n            </div>\n          </div>\n\n          <div class=\\\"section\\\">\n            <h3>Academic Information</h3>\n            ${format('Interested Course', app.interested_course)}\n            ${format('Education level completed', app.education_level_completed)}\n            ${format('School/College/University Name', app.school_name)}\n            <div class=\\\"grid\\\">\n              ${format('Subjects/Combination/Course Taken', app.subjects_name)}\n              ${format('Passing Year', app.passing_year)}\n            </div>\n          </div>\n\n          <div class=\\\"section\\\">\n            <h3>Parent/Guardian Information</h3>\n            <div class=\\\"grid\\\">\n              ${format("Father's Name", app.father_name)}\n              ${format("Mother's Name", app.mother_name)}\n              ${format('Parent Mobile', app.parent_mobile)}\n              ${format('Parent WhatsApp', app.parent_whatsapp)}\n              ${format('Parent Email', app.parent_email)}\n            </div>\n          </div>\n        </body>\n      </html>`;
+                    const printWindow = window.open('', '_blank');
+                    if (!printWindow) { alert('Please allow pop-ups to export the PDF.'); return; }
+                    printWindow.document.open();
+                    printWindow.document.write(html);
+                    printWindow.document.close();
+                    printWindow.focus();
+                    setTimeout(() => { printWindow.print(); printWindow.close(); }, 300);
+                  }}
+                  className="px-4 py-2 text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg hover:bg-emerald-100 transition-colors flex items-center space-x-2"
+                >
                     <Download className="h-4 w-4" />
-                    <span>Export</span>
+                  <span>Export PDF</span>
                   </button>
                 </div>
                 <button

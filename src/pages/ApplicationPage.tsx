@@ -17,10 +17,10 @@ const ApplicationPage = () => {
     interestedCourse: '',
     
     // Academic Details
+    educationLevelCompleted: '',
     schoolName: '',
     subjectsName: '',
     passingYear: '',
-    subjectsAppeared: '',
     
     // Parent/Guardian Details
     fatherName: '',
@@ -56,7 +56,7 @@ const ApplicationPage = () => {
       school_name: formData.schoolName || null,
       subjects_name: formData.subjectsName || null,
       passing_year: formData.passingYear || null,
-      subjects_appeared: formData.subjectsAppeared || null,
+      education_level_completed: formData.educationLevelCompleted || null,
       father_name: formData.fatherName || null,
       mother_name: formData.motherName || null,
       parent_mobile: formData.parentMobile || null,
@@ -78,10 +78,10 @@ const ApplicationPage = () => {
         email: '',
         dateOfBirth: '',
         interestedCourse: '',
+        educationLevelCompleted: '',
         schoolName: '',
         subjectsName: '',
         passingYear: '',
-        subjectsAppeared: '',
         fatherName: '',
         motherName: '',
         parentMobile: '',
@@ -307,7 +307,20 @@ const ApplicationPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      School Name: <span className="text-red-500">*</span>
+                      Education level completed:
+                    </label>
+                    <input
+                      type="text"
+                      name="educationLevelCompleted"
+                      value={formData.educationLevelCompleted}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-300"
+                      placeholder="e.g., O'Level, A'Level, Diploma, Bachelor's"
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      School/College/University Name: <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -316,13 +329,13 @@ const ApplicationPage = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-300"
-                      placeholder="Enter your school name"
+                      placeholder="Enter your school/college/university name"
                     />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Subjects Name:
+                      Subjects/Combination/Course Taken:
                     </label>
                     <input
                       type="text"
@@ -330,7 +343,7 @@ const ApplicationPage = () => {
                       value={formData.subjectsName}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-300"
-                      placeholder="Enter subjects"
+                      placeholder="Enter subjects/combination/course"
                     />
                   </div>
                   
@@ -347,20 +360,6 @@ const ApplicationPage = () => {
                       placeholder="Enter passing year"
                     />
                   </div>
-                  
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Subjects Appeared:
-                    </label>
-                    <input
-                      type="text"
-                      name="subjectsAppeared"
-                      value={formData.subjectsAppeared}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-300"
-                      placeholder="Enter subjects appeared"
-                    />
-                  </div>
                 </div>
               </div>
 
@@ -370,7 +369,7 @@ const ApplicationPage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3">
                     <Users className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Parent/Guardian Details</h3>
+                  <h3 className="text-xl font-bold text-gray-900">Parent/Guardian Details (Optional)</h3>
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
