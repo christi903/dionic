@@ -9,6 +9,7 @@ interface TeamMember {
   image: string;
   email?: string;
   phone?: string;
+  instagram?: string;
 }
 
 interface TeamModalProps {
@@ -24,7 +25,7 @@ const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
       role: 'Director',
       image: '/team/member1.jpg',
       email: 'musadionis58@gmail.com',
-      phone: '+255 123 456 789',
+      phone: '+255 697 335 359',
     },
     {
       id: 2,
@@ -32,7 +33,8 @@ const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
       role: 'Chief Executive Officer',
       image: '/team/member2.jpg',
       email: 'karimzumomakame@gmail.com',
-      phone: '+255 123 456 790',
+      phone: '+91 9662 501 213', // Updated phone number
+      instagram: 'Karim_Zumo', // Added Instagram account
     },
     {
       id: 3,
@@ -40,7 +42,7 @@ const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
       role: 'Chief Operations Officer',
       image: '/team/member3.jpg',
       email: 'abdulrahimyusuf34@gmail.com',
-      phone: '+255 123 456 791',
+      phone: '+255 792 483 540',
     }
   ];
 
