@@ -2,13 +2,62 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, BookOpen } from 'lucide-react';
 
+type CourseType = 'diploma' | 'undergraduate' | 'graduate' | 'phd';
+
 interface SpecializationsModalProps {
   isOpen: boolean;
   onClose: () => void;
   courseName: string;
   specializations: string[];
-  courseType?: 'diploma' | 'undergraduate' | 'graduate' | 'phd';
+  courseType?: CourseType;
 }
+
+const colorThemes = {
+  // Diploma (Green)
+  'diploma': {
+    header: 'from-green-600 to-green-700',
+    closeBtn: 'hover:bg-green-800',
+    courseName: 'text-green-100',
+    backBtn: 'bg-green-700 hover:bg-green-800 text-white',
+    itemBg: 'from-green-50 to-green-100 border-green-200',
+    itemDot: 'bg-green-500',
+    count: 'text-green-600',
+    footerBtn: 'bg-green-600 hover:bg-green-700'
+  },
+  // Undergraduate (Blue)
+  'undergraduate': {
+    header: 'from-blue-600 to-blue-700',
+    closeBtn: 'hover:bg-blue-800',
+    courseName: 'text-blue-100',
+    backBtn: 'bg-blue-700 hover:bg-blue-800 text-white',
+    itemBg: 'from-blue-50 to-blue-100 border-blue-200',
+    itemDot: 'bg-blue-500',
+    count: 'text-blue-600',
+    footerBtn: 'bg-blue-600 hover:bg-blue-700'
+  },
+  // Graduate (Purple)
+  'graduate': {
+    header: 'from-purple-600 to-purple-700',
+    closeBtn: 'hover:bg-purple-800',
+    courseName: 'text-purple-100',
+    backBtn: 'bg-purple-700 hover:bg-purple-800 text-white',
+    itemBg: 'from-purple-50 to-purple-100 border-purple-200',
+    itemDot: 'bg-purple-500',
+    count: 'text-purple-600',
+    footerBtn: 'bg-purple-600 hover:bg-purple-700'
+  },
+  // PhD (Amber)
+  'phd': {
+    header: 'from-amber-600 to-amber-700',
+    closeBtn: 'hover:bg-amber-800',
+    courseName: 'text-amber-100',
+    backBtn: 'bg-amber-700 hover:bg-amber-800 text-white',
+    itemBg: 'from-amber-50 to-amber-100 border-amber-200',
+    itemDot: 'bg-amber-500',
+    count: 'text-amber-600',
+    footerBtn: 'bg-amber-600 hover:bg-amber-700'
+  }
+};
 
 const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
   isOpen,
@@ -17,56 +66,7 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
   specializations,
   courseType = 'diploma'
 }) => {
-  // Color scheme based on course type
-  const colors = (() => {
-    switch(courseType) {
-      case 'undergraduate':
-        return {
-          primary: 'blue',
-          primary600: 'blue-600',
-          primary700: 'blue-700',
-          primary800: 'blue-800',
-          primary50: 'blue-50',
-          primary100: 'blue-100',
-          primary200: 'blue-200',
-          primary500: 'blue-500'
-        };
-      case 'graduate':
-        return {
-          primary: 'purple',
-          primary600: 'purple-600',
-          primary700: 'purple-700',
-          primary800: 'purple-800',
-          primary50: 'purple-50',
-          primary100: 'purple-100',
-          primary200: 'purple-200',
-          primary500: 'purple-500'
-        };
-      case 'phd':
-        return {
-          primary: 'amber',
-          primary600: 'amber-600',
-          primary700: 'amber-700',
-          primary800: 'amber-800',
-          primary50: 'amber-50',
-          primary100: 'amber-100',
-          primary200: 'amber-200',
-          primary500: 'amber-500'
-        };
-      case 'diploma':
-      default:
-        return {
-          primary: 'green',
-          primary600: 'green-600',
-          primary700: 'green-700',
-          primary800: 'green-800',
-          primary50: 'green-50',
-          primary100: 'green-100',
-          primary200: 'green-200',
-          primary500: 'green-500'
-        };
-    }
-  })();
+  const colors = colorThemes[courseType] || colorThemes.diploma;
 
   return (
     <AnimatePresence>
@@ -91,7 +91,7 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
           >
             <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
               {/* Header */}
-              <div className={`bg-gradient-to-r from-${colors.primary600} to-${colors.primary700} px-6 py-4 text-white`}>
+              <div className={`bg-gradient-to-r ${colors.header} px-6 py-4 text-white`}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
                     <BookOpen className="h-6 w-6 mr-3" />
@@ -99,19 +99,19 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
                   </div>
                   <button
                     onClick={onClose}
-                    className={`p-2 hover:bg-${colors.primary800} rounded-full transition-colors duration-200`}
+                    className={`p-2 ${colors.closeBtn} rounded-full transition-colors duration-200`}
                     aria-label="Close"
                   >
                     <X className="h-5 w-5" />
                   </button>
                 </div>
                 <div className="flex items-center justify-between">
-                  <p className={`text-${colors.primary100} text-sm ml-9`}>{courseName}</p>
+                  <p className={`${colors.courseName} text-sm ml-9`}>{courseName}</p>
                   <button
                     onClick={onClose}
-                    className={`text-${colors.primary100} hover:text-white text-sm font-medium flex items-center`}
+                    className={`${colors.backBtn} text-sm font-medium px-3 py-1.5 rounded-lg flex items-center transition-colors duration-200`}
                   >
-                    <X className="h-4 w-4 mr-1" /> Back to Courses
+                    <X className="h-3.5 w-3.5 mr-1.5" /> Back to Courses
                   </button>
                 </div>
               </div>
@@ -122,13 +122,13 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
                   {specializations.map((specialization, index) => (
                     <motion.div
                       key={index}
-                      className={`bg-gradient-to-r from-${colors.primary50} to-${colors.primary100} border border-${colors.primary200} rounded-lg p-4 hover:shadow-md transition-shadow duration-200`}
+                      className={`bg-gradient-to-r ${colors.itemBg} rounded-lg p-4 hover:shadow-md transition-shadow duration-200`}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                     >
                       <div className="flex items-center">
-                        <div className={`w-3 h-3 bg-${colors.primary500} rounded-full mr-3 flex-shrink-0`}></div>
+                        <div className={`w-3 h-3 ${colors.itemDot} rounded-full mr-3 flex-shrink-0`}></div>
                         <span className="text-gray-800 font-medium text-sm">
                           {specialization}
                         </span>
@@ -140,7 +140,7 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
                 {/* Summary */}
                 <div className="mt-6 pt-4 border-t border-gray-200">
                   <p className="text-center text-gray-600 text-sm">
-                    <span className={`font-semibold text-${colors.primary600}`}>
+                    <span className={`font-semibold ${colors.count}`}>
                       {specializations.length}
                     </span>{' '}
                     specializations available in this program
@@ -152,7 +152,7 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
               <div className="bg-gray-50 px-6 py-4">
                 <button
                   onClick={onClose}
-                  className={`w-full bg-${colors.primary600} hover:bg-${colors.primary700} text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200`}
+                  className={`w-full ${colors.footerBtn} text-white font-medium py-3 px-4 rounded-lg transition-colors duration-200`}
                 >
                   Close
                 </button>

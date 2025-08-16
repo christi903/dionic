@@ -3,12 +3,13 @@ export interface Scholarship {
   title: string;
   university: string;
   country: string;
-  type: string;
+  type: 'diploma' | 'undergraduate' | 'graduate' | 'phd' | string;
   duration: string;
   deadline: string;
   image: string;
   description: string;
   requirements: string[];
+  value?: string; // Optional value property for scholarships
 }
 
 export const scholarships: Scholarship[] = [
@@ -158,7 +159,7 @@ export const scholarships: Scholarship[] = [
     requirements: ['Portfolio required', 'IELTS 6.5+', 'Design creativity']
   },
   {
-    id: 13,
+    id: 23,
     title: 'Bachelor of Information Technology',
     university: 'University of Sydney',
     country: 'Australia',
@@ -170,7 +171,7 @@ export const scholarships: Scholarship[] = [
     requirements: ['Mathematics background', 'IELTS 6.5+', 'Technology interest']
   },
   {
-    id: 14,
+    id: 24,
     title: 'Bachelor of Hotel Management',
     university: 'Swiss Hotel Management School',
     country: 'Switzerland',
@@ -182,7 +183,7 @@ export const scholarships: Scholarship[] = [
     requirements: ['Strong communication', 'IELTS 6.5+', 'Service orientation']
   },
   {
-    id: 15,
+    id: 25,
     title: 'Bachelor of Public Health',
     university: 'University of Edinburgh',
     country: 'United Kingdom',
@@ -196,7 +197,7 @@ export const scholarships: Scholarship[] = [
 
   // GRADUATE PROGRAMS
   {
-    id: 11,
+    id: 21,
     title: 'Global Health Initiative',
     university: 'University of Edinburgh',
     country: 'United Kingdom',
