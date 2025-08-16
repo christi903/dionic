@@ -52,10 +52,10 @@ const ScholarshipPage = () => {
   }, [backgroundImages.length]);
 
   const stats = [
-    { icon: <Users className="h-8 w-8 text-blue-500" />, number: '500+', label: 'Students Placed' },
-    { icon: <Globe className="h-8 w-8 text-emerald-500" />, number: '25+', label: 'Countries' },
-    { icon: <Award className="h-8 w-8 text-amber-500" />, number: '100+', label: 'Partner Universities' },
-    { icon: <DollarSign className="h-8 w-8 text-green-600" />, number: '$5M+', label: 'Scholarships Secured' }
+    { icon: <Users className="h-8 w-8 text-blue-500" />, number: '50+', label: 'Students Placed' },
+    { icon: <Globe className="h-8 w-8 text-emerald-500" />, number: '10+', label: 'Countries' },
+    { icon: <Award className="h-8 w-8 text-amber-500" />, number: '25+', label: 'Partner Universities' },
+    { icon: <DollarSign className="h-8 w-8 text-green-600" />, number: '$1M+', label: 'Scholarships Secured' }
   ];
 
   const services = [
@@ -457,7 +457,7 @@ const ScholarshipPage = () => {
              >
                <Phone className="h-8 w-8 mx-auto mb-4 text-blue-300" />
                <h3 className="text-xl font-semibold mb-2 text-blue-200">Call Us</h3>
-                <p className="text-white font-medium">+255693641585</p>
+                <p className="text-white font-medium">+255752006879</p>
              </motion.div>
               <motion.div
                className="text-center p-6 rounded-lg bg-white/10 backdrop-blur"
