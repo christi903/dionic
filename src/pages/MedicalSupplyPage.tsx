@@ -68,7 +68,7 @@ const MedicalSupplyPage = () => {
     const text = toWhatsAppText();
     if (!text) { alert('Your cart is empty. Add items first.'); return; }
     const encoded = encodeURIComponent(text);
-    const url = `https://wa.me/+255769558797?text=${encoded}`;
+    const url = `https://wa.me/+255693641585?text=${encoded}`;
     window.open(url, '_blank');
   };
   return (
