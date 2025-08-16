@@ -95,9 +95,61 @@ const ScholarshipPage = () => {
     'Assistantships & on-campus work opportunities'
   ];
 
+  // Map the course arrays to the scholarship format for the default view
+  const allCourses = [
+    ...diplomaCourses.map(course => ({
+      id: course.id,
+      title: course.name,
+      university: course.university,
+      country: course.country,
+      type: 'diploma',
+      duration: course.duration,
+      deadline: 'Rolling Admission',
+      image: course.image,
+      description: course.description,
+      requirements: []
+    })),
+    ...undergraduateCourses.map(course => ({
+      id: course.id,
+      title: course.name,
+      university: course.university,
+      country: course.country,
+      type: 'undergraduate',
+      duration: course.duration,
+      deadline: 'Rolling Admission',
+      image: course.image,
+      description: course.description,
+      requirements: []
+    })),
+    ...graduateCourses.map(course => ({
+      id: course.id,
+      title: course.name,
+      university: course.university,
+      country: course.country,
+      type: 'graduate',
+      duration: course.duration,
+      deadline: 'Rolling Admission',
+      image: course.image,
+      description: course.description,
+      requirements: []
+    })),
+    ...phdCourses.map(course => ({
+      id: course.id,
+      title: course.name,
+      university: course.university,
+      country: course.country,
+      type: 'phd',
+      duration: course.duration,
+      deadline: 'Rolling Admission',
+      image: course.image,
+      description: course.description,
+      requirements: []
+    }))
+  ];
+
   const filteredScholarships = selectedProgram === 'all' 
-    ? scholarships 
-    : scholarships.filter(scholarship => scholarship.type === selectedProgram);
+    ? allCourses 
+    : allCourses.filter(scholarship => scholarship.type === selectedProgram);
 
   return (
     <div className="min-h-screen bg-gray-50">
