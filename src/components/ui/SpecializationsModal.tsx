@@ -92,19 +92,26 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
             <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
               {/* Header */}
               <div className={`bg-gradient-to-r from-${colors.primary600} to-${colors.primary700} px-6 py-4 text-white`}>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center">
                     <BookOpen className="h-6 w-6 mr-3" />
-                    <div>
-                      <h2 className="text-xl font-bold">Specializations</h2>
-                      <p className={`text-${colors.primary100} text-sm`}>{courseName}</p>
-                    </div>
+                    <h2 className="text-xl font-bold">Specializations</h2>
                   </div>
                   <button
                     onClick={onClose}
                     className={`p-2 hover:bg-${colors.primary800} rounded-full transition-colors duration-200`}
+                    aria-label="Close"
                   >
                     <X className="h-5 w-5" />
+                  </button>
+                </div>
+                <div className="flex items-center justify-between">
+                  <p className={`text-${colors.primary100} text-sm ml-9`}>{courseName}</p>
+                  <button
+                    onClick={onClose}
+                    className={`text-${colors.primary100} hover:text-white text-sm font-medium flex items-center`}
+                  >
+                    <X className="h-4 w-4 mr-1" /> Back to Courses
                   </button>
                 </div>
               </div>
