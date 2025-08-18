@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, BookOpen } from 'lucide-react';
 
-type CourseType = 'diploma' | 'undergraduate' | 'graduate' | 'phd';
+type CourseType = 'diploma' | 'masters' | 'phd';
 
 interface SpecializationsModalProps {
   isOpen: boolean;
@@ -24,19 +24,8 @@ const colorThemes = {
     count: 'text-green-600',
     footerBtn: 'bg-green-600 hover:bg-green-700'
   },
-  // Undergraduate (Blue)
-  'undergraduate': {
-    header: 'from-blue-600 to-blue-700',
-    closeBtn: 'hover:bg-blue-800',
-    courseName: 'text-blue-100',
-    backBtn: 'bg-blue-700 hover:bg-blue-800 text-white',
-    itemBg: 'from-blue-50 to-blue-100 border-blue-200',
-    itemDot: 'bg-blue-500',
-    count: 'text-blue-600',
-    footerBtn: 'bg-blue-600 hover:bg-blue-700'
-  },
-  // Graduate (Purple)
-  'graduate': {
+  // Masters (Purple)
+  'masters': {
     header: 'from-purple-600 to-purple-700',
     closeBtn: 'hover:bg-purple-800',
     courseName: 'text-purple-100',

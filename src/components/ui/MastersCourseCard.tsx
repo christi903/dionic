@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Clock, MapPin, BookOpen } from 'lucide-react';
-import { GraduateCourse } from '../../data/scholarships';
+import { MastersCourse } from '../../data/scholarships';
 import SpecializationsModal from './SpecializationsModal';
 
-interface GraduateCourseCardProps {
-  course: GraduateCourse;
+interface MastersCourseCardProps {
+  course: MastersCourse;
 }
 
-const GraduateCourseCard: React.FC<GraduateCourseCardProps> = ({ course }) => {
+const MastersCourseCard: React.FC<MastersCourseCardProps> = ({ course }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleViewAllSpecializations = () => {
@@ -26,7 +26,7 @@ const GraduateCourseCard: React.FC<GraduateCourseCardProps> = ({ course }) => {
         onClose={handleCloseModal}
         courseName={course.name}
         specializations={course.specializations}
-        courseType="graduate"
+        courseType="masters"
       />
       <motion.div
         className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -106,4 +106,4 @@ const GraduateCourseCard: React.FC<GraduateCourseCardProps> = ({ course }) => {
   );
 };
 
-export default GraduateCourseCard;
+export default MastersCourseCard;
