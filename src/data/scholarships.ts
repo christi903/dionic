@@ -191,6 +191,196 @@ export const diplomaCourses: DiplomaCourse[] = [
       'UI/UX Design',
       'Typography'
     ]
+  },
+  {
+    id: 6,
+    name: 'Diploma in Culinary Arts',
+    university: 'Sunway University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Professional culinary program focusing on international cuisines and food service management.',
+    specializations: [
+      'International Cuisine',
+      'Pastry & Bakery',
+      'Food & Beverage Management',
+      'Kitchen Management',
+      'Menu Planning & Development',
+      'Food Safety & Sanitation',
+      'Catering Operations',
+      'Sustainable Culinary Practices'
+    ]
+  },
+  {
+    id: 7,
+    name: 'Diploma in Digital Marketing',
+    university: 'INTI International University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Specialized program in digital marketing strategies, social media management, and online advertising.',
+    specializations: [
+      'Social Media Marketing',
+      'Search Engine Optimization',
+      'Content Marketing',
+      'Email Marketing',
+      'Digital Analytics',
+      'Mobile Marketing',
+      'E-commerce Marketing',
+      'Influencer Marketing'
+    ]
+  },
+  {
+    id: 8,
+    name: 'Diploma in Fashion Design',
+    university: 'Raffles Design Institute',
+    country: 'Singapore',
+    duration: '2.5 years',
+    image: 'https://images.pexels.com/photos/3184466/pexels-photo-3184466.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Creative fashion design program covering garment construction, textile design, and fashion merchandising.',
+    specializations: [
+      'Apparel Design',
+      'Textile Design',
+      'Fashion Illustration',
+      'Pattern Making',
+      'Fashion Merchandising',
+      'Sustainable Fashion',
+      'Costume Design',
+      'Fashion Styling'
+    ]
+  },
+  {
+    id: 9,
+    name: 'Diploma in Interior Design',
+    university: 'UCSI University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184467/pexels-photo-3184467.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Interior design program focusing on spatial planning, materials, and sustainable design practices.',
+    specializations: [
+      'Residential Design',
+      'Commercial Design',
+      'Sustainable Design',
+      'Lighting Design',
+      'Furniture Design',
+      'Exhibition Design',
+      'Space Planning',
+      'Material & Finishes'
+    ]
+  },
+  {
+    id: 10,
+    name: 'Diploma in Multimedia Design',
+    university: 'Multimedia University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184468/pexels-photo-3184468.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Multimedia design program covering animation, video production, and interactive media development.',
+    specializations: [
+      '3D Animation',
+      'Video Production',
+      'Interactive Media',
+      'Game Design',
+      'Visual Effects',
+      'Sound Design',
+      'Motion Graphics',
+      'Digital Storytelling'
+    ]
+  },
+  {
+    id: 11,
+    name: 'Diploma in Tourism Management',
+    university: 'Taylor\'s University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Tourism management program focusing on travel industry operations, destination management, and customer service.',
+    specializations: [
+      'Travel Agency Operations',
+      'Tour Planning & Development',
+      'Destination Management',
+      'Sustainable Tourism',
+      'Adventure Tourism',
+      'Cultural Tourism',
+      'Ecotourism',
+      'Tourism Marketing'
+    ]
+  },
+  {
+    id: 12,
+    name: 'Diploma in Accounting',
+    university: 'Sunway University',
+    country: 'Malaysia',
+    duration: '2.5 years',
+    image: 'https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Accounting program covering financial accounting, taxation, and business finance principles.',
+    specializations: [
+      'Financial Accounting',
+      'Management Accounting',
+      'Taxation',
+      'Auditing',
+      'Corporate Finance',
+      'Financial Reporting',
+      'Accounting Information Systems',
+      'Business Ethics'
+    ]
+  },
+  {
+    id: 13,
+    name: 'Diploma in Early Childhood Education',
+    university: 'SEGi University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184341/pexels-photo-3184341.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Early childhood education program focusing on child development, teaching methodologies, and curriculum planning.',
+    specializations: [
+      'Child Development',
+      'Curriculum Planning',
+      'Teaching Methodologies',
+      'Classroom Management',
+      'Special Needs Education',
+      'Educational Psychology',
+      'Play-Based Learning',
+      'Parent-Teacher Relations'
+    ]
+  },
+  {
+    id: 14,
+    name: 'Diploma in Performing Arts',
+    university: 'LASALLE College of the Arts',
+    country: 'Singapore',
+    duration: '3 years',
+    image: 'https://images.pexels.com/photos/3184469/pexels-photo-3184469.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Performing arts program covering acting, dance, and music performance techniques.',
+    specializations: [
+      'Acting',
+      'Dance Performance',
+      'Music Performance',
+      'Theatre Production',
+      'Voice & Speech',
+      'Movement',
+      'Stage Management',
+      'Performance Studies'
+    ]
+  },
+  {
+    id: 15,
+    name: 'Diploma in Journalism',
+    university: 'HELP University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Journalism program covering news reporting, media ethics, and digital content creation.',
+    specializations: [
+      'News Reporting',
+      'Feature Writing',
+      'Photojournalism',
+      'Broadcast Journalism',
+      'Digital Media',
+      'Media Ethics',
+      'Investigative Journalism',
+      'Sports Journalism'
+    ]
   }
 ];
 
@@ -300,6 +490,216 @@ export const mastersCourses: MastersCourse[] = [
       'International Organizations',
       'Peace Studies'
     ]
+  },
+  {
+    id: 6,
+    name: 'Master of Data Science',
+    university: 'National University of Singapore',
+    country: 'Singapore',
+    duration: '1.5 years',
+    image: 'https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Advanced program in data science focusing on big data analytics, machine learning, and statistical modeling.',
+    specializations: [
+      'Big Data Analytics',
+      'Machine Learning',
+      'Statistical Modeling',
+      'Data Visualization',
+      'Natural Language Processing',
+      'Predictive Analytics',
+      'Business Intelligence',
+      'Data Engineering',
+      'Deep Learning',
+      'Computational Statistics'
+    ]
+  },
+  {
+    id: 7,
+    name: 'Master of Architecture',
+    university: 'University of Technology Malaysia',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3862133/pexels-photo-3862133.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Advanced architecture program focusing on sustainable design, urban planning, and architectural theory.',
+    specializations: [
+      'Sustainable Architecture',
+      'Urban Design',
+      'Architectural Conservation',
+      'Digital Fabrication',
+      'Parametric Design',
+      'Building Technology',
+      'Landscape Architecture',
+      'Interior Architecture',
+      'Housing & Urban Development',
+      'Architectural Theory & Criticism'
+    ]
+  },
+  {
+    id: 8,
+    name: 'Master of Education',
+    university: 'University of Malaya',
+    country: 'Malaysia',
+    duration: '1.5-2 years',
+    image: 'https://images.pexels.com/photos/3184342/pexels-photo-3184342.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Advanced education program focusing on educational leadership, curriculum development, and teaching methodologies.',
+    specializations: [
+      'Educational Leadership',
+      'Curriculum & Instruction',
+      'Educational Technology',
+      'Special Education',
+      'TESOL (Teaching English to Speakers of Other Languages)',
+      'Educational Psychology',
+      'Higher Education Administration',
+      'Educational Research',
+      'Inclusive Education',
+      'Science Education'
+    ]
+  },
+  {
+    id: 9,
+    name: 'Master of Finance',
+    university: 'Singapore Management University',
+    country: 'Singapore',
+    duration: '1 year',
+    image: 'https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Specialized finance program focusing on investment analysis, financial markets, and risk management.',
+    specializations: [
+      'Investment Management',
+      'Corporate Finance',
+      'Financial Analysis',
+      'Risk Management',
+      'Financial Markets',
+      'Wealth Management',
+      'Quantitative Finance',
+      'Financial Technology (FinTech)',
+      'Banking & Financial Services',
+      'International Finance'
+    ]
+  },
+  {
+    id: 10,
+    name: 'Master of Psychology',
+    university: 'HELP University',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3184343/pexels-photo-3184343.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Advanced psychology program focusing on clinical practice, research methodologies, and psychological assessment.',
+    specializations: [
+      'Clinical Psychology',
+      'Counseling Psychology',
+      'Industrial & Organizational Psychology',
+      'Educational Psychology',
+      'Health Psychology',
+      'Neuropsychology',
+      'Forensic Psychology',
+      'Child & Developmental Psychology',
+      'Cognitive Psychology',
+      'Social Psychology'
+    ]
+  },
+  {
+    id: 11,
+    name: 'Master of Cybersecurity',
+    university: 'Nanyang Technological University',
+    country: 'Singapore',
+    duration: '1.5 years',
+    image: 'https://images.pexels.com/photos/3861960/pexels-photo-3861960.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Advanced cybersecurity program focusing on network security, ethical hacking, and digital forensics.',
+    specializations: [
+      'Network Security',
+      'Ethical Hacking',
+      'Digital Forensics',
+      'Security Governance',
+      'Cryptography',
+      'Secure Software Development',
+      'Cloud Security',
+      'IoT Security',
+      'Cyber Threat Intelligence',
+      'Security Operations'
+    ]
+  },
+  {
+    id: 12,
+    name: 'Master of Urban Planning',
+    university: 'University of Technology Malaysia',
+    country: 'Malaysia',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3862134/pexels-photo-3862134.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Urban planning program focusing on sustainable city development, transportation planning, and urban policy.',
+    specializations: [
+      'Sustainable Urban Development',
+      'Transportation Planning',
+      'Urban Policy & Governance',
+      'Housing & Community Development',
+      'Environmental Planning',
+      'Smart Cities',
+      'Urban Design',
+      'Land Use Planning',
+      'Infrastructure Planning',
+      'Regional Planning'
+    ]
+  },
+  {
+    id: 13,
+    name: 'Master of Biotechnology',
+    university: 'Indian Institute of Technology Bombay',
+    country: 'India',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3938024/pexels-photo-3938024.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Advanced biotechnology program focusing on genetic engineering, bioinformatics, and pharmaceutical biotechnology.',
+    specializations: [
+      'Genetic Engineering',
+      'Bioinformatics',
+      'Pharmaceutical Biotechnology',
+      'Industrial Biotechnology',
+      'Agricultural Biotechnology',
+      'Medical Biotechnology',
+      'Environmental Biotechnology',
+      'Bioprocess Engineering',
+      'Molecular Biology',
+      'Stem Cell Technology'
+    ]
+  },
+  {
+    id: 14,
+    name: 'Master of Digital Marketing',
+    university: 'RMIT University Vietnam',
+    country: 'Vietnam',
+    duration: '1.5 years',
+    image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Specialized digital marketing program focusing on digital strategy, analytics, and consumer behavior.',
+    specializations: [
+      'Digital Marketing Strategy',
+      'Social Media Marketing',
+      'Search Engine Marketing',
+      'Content Marketing',
+      'Digital Analytics',
+      'E-commerce Marketing',
+      'Mobile Marketing',
+      'User Experience Design',
+      'Digital Consumer Behavior',
+      'Marketing Automation'
+    ]
+  },
+  {
+    id: 15,
+    name: 'Master of Artificial Intelligence',
+    university: 'Indian Institute of Technology Delhi',
+    country: 'India',
+    duration: '2 years',
+    image: 'https://images.pexels.com/photos/3861961/pexels-photo-3861961.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Advanced AI program focusing on machine learning, computer vision, and natural language processing.',
+    specializations: [
+      'Machine Learning',
+      'Deep Learning',
+      'Computer Vision',
+      'Natural Language Processing',
+      'Robotics',
+      'Reinforcement Learning',
+      'AI Ethics',
+      'Knowledge Representation',
+      'Cognitive Computing',
+      'Intelligent Systems'
+    ]
   }
 ];
 
@@ -408,6 +808,216 @@ export const phdCourses: PhDCourse[] = [
       'Anthropology',
       'Development Studies',
       'Gender Studies'
+    ]
+  },
+  {
+    id: 6,
+    name: 'PhD in Data Science',
+    university: 'Nanyang Technological University',
+    country: 'Singapore',
+    duration: '4-5 years',
+    image: 'https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in data science focusing on advanced analytics, machine learning, and big data research.',
+    specializations: [
+      'Advanced Machine Learning',
+      'Big Data Analytics',
+      'Computational Statistics',
+      'Data Mining',
+      'Deep Learning',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Bayesian Methods',
+      'Time Series Analysis',
+      'Causal Inference'
+    ]
+  },
+  {
+    id: 7,
+    name: 'PhD in Biotechnology',
+    university: 'Indian Institute of Technology Bombay',
+    country: 'India',
+    duration: '4-6 years',
+    image: 'https://images.pexels.com/photos/3938024/pexels-photo-3938024.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in biotechnology focusing on genetic engineering, molecular biology, and bioprocess research.',
+    specializations: [
+      'Genetic Engineering',
+      'Molecular Biology',
+      'Bioprocess Engineering',
+      'Industrial Biotechnology',
+      'Agricultural Biotechnology',
+      'Medical Biotechnology',
+      'Pharmaceutical Biotechnology',
+      'Environmental Biotechnology',
+      'Synthetic Biology',
+      'Systems Biology'
+    ]
+  },
+  {
+    id: 8,
+    name: 'PhD in Environmental Science',
+    university: 'University of Technology Malaysia',
+    country: 'Malaysia',
+    duration: '3-5 years',
+    image: 'https://images.pexels.com/photos/3862135/pexels-photo-3862135.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in environmental science focusing on sustainability, climate change, and environmental management.',
+    specializations: [
+      'Climate Change Science',
+      'Environmental Management',
+      'Sustainable Development',
+      'Ecosystem Conservation',
+      'Environmental Policy',
+      'Pollution Control',
+      'Renewable Energy',
+      'Water Resources Management',
+      'Environmental Impact Assessment',
+      'Biodiversity Conservation'
+    ]
+  },
+  {
+    id: 9,
+    name: 'PhD in Economics',
+    university: 'Singapore Management University',
+    country: 'Singapore',
+    duration: '4-6 years',
+    image: 'https://images.pexels.com/photos/3184297/pexels-photo-3184297.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in economics focusing on economic theory, econometrics, and applied economics research.',
+    specializations: [
+      'Microeconomic Theory',
+      'Macroeconomic Theory',
+      'Econometrics',
+      'Development Economics',
+      'International Economics',
+      'Labor Economics',
+      'Public Economics',
+      'Financial Economics',
+      'Behavioral Economics',
+      'Environmental Economics'
+    ]
+  },
+  {
+    id: 10,
+    name: 'PhD in Psychology',
+    university: 'University of Malaya',
+    country: 'Malaysia',
+    duration: '3-5 years',
+    image: 'https://images.pexels.com/photos/3184344/pexels-photo-3184344.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in psychology focusing on psychological research, assessment, and therapeutic interventions.',
+    specializations: [
+      'Clinical Psychology',
+      'Cognitive Psychology',
+      'Developmental Psychology',
+      'Social Psychology',
+      'Neuropsychology',
+      'Health Psychology',
+      'Educational Psychology',
+      'Industrial & Organizational Psychology',
+      'Cross-Cultural Psychology',
+      'Positive Psychology'
+    ]
+  },
+  {
+    id: 11,
+    name: 'PhD in Public Health',
+    university: 'All India Institute of Medical Sciences',
+    country: 'India',
+    duration: '4-5 years',
+    image: 'https://images.pexels.com/photos/3938025/pexels-photo-3938025.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in public health focusing on epidemiology, health policy, and global health challenges.',
+    specializations: [
+      'Epidemiology',
+      'Health Policy & Management',
+      'Global Health',
+      'Biostatistics',
+      'Environmental Health',
+      'Health Promotion',
+      'Maternal & Child Health',
+      'Infectious Disease Epidemiology',
+      'Health Economics',
+      'Health Systems Research'
+    ]
+  },
+  {
+    id: 12,
+    name: 'PhD in Education',
+    university: 'Nanyang Technological University',
+    country: 'Singapore',
+    duration: '4-6 years',
+    image: 'https://images.pexels.com/photos/3184345/pexels-photo-3184345.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in education focusing on educational research, policy, and innovative teaching methodologies.',
+    specializations: [
+      'Educational Policy',
+      'Curriculum Studies',
+      'Educational Technology',
+      'Higher Education',
+      'Educational Leadership',
+      'Science Education',
+      'Mathematics Education',
+      'Language Education',
+      'Special Education',
+      'Comparative Education'
+    ]
+  },
+  {
+    id: 13,
+    name: 'PhD in Artificial Intelligence',
+    university: 'Indian Institute of Technology Delhi',
+    country: 'India',
+    duration: '4-5 years',
+    image: 'https://images.pexels.com/photos/3861961/pexels-photo-3861961.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in artificial intelligence focusing on advanced AI research, machine learning, and intelligent systems.',
+    specializations: [
+      'Deep Learning',
+      'Reinforcement Learning',
+      'Natural Language Processing',
+      'Computer Vision',
+      'Robotics',
+      'Knowledge Representation',
+      'AI Ethics',
+      'Cognitive Computing',
+      'Multi-agent Systems',
+      'Explainable AI'
+    ]
+  },
+  {
+    id: 14,
+    name: 'PhD in Architecture',
+    university: 'University of Technology Malaysia',
+    country: 'Malaysia',
+    duration: '3-5 years',
+    image: 'https://images.pexels.com/photos/3862136/pexels-photo-3862136.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in architecture focusing on architectural theory, sustainable design, and urban development.',
+    specializations: [
+      'Architectural Theory & Criticism',
+      'Sustainable Architecture',
+      'Urban Design',
+      'Architectural Conservation',
+      'Digital Architecture',
+      'Building Technology',
+      'Housing & Urban Development',
+      'Architectural History',
+      'Parametric Design',
+      'Landscape Architecture'
+    ]
+  },
+  {
+    id: 15,
+    name: 'PhD in Neuroscience',
+    university: 'National University of Singapore',
+    country: 'Singapore',
+    duration: '4-6 years',
+    image: 'https://images.pexels.com/photos/3938026/pexels-photo-3938026.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Doctoral program in neuroscience focusing on brain function, neurological disorders, and cognitive processes.',
+    specializations: [
+      'Cognitive Neuroscience',
+      'Molecular Neuroscience',
+      'Cellular Neuroscience',
+      'Behavioral Neuroscience',
+      'Computational Neuroscience',
+      'Developmental Neuroscience',
+      'Clinical Neuroscience',
+      'Neuroimaging',
+      'Neurogenetics',
+      'Neuroengineering'
     ]
   }
 ];
