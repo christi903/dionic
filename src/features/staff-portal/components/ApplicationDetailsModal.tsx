@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Application } from '../types';
-import { X, Edit3, User, Calendar, Mail, Phone, MessageSquare, GraduationCap, School, BookOpen, Users, CheckCircle, AlertCircle, Clock, Eye } from 'lucide-react';
+import { X, Edit3, User, GraduationCap, Users, CheckCircle, AlertCircle, Clock, Eye } from 'lucide-react';
 
 interface ApplicationDetailsModalProps {
   isOpen: boolean;

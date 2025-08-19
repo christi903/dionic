@@ -3,10 +3,9 @@ import { motion } from 'framer-motion';
 interface GoLearnLogoProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg';
-  showTagline?: boolean;
 }
 
-const GoLearnLogo: React.FC<GoLearnLogoProps> = ({ className = '', size = 'md', showTagline = true }) => {
+const GoLearnLogo: React.FC<GoLearnLogoProps> = ({ className = '', size = 'md' }) => {
   const sizeClasses = {
     sm: 'w-8 h-8',
     md: 'w-12 h-12',

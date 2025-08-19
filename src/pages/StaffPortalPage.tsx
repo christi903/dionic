@@ -11,6 +11,10 @@ import HeaderBar from '../features/staff-portal/components/HeaderBar';
 import AuthCard from '../features/auth/AuthCard';
 import { Application, StaffPortalView } from '../features/staff-portal/types';
 
+interface UserMetadata {
+  fullName?: string;
+}
+
 const StaffPortalPage = () => {
   const { user, loading: authLoading, signIn, signOut, signUp, resetPassword } = useAuth();
   const [applications, setApplications] = useState<Application[]>([]);
@@ -131,7 +135,7 @@ const StaffPortalPage = () => {
         <main className="flex-1 min-w-0">
           <HeaderBar
             title={view === 'dashboard' ? 'Dashboard' : 'Applications'}
-            userName={(user.user_metadata as any)?.fullName || null}
+            userName={(user.user_metadata as UserMetadata)?.fullName || null}
             userEmail={user.email}
           />
           <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">

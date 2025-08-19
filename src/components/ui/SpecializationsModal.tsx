@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, BookOpen } from 'lucide-react';
 
-type CourseType = 'diploma' | 'masters' | 'phd';
+type CourseType = 'diploma' | 'undergraduate' | 'masters' | 'phd';
 
 interface SpecializationsModalProps {
   isOpen: boolean;
@@ -23,6 +23,17 @@ const colorThemes = {
     itemDot: 'bg-green-500',
     count: 'text-green-600',
     footerBtn: 'bg-green-600 hover:bg-green-700'
+  },
+  // Undergraduate (Dark Blue)
+  'undergraduate': {
+    header: 'from-blue-800 to-blue-900',
+    closeBtn: 'hover:bg-blue-900',
+    courseName: 'text-blue-100',
+    backBtn: 'bg-blue-900 hover:bg-blue-950 text-white',
+    itemBg: 'from-blue-50 to-blue-100 border-blue-200',
+    itemDot: 'bg-blue-700',
+    count: 'text-blue-800',
+    footerBtn: 'bg-blue-900 hover:bg-blue-950'
   },
   // Masters (Purple)
   'masters': {
@@ -81,18 +92,9 @@ const SpecializationsModal: React.FC<SpecializationsModalProps> = ({
             <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
               {/* Header */}
               <div className={`bg-gradient-to-r ${colors.header} px-6 py-4 text-white`}>
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center">
-                    <BookOpen className="h-6 w-6 mr-3" />
-                    <h2 className="text-xl font-bold">Specializations</h2>
-                  </div>
-                  <button
-                    onClick={onClose}
-                    className={`p-2 ${colors.closeBtn} rounded-full transition-colors duration-200`}
-                    aria-label="Close"
-                  >
-                    <X className="h-5 w-5" />
-                  </button>
+                <div className="flex items-center mb-2">
+                  <BookOpen className="h-6 w-6 mr-3" />
+                  <h2 className="text-xl font-bold">Specializations</h2>
                 </div>
                 <div className="flex items-center justify-between">
                   <p className={`${colors.courseName} text-sm ml-9`}>{courseName}</p>

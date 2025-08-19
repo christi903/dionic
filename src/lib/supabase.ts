@@ -3,6 +3,15 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+interface UserData {
+  fullName?: string;
+  [key: string]: unknown;
+}
+
+interface AuthCallback {
+  (event: string, session: { user: unknown; access_token?: string; refresh_token?: string } | null): void;
+}
+
 // Create a mock client if environment variables are missing (for development)
 const createMockClient = () => ({
   auth: {
@@ -40,7 +49,7 @@ export const supabase = (!supabaseUrl || !supabaseAnonKey)
 // Auth helper functions
 export const authHelpers = {
   // Sign up new user
-  signUp: async (email: string, password: string, userData?: any) => {
+  signUp: async (email: string, password: string, userData?: UserData) => {
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -81,7 +90,7 @@ export const authHelpers = {
   },
 
   // Listen to auth changes
-  onAuthStateChange: (callback: (event: string, session: any) => void) => {
+  onAuthStateChange: (callback: AuthCallback) => {
     return supabase.auth.onAuthStateChange(callback);
   }
 };

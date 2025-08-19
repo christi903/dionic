@@ -1,6 +1,6 @@
 import React from 'react';
 import { Application } from '../types';
-import { CheckCircle, Clock, AlertCircle, Eye } from 'lucide-react';
+import { CheckCircle, Clock, Eye } from 'lucide-react';
 
 interface DashboardOverviewProps {
   applications: Application[];

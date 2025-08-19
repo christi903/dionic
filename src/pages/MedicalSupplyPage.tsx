@@ -10,6 +10,7 @@ import { useCart } from '../features/med-supply/hooks/useCart';
 import QuantityModal from '../features/med-supply/components/QuantityModal';
 import CartDrawer from '../features/med-supply/components/CartDrawer';
 import SearchBar from '../features/med-supply/components/SearchBar';
+import { SupplyProduct } from '../features/med-supply/types';
 
 const MedicalSupplyPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -219,7 +220,7 @@ const MedicalSupplyPage = () => {
         onClose={() => setQuantityModal({ open: false, productName: '', productId: null })}
         onConfirm={(q) => {
           const product = allProducts.find(p => p.id === quantityModal.productId);
-          if (product) addProduct(product as any, q);
+          if (product) addProduct(product as SupplyProduct, q);
           setDrawerOpen(true);
         }}
       />

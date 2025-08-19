@@ -25,6 +25,17 @@ export interface DiplomaCourse {
   specializations: string[];
 }
 
+export interface UndergraduateCourse {
+  id: number;
+  name: string;
+  university: string;
+  country: string;
+  duration: string;
+  image: string;
+  description: string;
+  specializations: string[];
+}
+
 export interface MastersCourse {
   id: number;
   name: string;
@@ -51,6 +62,7 @@ export interface PhDCourse {
 export const programTypes = [
   { id: 'all', name: 'All Programs' },
   { id: 'diploma', name: 'Diploma Programs' },
+  { id: 'undergraduate', name: 'Undergraduate Programs' },
   { id: 'masters', name: 'Masters Programs' },
   { id: 'phd', name: 'PhD Programs' }
 ];
@@ -1025,3 +1037,292 @@ export const phdCourses: PhDCourse[] = [
 // Export renamed graduate courses as masters courses for backward compatibility
 export const graduateCourses = mastersCourses;
 export type GraduateCourse = MastersCourse;
+
+// Undergraduate Courses
+export const undergraduateCourses: UndergraduateCourse[] = [
+  {
+    id: 1,
+    name: 'Bachelor of Computer Science',
+    university: 'University of Malaya',
+    country: 'Malaysia',
+    duration: '3-4 years',
+    image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Foundational and advanced topics in computing, software, and data systems preparing students for tech careers.',
+    specializations: [
+      'Software Engineering',
+      'Artificial Intelligence',
+      'Data Science',
+      'Cybersecurity',
+      'Computer Networks',
+      'Human-Computer Interaction',
+      'Cloud Computing',
+      'Mobile App Development'
+    ]
+  },
+  {
+    id: 2,
+    name: 'Bachelor of Business Administration',
+    university: 'Singapore Management University',
+    country: 'Singapore',
+    duration: '3-4 years',
+    image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Comprehensive grounding in business disciplines with a focus on leadership, strategy, and entrepreneurship.',
+    specializations: [
+      'Marketing',
+      'Finance',
+      'Human Resource Management',
+      'Operations Management',
+      'International Business',
+      'Entrepreneurship',
+      'Business Analytics',
+      'Supply Chain Management'
+    ]
+  },
+  {
+    id: 3,
+    name: 'Bachelor of Mechanical Engineering',
+    university: 'Nanyang Technological University',
+    country: 'Singapore',
+    duration: '4 years',
+    image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Hands-on engineering education covering design, manufacturing, and next-generation systems.',
+    specializations: [
+      'Robotics',
+      'Automotive Engineering',
+      'Aerospace Systems',
+      'Thermal & Fluid Sciences',
+      'Manufacturing Engineering',
+      'Materials Engineering',
+      'Mechatronics',
+      'Product Design'
+    ]
+  },
+  {
+    id: 4,
+    name: 'Bachelor of Electrical & Electronics Engineering',
+    university: 'Indian Institute of Technology Delhi',
+    country: 'India',
+    duration: '4 years',
+    image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Core EEE curriculum with strong emphasis on circuits, signal processing, and communication systems.',
+    specializations: [
+      'Embedded Systems',
+      'Power Systems',
+      'Control Systems',
+      'VLSI Design',
+      'Communication Engineering',
+      'Signal Processing',
+      'Renewable Energy',
+      'Microelectronics'
+    ]
+  },
+  {
+    id: 5,
+    name: 'Bachelor of Civil Engineering',
+    university: 'University of Technology Malaysia',
+    country: 'Malaysia',
+    duration: '4 years',
+    image: 'https://images.pexels.com/photos/3862134/pexels-photo-3862134.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Design and build sustainable infrastructure with focus on structures, transportation, and water resources.',
+    specializations: [
+      'Structural Engineering',
+      'Transportation Engineering',
+      'Water Resources',
+      'Geotechnical Engineering',
+      'Environmental Engineering',
+      'Construction Management',
+      'Urban Planning',
+      'Sustainable Design'
+    ]
+  },
+  {
+    id: 6,
+    name: 'Bachelor of Psychology',
+    university: 'HELP University',
+    country: 'Malaysia',
+    duration: '3 years',
+    image: 'https://images.pexels.com/photos/3184343/pexels-photo-3184343.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Explore human behavior, cognition, and mental health with practical training and research exposure.',
+    specializations: [
+      'Clinical Psychology',
+      'Counseling',
+      'Cognitive Psychology',
+      'Organizational Psychology',
+      'Health Psychology',
+      'Educational Psychology',
+      'Neuropsychology',
+      'Social Psychology'
+    ]
+  },
+  {
+    id: 7,
+    name: 'Bachelor of Architecture',
+    university: 'Taylor\'s University',
+    country: 'Malaysia',
+    duration: '3-4 years',
+    image: 'https://images.pexels.com/photos/3862136/pexels-photo-3862136.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Architectural studies integrating design thinking, sustainability, and urban contexts.',
+    specializations: [
+      'Sustainable Architecture',
+      'Urban Design',
+      'Interior Architecture',
+      'Architectural Conservation',
+      'Landscape Architecture',
+      'Digital Fabrication',
+      'Parametric Design',
+      'Building Technology'
+    ]
+  },
+  {
+    id: 8,
+    name: 'Bachelor of Biotechnology',
+    university: 'Indian Institute of Technology Bombay',
+    country: 'India',
+    duration: '3-4 years',
+    image: 'https://images.pexels.com/photos/3938024/pexels-photo-3938024.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Foundational life sciences with laboratory practice across biotech domains and applications.',
+    specializations: [
+      'Genetics',
+      'Bioinformatics',
+      'Industrial Biotechnology',
+      'Medical Biotechnology',
+      'Environmental Biotechnology',
+      'Bioprocess Engineering',
+      'Molecular Biology',
+      'Pharmaceutical Biotechnology'
+    ]
+  },
+  {
+    id: 9,
+    name: 'Bachelor of Public Health',
+    university: 'All India Institute of Medical Sciences',
+    country: 'India',
+    duration: '3-4 years',
+    image: 'https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Population health, epidemiology, and health systems with community-based learning.',
+    specializations: [
+      'Epidemiology',
+      'Health Policy & Management',
+      'Environmental Health',
+      'Global Health',
+      'Health Promotion',
+      'Biostatistics',
+      'Occupational Health',
+      'Maternal & Child Health'
+    ]
+  },
+  {
+    id: 10,
+    name: 'Bachelor of International Relations',
+    university: 'Jawaharlal Nehru University',
+    country: 'India',
+    duration: '3 years',
+    image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Study global politics, diplomacy, and economies to build careers in policy and international affairs.',
+    specializations: [
+      'Diplomacy',
+      'International Security',
+      'International Economics',
+      'Regional Studies',
+      'International Law',
+      'Conflict Resolution',
+      'Global Governance',
+      'Foreign Policy Analysis'
+    ]
+  },
+  {
+    id: 11,
+    name: 'Bachelor of Finance',
+    university: 'Singapore Management University',
+    country: 'Singapore',
+    duration: '3 years',
+    image: 'https://images.pexels.com/photos/3184295/pexels-photo-3184295.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Financial markets, investment analysis, and risk management with practical exposure.',
+    specializations: [
+      'Investment Management',
+      'Corporate Finance',
+      'Financial Analytics',
+      'Risk Management',
+      'Banking',
+      'FinTech',
+      'Wealth Management',
+      'International Finance'
+    ]
+  },
+  {
+    id: 12,
+    name: 'Bachelor of Education',
+    university: 'University of Malaya',
+    country: 'Malaysia',
+    duration: '3-4 years',
+    image: 'https://images.pexels.com/photos/3184342/pexels-photo-3184342.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Teacher preparation covering pedagogy, curriculum, and classroom technologies.',
+    specializations: [
+      'Educational Technology',
+      'Curriculum & Instruction',
+      'Special Education',
+      'Educational Psychology',
+      'TESOL',
+      'Science Education',
+      'Mathematics Education',
+      'Early Childhood Education'
+    ]
+  },
+  {
+    id: 13,
+    name: 'Bachelor of Digital Marketing',
+    university: 'RMIT University Vietnam',
+    country: 'Vietnam',
+    duration: '3 years',
+    image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Modern marketing program centered on digital strategy, analytics, and consumer behavior.',
+    specializations: [
+      'Digital Strategy',
+      'Content Marketing',
+      'Social Media Marketing',
+      'Search Engine Marketing',
+      'Marketing Analytics',
+      'E-commerce',
+      'Brand Management',
+      'UX for Marketers'
+    ]
+  },
+  {
+    id: 14,
+    name: 'Bachelor of Journalism & Media',
+    university: 'HELP University',
+    country: 'Malaysia',
+    duration: '3 years',
+    image: 'https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Media production, storytelling, and digital journalism with ethics and investigative rigor.',
+    specializations: [
+      'Broadcast Journalism',
+      'Digital Media',
+      'Feature Writing',
+      'Investigative Journalism',
+      'Photojournalism',
+      'Media Management',
+      'Public Relations',
+      'Content Production'
+    ]
+  },
+  {
+    id: 15,
+    name: 'Bachelor of Information Systems',
+    university: 'National University of Singapore',
+    country: 'Singapore',
+    duration: '3-4 years',
+    image: 'https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Bridge business and technology with systems analysis, product, and data-driven decision making.',
+    specializations: [
+      'Business Analytics',
+      'Product Management',
+      'Information Security',
+      'Enterprise Systems',
+      'IT Consulting',
+      'Data Engineering',
+      'UX Design',
+      'Process Automation'
+    ]
+  }
+];

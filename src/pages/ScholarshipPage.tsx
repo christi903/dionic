@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/ui/Navigation';
 import ScholarshipCard from '../components/ui/ScholarshipCard';
 import DiplomaCourseCard from '../components/ui/DiplomaCourseCard';
+import UndergraduateCourseCard from '../components/ui/UndergraduateCourseCard';
 import MastersCourseCard from '../components/ui/MastersCourseCard';
 import PhDCourseCard from '../components/ui/PhDCourseCard';
 import GoLearnLogo from '../components/ui/GoLearnLogo';
 import TeamModal from '../components/ui/TeamModal';
-import { scholarships, programTypes, diplomaCourses, mastersCourses, phdCourses, MastersCourse, PhDCourse } from '../data/scholarships';
+import { programTypes, diplomaCourses, undergraduateCourses, mastersCourses, phdCourses, MastersCourse, PhDCourse, UndergraduateCourse } from '../data/scholarships';
 
 const ScholarshipPage = () => {
   const [selectedProgram, setSelectedProgram] = useState('diploma');
@@ -102,6 +103,18 @@ const ScholarshipPage = () => {
       university: course.university,
       country: course.country,
       type: 'diploma',
+      duration: course.duration,
+      deadline: 'Rolling Admission',
+      image: course.image,
+      description: course.description,
+      requirements: []
+    })),
+    ...undergraduateCourses.map(course => ({
+      id: course.id,
+      title: course.name,
+      university: course.university,
+      country: course.country,
+      type: 'undergraduate',
       duration: course.duration,
       deadline: 'Rolling Admission',
       image: course.image,
@@ -267,6 +280,15 @@ const ScholarshipPage = () => {
             </div>
           )}
           
+          {selectedProgram === 'undergraduate' && (
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Available Undergraduate Programs</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Explore accredited undergraduate degrees designed to build strong foundations and practical skills across disciplines.
+              </p>
+            </div>
+          )}
+
           {selectedProgram === 'masters' && (
             <div className="text-center mb-12">
               <h2 className="text-3xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600">Available Masters Programs</h2>
@@ -291,6 +313,12 @@ const ScholarshipPage = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {diplomaCourses.map((course) => (
                 <DiplomaCourseCard key={course.id} course={course} />
+              ))}
+            </div>
+          ) : selectedProgram === 'undergraduate' ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {undergraduateCourses.map((course: UndergraduateCourse) => (
+                <UndergraduateCourseCard key={course.id} course={course} />
               ))}
             </div>
           ) : selectedProgram === 'masters' ? (

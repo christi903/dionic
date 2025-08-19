@@ -3,14 +3,17 @@ import { motion } from 'framer-motion';
 import { UserCheck } from 'lucide-react';
 import LoginForm from './components/LoginForm';
 import RegisterForm from './components/RegisterForm';
-import { ALLOWED_STAFF_EMAILS } from './allowedStaff';
 import ForgotPasswordForm from './components/ForgotPasswordForm';
 
 type View = 'login' | 'register' | 'forgot';
 
+interface UserData {
+  fullName?: string;
+}
+
 interface AuthCardProps {
   signIn: (email: string, password: string) => Promise<{ error?: { message: string } | null }>;
-  signUp: (email: string, password: string, userData?: any) => Promise<{ error?: { message: string } | null }>;
+  signUp: (email: string, password: string, userData?: UserData) => Promise<{ error?: { message: string } | null }>;
   resetPassword: (email: string) => Promise<{ error?: { message: string } | null }>;
 }
 
