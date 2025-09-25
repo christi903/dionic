@@ -4,7 +4,7 @@
 # Example: /home/youruser/public_html or a subdirectory like /home/youruser/public_html/app
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/dionisco/dionic/
+    - export DEPLOYPATH=/home/dionisco/public_html/
     # Ensure workspace dependencies and build the production bundle
     - /usr/bin/npm ci --silent --no-audit --no-fund || npm ci --silent --no-audit --no-fund
     - /usr/bin/npm run build --silent || npm run build --silent
