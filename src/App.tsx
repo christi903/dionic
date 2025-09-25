@@ -18,7 +18,7 @@ function App() {
           <Route path="/staff-portal" element={<StaffPortalPage />} />
         </Routes>
         <WhatsAppButton 
-          phoneNumber="+255769558797" 
+          phoneNumber="+91 96625 01213" 
           message="" 
         />
       </div>
