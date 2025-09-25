@@ -1,0 +1,15 @@
+---
+# cPanel Git™ deployment for Vite (React/TS) static site
+# Update DEPLOYPATH to match your cPanel username and desired target directory
+# Example: /home/youruser/public_html or a subdirectory like /home/youruser/public_html/app
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/youruser/public_html/
+    # Ensure workspace dependencies and build the production bundle
+    - /usr/bin/npm ci --silent --no-audit --no-fund || npm ci --silent --no-audit --no-fund
+    - /usr/bin/npm run build --silent || npm run build --silent
+    # Create target directory if it doesn't exist
+    - /bin/mkdir -p $DEPLOYPATH
+    # Deploy built assets from dist/ to the target directory (clean old files)
+    - /usr/bin/rsync -av --delete dist/ $DEPLOYPATH || rsync -av --delete dist/ $DEPLOYPATH
+
