@@ -2,10 +2,11 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://wwww.dioniscompany.co.tz/sitemap.xml
+Sitemap: https://www.dioniscompany.co.tz/sitemap.xml
 
 # Disallow access to admin/staff portal for crawlers
 Disallow: /staff-portal
 
 # Disallow access to API routes if any
 Disallow: /api/
+
