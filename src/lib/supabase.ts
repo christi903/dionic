@@ -1,7 +1,18 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Get environment variables (Vite uses import.meta.env)
+const supabaseUrl = 
+  import.meta.env.VITE_SUPABASE_URL ||
+  'https://khgjiimmydrepuhnoagx.supabase.co';
+
+const supabaseAnonKey = 
+  import.meta.env.VITE_SUPABASE_ANON_KEY ||
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtoZ2ppaW1teWRyZXB1aG5vYWd4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ3Mjg1MjcsImV4cCI6MjA3MDMwNDUyN30.ZdTScwcZsdSoWn-e9rpjimic-b7_otRIZYwlWPmBeTQ';
+
+// Validate configuration
+if (!supabaseUrl || !supabaseAnonKey || supabaseUrl.includes('your-project-ref')) {
+  console.warn('Supabase configuration incomplete. Using mock client.');
+}
 
 interface UserData {
   fullName?: string;
@@ -42,9 +53,15 @@ const createMockClient = () => ({
   removeChannel: () => {}
 });
 
-export const supabase = (!supabaseUrl || !supabaseAnonKey) 
+// Create the client with better error handling
+export const supabase = (!supabaseUrl || !supabaseAnonKey || supabaseUrl.includes('your-project-ref')) 
   ? createMockClient() 
-  : createClient(supabaseUrl, supabaseAnonKey);
+  : createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+      }
+    });
 
 // Auth helper functions
 export const authHelpers = {
