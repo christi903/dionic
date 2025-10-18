@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, MapPin, BookOpen } from 'lucide-react';
+import { Clock, BookOpen } from 'lucide-react';
 import { DiplomaCourse } from '../../data/scholarships';
 import SpecializationsModal from './SpecializationsModal';
 
@@ -52,12 +52,6 @@ const DiplomaCourseCard: React.FC<DiplomaCourseCardProps> = ({ course }) => {
         {/* Course Title */}
         <h3 className="text-xl font-bold text-gray-900 mb-2">{course.name}</h3>
         
-        {/* University and Country */}
-        <div className="flex items-center text-gray-600 mb-3">
-          <MapPin className="h-4 w-4 mr-2" />
-          <span className="text-sm">{course.university}, {course.country}</span>
-        </div>
-
         {/* Duration */}
         <div className="flex items-center text-gray-600 mb-3">
           <Clock className="h-4 w-4 mr-2" />

@@ -94,7 +94,7 @@ export const scholarships: Scholarship[] = [
     country: 'India',
     type: 'Government-funded',
     value: '75% Tuition Coverage',
-    duration: '2 years',
+    duration: '3 years',
     deadline: 'April 15, 2024',
     image: 'https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Government-sponsored scholarship for masters programs in engineering and technology.',
@@ -114,7 +114,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Business Administration',
     university: 'Asia Pacific University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Comprehensive business administration program covering management, marketing, and finance fundamentals.',
     specializations: [
@@ -133,7 +133,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Information Technology',
     university: 'Limkokwing University',
     country: 'Malaysia',
-    duration: '2.5 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Practical IT program focusing on software development, networking, and system administration.',
     specializations: [
@@ -152,7 +152,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Hospitality Management',
     university: 'Taylor\'s University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Hospitality management program with hands-on training in hotel operations and customer service.',
     specializations: [
@@ -190,7 +190,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Graphic Design',
     university: 'The One Academy',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Creative design program covering digital and traditional graphic design techniques.',
     specializations: [
@@ -209,7 +209,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Culinary Arts',
     university: 'Sunway University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Professional culinary program focusing on international cuisines and food service management.',
     specializations: [
@@ -228,7 +228,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Digital Marketing',
     university: 'INTI International University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Specialized program in digital marketing strategies, social media management, and online advertising.',
     specializations: [
@@ -247,7 +247,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Fashion Design',
     university: 'Raffles Design Institute',
     country: 'Singapore',
-    duration: '2.5 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184466/pexels-photo-3184466.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Creative fashion design program covering garment construction, textile design, and fashion merchandising.',
     specializations: [
@@ -266,7 +266,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Interior Design',
     university: 'UCSI University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184467/pexels-photo-3184467.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Interior design program focusing on spatial planning, materials, and sustainable design practices.',
     specializations: [
@@ -285,7 +285,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Multimedia Design',
     university: 'Multimedia University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184468/pexels-photo-3184468.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Multimedia design program covering animation, video production, and interactive media development.',
     specializations: [
@@ -304,7 +304,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Tourism Management',
     university: 'Taylor\'s University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Tourism management program focusing on travel industry operations, destination management, and customer service.',
     specializations: [
@@ -323,7 +323,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Accounting',
     university: 'Sunway University',
     country: 'Malaysia',
-    duration: '2.5 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Accounting program covering financial accounting, taxation, and business finance principles.',
     specializations: [
@@ -342,7 +342,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Early Childhood Education',
     university: 'SEGi University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184341/pexels-photo-3184341.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Early childhood education program focusing on child development, teaching methodologies, and curriculum planning.',
     specializations: [
@@ -380,7 +380,7 @@ export const diplomaCourses: DiplomaCourse[] = [
     name: 'Diploma in Journalism',
     university: 'HELP University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184294/pexels-photo-3184294.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Journalism program covering news reporting, media ethics, and digital content creation.',
     specializations: [
@@ -403,7 +403,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Business Administration (MBA)',
     university: 'Indian Institute of Management',
     country: 'India',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Comprehensive MBA program designed for future business leaders and entrepreneurs.',
     specializations: [
@@ -466,7 +466,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Public Health',
     university: 'All India Institute of Medical Sciences',
     country: 'India',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Comprehensive public health program addressing global health challenges and policy.',
     specializations: [
@@ -487,7 +487,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of International Relations',
     university: 'Jawaharlal Nehru University',
     country: 'India',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Advanced study of international politics, diplomacy, and global governance.',
     specializations: [
@@ -508,7 +508,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Data Science',
     university: 'National University of Singapore',
     country: 'Singapore',
-    duration: '1.5 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Advanced program in data science focusing on big data analytics, machine learning, and statistical modeling.',
     specializations: [
@@ -529,7 +529,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Architecture',
     university: 'University of Technology Malaysia',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3862133/pexels-photo-3862133.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Advanced architecture program focusing on sustainable design, urban planning, and architectural theory.',
     specializations: [
@@ -592,7 +592,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Psychology',
     university: 'HELP University',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184343/pexels-photo-3184343.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Advanced psychology program focusing on clinical practice, research methodologies, and psychological assessment.',
     specializations: [
@@ -613,7 +613,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Cybersecurity',
     university: 'Nanyang Technological University',
     country: 'Singapore',
-    duration: '1.5 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3861960/pexels-photo-3861960.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Advanced cybersecurity program focusing on network security, ethical hacking, and digital forensics.',
     specializations: [
@@ -634,7 +634,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Urban Planning',
     university: 'University of Technology Malaysia',
     country: 'Malaysia',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3862134/pexels-photo-3862134.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Urban planning program focusing on sustainable city development, transportation planning, and urban policy.',
     specializations: [
@@ -655,7 +655,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Biotechnology',
     university: 'Indian Institute of Technology Bombay',
     country: 'India',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3938024/pexels-photo-3938024.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Advanced biotechnology program focusing on genetic engineering, bioinformatics, and pharmaceutical biotechnology.',
     specializations: [
@@ -676,7 +676,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Digital Marketing',
     university: 'RMIT University Vietnam',
     country: 'Vietnam',
-    duration: '1.5 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Specialized digital marketing program focusing on digital strategy, analytics, and consumer behavior.',
     specializations: [
@@ -697,7 +697,7 @@ export const mastersCourses: MastersCourse[] = [
     name: 'Master of Artificial Intelligence',
     university: 'Indian Institute of Technology Delhi',
     country: 'India',
-    duration: '2 years',
+    duration: '3 years',
     image: 'https://images.pexels.com/photos/3861961/pexels-photo-3861961.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Advanced AI program focusing on machine learning, computer vision, and natural language processing.',
     specializations: [
