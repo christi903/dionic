@@ -60,7 +60,6 @@ export interface PhDCourse {
 
 // Program types for filtering
 export const programTypes = [
-  { id: 'all', name: 'All Programs' },
   { id: 'diploma', name: 'Diploma Programs' },
   { id: 'undergraduate', name: 'Undergraduate Programs' },
   { id: 'masters', name: 'Masters Programs' },

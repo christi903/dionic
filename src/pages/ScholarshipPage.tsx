@@ -147,9 +147,8 @@ const ScholarshipPage = () => {
     }))
   ];
 
-  const filteredScholarships = selectedProgram === 'all' 
-    ? allCourses 
-    : allCourses.filter(scholarship => scholarship.type === selectedProgram);
+  // Filter courses based on selected program type (default to diploma if none selected)
+  const filteredScholarships = allCourses.filter(scholarship => scholarship.type === selectedProgram);
 
   return (
     <div className="min-h-screen bg-gray-50">
