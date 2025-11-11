@@ -1,16 +1,28 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, FileText, Users } from 'lucide-react';
-import GoLearnLogo from './GoLearnLogo';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, FileText, Users } from "lucide-react";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { name: 'Home', href: '/', icon: null },
-    { name: 'Start Application', href: '/application', icon: <FileText className="h-4 w-4" /> },
-    { name: 'Staff Portal', href: '/staff-portal', icon: <Users className="h-4 w-4" /> },
+    { name: "Home", href: "/", icon: null },
+    {
+      name: "GoLearn Courses",
+      href: "/golearn-courses",
+      icon: null,
+    },
+    {
+      name: "Start Application",
+      href: "/application",
+      icon: <FileText className="h-4 w-4" />,
+    },
+    {
+      name: "Staff Portal",
+      href: "/staff-portal",
+      icon: <Users className="h-4 w-4" />,
+    },
   ];
 
   return (
@@ -19,10 +31,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/scholarships" className="flex items-center">
-            <GoLearnLogo size="sm" />
             <div className="ml-3">
-              <span className="text-emerald-600 font-bold text-lg">GoLearn</span>
-              <span className="text-orange-600 text-sm font-semibold ml-1">Global</span>
+              <span className="text-emerald-600 font-bold text-lg">
+                GoLearn
+              </span>
+              <span className="text-orange-600 text-sm font-semibold ml-1">
+                Global
+              </span>
             </div>
           </Link>
 
@@ -46,7 +61,11 @@ const Navigation = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 hover:text-emerald-600 transition-colors"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -56,7 +75,7 @@ const Navigation = () => {
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               className="md:hidden border-t border-gray-200"
             >

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Mail, Phone } from 'lucide-react';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Mail, Phone } from "lucide-react";
 
 interface TeamMember {
   id: number;
@@ -21,29 +21,29 @@ const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
   const teamMembers: TeamMember[] = [
     {
       id: 1,
-      name: 'Mussa Dionis Karwani',
-      role: 'Director',
-      image: '/team/member1.jpg',
-      email: 'musadionis58@gmail.com',
-      phone: '+255 697 335 359',
+      name: "Mussa Dionis Karwani",
+      role: "Director",
+      image: "/team/member1.jpg",
+      email: "musadionis58@gmail.com",
+      phone: "+255 697 335 359",
     },
     {
       id: 2,
-      name: 'Karim Zumo Makame',
-      role: 'Chief Executive Officer',
-      image: '/team/member2.jpg',
-      email: 'karimzumomakame@gmail.com',
-      phone: '+91 9662 501 213', // Updated phone number
-      instagram: 'Karim_Zumo', // Added Instagram account
+      name: "Karim Zumo Makame",
+      role: "Chief Executive Officer",
+      image: "/team/member2.jpg",
+      email: "karimzumomakame@gmail.com",
+      phone: "+91 9662 501 213", // Updated phone number
+      instagram: "Karim_Zumo", // Added Instagram account
     },
     {
       id: 3,
-      name: 'Abdulrahim Yusuf',
-      role: 'Chief Operations Officer',
-      image: '/team/member3.jpg',
-      email: 'abdulrahimyusuf34@gmail.com',
-      phone: '+255 792 483 540',
-    }
+      name: "Abdulrahim Yusuf",
+      role: "Chief Operations Officer",
+      image: "/team/member3.jpg",
+      email: "abdulrahimyusuf34@gmail.com",
+      phone: "+255 792 483 540",
+    },
   ];
 
   // Using inline motion props to avoid strict Variants typing issues in framer-motion v12
@@ -61,7 +61,11 @@ const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
           <motion.div
             className="bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[90vh] overflow-hidden"
             initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1, transition: { type: 'spring', damping: 25, stiffness: 300 } }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              transition: { type: "spring", damping: 25, stiffness: 300 },
+            }}
             exit={{ y: 20, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -69,11 +73,18 @@ const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
             <div className="bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600 text-white p-6">
               <div className="flex justify-between items-center">
                 <div>
-                  <h2 className="text-3xl font-bold mb-2">Meet Our Expert Team</h2>
-                  <p className="text-blue-100">Dedicated professionals committed to your success</p>
+                  <h2 className="text-3xl font-bold mb-2">
+                    Meet Our Expert Team
+                  </h2>
+                  <p className="text-blue-100">
+                    Dedicated professionals committed to your success
+                  </p>
                 </div>
                 <button
+                  type="button"
                   onClick={onClose}
+                  aria-label="Close team modal"
+                  title="Close"
                   className="p-2 hover:bg-white/20 rounded-full transition-colors"
                 >
                   <X className="h-6 w-6" />
@@ -107,7 +118,9 @@ const TeamModal: React.FC<TeamModalProps> = ({ isOpen, onClose }) => {
                       <h3 className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-amber-500 to-emerald-600 mb-1">
                         {member.name}
                       </h3>
-                      <p className="text-blue-600 font-semibold">{member.role}</p>
+                      <p className="text-blue-600 font-semibold">
+                        {member.role}
+                      </p>
                     </div>
 
                     {/* Contact Info */}

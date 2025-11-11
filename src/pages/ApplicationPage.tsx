@@ -1,41 +1,50 @@
-import { useState } from 'react';
-import { supabase } from '../lib/supabase';
-import { motion } from 'framer-motion';
-import { Send, User, GraduationCap, Users, BookOpen, Globe } from 'lucide-react';
-import Navigation from '../components/ui/Navigation';
-import GoLearnLogo from '../components/ui/GoLearnLogo';
+import { useState } from "react";
+import { supabase } from "../lib/supabase";
+import { motion } from "framer-motion";
+import {
+  Send,
+  User,
+  GraduationCap,
+  Users,
+  BookOpen,
+  Globe,
+} from "lucide-react";
+import Navigation from "../components/ui/Navigation";
+import GoLearnLogo from "../components/ui/GoLearnLogo";
 
 const ApplicationPage = () => {
   const [formData, setFormData] = useState({
     // Student Details
-    fullName: '',
-    mobile: '',
-    whatsapp: '',
-    email: '',
-    dateOfBirth: '',
-    interestedCourse: '',
-    
+    fullName: "",
+    mobile: "",
+    whatsapp: "",
+    email: "",
+    dateOfBirth: "",
+    interestedCourse: "",
+
     // Academic Details
-    educationLevelCompleted: '',
-    schoolName: '',
-    subjectsName: '',
-    passingYear: '',
-    
+    educationLevelCompleted: "",
+    schoolName: "",
+    subjectsName: "",
+    passingYear: "",
+
     // Parent/Guardian Details
-    fatherName: '',
-    motherName: '',
-    parentMobile: '',
-    parentWhatsapp: '',
-    parentEmail: ''
+    fatherName: "",
+    motherName: "",
+    parentMobile: "",
+    parentWhatsapp: "",
+    parentEmail: "",
   });
 
   const [submitting, setSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -49,7 +58,9 @@ const ApplicationPage = () => {
       mobile: formData.mobile || null,
       whatsapp: formData.whatsapp || null,
       email: formData.email || null,
-      date_of_birth: formData.dateOfBirth ? new Date(formData.dateOfBirth).toISOString().slice(0, 10) : null,
+      date_of_birth: formData.dateOfBirth
+        ? new Date(formData.dateOfBirth).toISOString().slice(0, 10)
+        : null,
       interested_course: formData.interestedCourse || null,
       school_name: formData.schoolName || null,
       subjects_name: formData.subjectsName || null,
@@ -62,28 +73,28 @@ const ApplicationPage = () => {
       parent_email: formData.parentEmail || null,
     };
 
-    const { error } = await supabase.from('applications').insert([payload]);
+    const { error } = await supabase.from("applications").insert([payload]);
 
     if (error) {
       alert(`Failed to submit application: ${error.message}`);
     } else {
-      alert('Application submitted successfully! We will contact you soon.');
+      alert("Application submitted successfully! We will contact you soon.");
       setFormData({
-        fullName: '',
-        mobile: '',
-        whatsapp: '',
-        email: '',
-        dateOfBirth: '',
-        interestedCourse: '',
-        educationLevelCompleted: '',
-        schoolName: '',
-        subjectsName: '',
-        passingYear: '',
-        fatherName: '',
-        motherName: '',
-        parentMobile: '',
-        parentWhatsapp: '',
-        parentEmail: ''
+        fullName: "",
+        mobile: "",
+        whatsapp: "",
+        email: "",
+        dateOfBirth: "",
+        interestedCourse: "",
+        educationLevelCompleted: "",
+        schoolName: "",
+        subjectsName: "",
+        passingYear: "",
+        fatherName: "",
+        motherName: "",
+        parentMobile: "",
+        parentWhatsapp: "",
+        parentEmail: "",
       });
     }
 
@@ -93,16 +104,12 @@ const ApplicationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-emerald-50">
       <Navigation />
-      
+
       {/* Enhanced Header Section */}
       <section className="relative bg-gradient-to-r from-blue-600 via-emerald-600 to-blue-800 text-white py-16 overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-          }} />
-        </div>
-        
+        <div className="absolute inset-0 opacity-10 bg-dot-pattern"></div>
+
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -114,8 +121,8 @@ const ApplicationPage = () => {
             <div className="mb-8 transform hover:scale-105 transition-transform duration-300">
               <GoLearnLogo size="lg" className="text-white drop-shadow-lg" />
             </div>
-            
-            <motion.h1 
+
+            <motion.h1
               className="text-4xl sm:text-5xl font-extrabold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-100 to-emerald-100"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -123,18 +130,21 @@ const ApplicationPage = () => {
             >
               Student Application Form
             </motion.h1>
-            
-            <motion.p 
+
+            <motion.p
               className="text-xl sm:text-2xl text-blue-100 max-w-2xl mx-auto leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              From Home to Horizon - <span className="text-emerald-200 font-semibold">Go Learn Global</span>
+              From Home to Horizon -{" "}
+              <span className="text-emerald-200 font-semibold">
+                Go Learn Global
+              </span>
             </motion.p>
-            
+
             {/* Decorative Icons */}
-            <motion.div 
+            <motion.div
               className="flex items-center justify-center space-x-8 mt-8"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -147,7 +157,9 @@ const ApplicationPage = () => {
               <div className="w-px h-8 bg-blue-300"></div>
               <div className="flex items-center space-x-2 text-emerald-200">
                 <Globe className="h-6 w-6" />
-                <span className="text-sm font-medium">Global Opportunities</span>
+                <span className="text-sm font-medium">
+                  Global Opportunities
+                </span>
               </div>
             </motion.div>
           </motion.div>
@@ -168,7 +180,9 @@ const ApplicationPage = () => {
               <div className="absolute inset-0 bg-black/10"></div>
               <div className="relative z-10">
                 <h2 className="text-3xl font-bold mb-2">INQUIRY FORM</h2>
-                <p className="text-purple-100 text-lg">Start Your Global Education Journey Today</p>
+                <p className="text-purple-100 text-lg">
+                  Start Your Global Education Journey Today
+                </p>
               </div>
               {/* Decorative Elements */}
               <div className="absolute top-0 left-0 w-32 h-32 bg-white/10 rounded-full -translate-x-16 -translate-y-16"></div>
@@ -182,9 +196,11 @@ const ApplicationPage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-lg flex items-center justify-center mr-3">
                     <User className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Student Details</h3>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Student Details
+                  </h3>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -200,7 +216,7 @@ const ApplicationPage = () => {
                       placeholder="Enter your full name"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Mobile: <span className="text-red-500">*</span>
@@ -215,7 +231,7 @@ const ApplicationPage = () => {
                       placeholder="Enter mobile number"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       WhatsApp:
@@ -229,7 +245,7 @@ const ApplicationPage = () => {
                       placeholder="Enter WhatsApp number"
                     />
                   </div>
-                  
+
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Email: <span className="text-red-500">*</span>
@@ -244,21 +260,36 @@ const ApplicationPage = () => {
                       placeholder="Enter your email address"
                     />
                   </div>
-                  
+
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label
+                      htmlFor="dateOfBirth"
+                      className="block text-sm font-semibold text-gray-700 mb-2"
+                    >
                       Date of Birth: <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="date"
-                      name="dateOfBirth"
-                      value={formData.dateOfBirth}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-300"
-                    />
+                    <div className="relative">
+                      <input
+                        type="date"
+                        id="dateOfBirth"
+                        name="dateOfBirth"
+                        value={formData.dateOfBirth}
+                        onChange={handleInputChange}
+                        aria-required="true"
+                        required
+                        aria-label="Date of birth in DD/MM/YYYY format"
+                        placeholder="DD/MM/YYYY"
+                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 bg-white hover:border-gray-300 peer"
+                      />
+                      <label
+                        htmlFor="dateOfBirth"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 bg-white px-1 transition-all duration-200 peer-focus:text-blue-600 peer-focus:-top-2 peer-focus:text-xs peer-focus:bg-white peer-placeholder-shown:bg-transparent"
+                      >
+                        Select date
+                      </label>
+                    </div>
                   </div>
-                  
+
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Interested Course:
@@ -281,9 +312,11 @@ const ApplicationPage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-lg flex items-center justify-center mr-3">
                     <GraduationCap className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Academic Details</h3>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Academic Details
+                  </h3>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -300,7 +333,8 @@ const ApplicationPage = () => {
                   </div>
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      School/College/University Name: <span className="text-red-500">*</span>
+                      School/College/University Name:{" "}
+                      <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -312,7 +346,7 @@ const ApplicationPage = () => {
                       placeholder="Enter your school/college/university name"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Subjects/Combination/Course Taken:
@@ -326,7 +360,7 @@ const ApplicationPage = () => {
                       placeholder="Enter subjects/combination/course"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Passing Year:
@@ -349,9 +383,11 @@ const ApplicationPage = () => {
                   <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-3">
                     <Users className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900">Parent/Guardian Details (Optional)</h3>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Parent/Guardian Details (Optional)
+                  </h3>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -366,7 +402,7 @@ const ApplicationPage = () => {
                       placeholder="Enter father's name"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Mother's Name:
@@ -380,7 +416,7 @@ const ApplicationPage = () => {
                       placeholder="Enter mother's name"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Mobile:
@@ -394,7 +430,7 @@ const ApplicationPage = () => {
                       placeholder="Enter parent's mobile"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       WhatsApp:
@@ -408,7 +444,7 @@ const ApplicationPage = () => {
                       placeholder="Enter parent's WhatsApp"
                     />
                   </div>
-                  
+
                   <div className="md:col-span-2">
                     <label className="block text-sm font-semibold text-gray-700 mb-2">
                       Email:
@@ -435,7 +471,9 @@ const ApplicationPage = () => {
                   whileTap={{ scale: submitting ? 1 : 0.98 }}
                 >
                   <Send className="h-6 w-6" />
-                  <span>{submitting ? 'Submitting...' : 'Submit Application'}</span>
+                  <span>
+                    {submitting ? "Submitting..." : "Submit Application"}
+                  </span>
                 </motion.button>
               </div>
             </form>

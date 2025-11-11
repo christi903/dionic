@@ -106,7 +106,7 @@ const ApplicationDetailsModal: React.FC<ApplicationDetailsModalProps> = ({ isOpe
                     <span className="capitalize">{application.status}</span>
                   </div>
                   <button onClick={handlePrint} className="px-3 py-1.5 rounded-lg bg-white/90 text-gray-900 text-sm font-medium hover:bg-white">Print PDF</button>
-                  <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-lg"><X className="h-5 w-5" /></button>
+                  <button onClick={onClose} className="p-2 hover:bg-white/10 rounded-lg" aria-label="Close modal"><X className="h-5 w-5" /></button>
                 </div>
               </div>
             </div>

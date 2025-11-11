@@ -1,0 +1,42 @@
+/* Background pattern styles */
+.bg-dot-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Dark overlay for better text readability */
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Background image styles */
+.bg-slide-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1s ease-in-out;
+}
+
+.bg-slide-image.active {
+  opacity: 1;
+}
+
+.bg-slide-image.inactive {
+  opacity: 0;
+}
+
+/* Background image for slides */
+.bg-slide-0 {
+  background-image: url('https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&w=1920&h=1080&q=80');
+}
+
+.bg-slide-1 {
+  background-image: url('https://images.unsplash.com/photo-1559181567-c3190ca9959b?auto=format&fit=crop&w=1920&h=1080&q=80');
+}
+
+.bg-slide-2 {
+  background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&h=1080&q=80');
+}
+
+.bg-slide-3 {
+  background-image: url('https://images.unsplash.com/photo-1567427018141-0584cfcbf1b8?auto=format&fit=crop&w=1920&h=1080&q=80');
+}

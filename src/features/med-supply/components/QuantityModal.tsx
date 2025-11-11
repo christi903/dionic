@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { X } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { X } from "lucide-react";
 
 interface QuantityModalProps {
   isOpen: boolean;
@@ -9,7 +9,12 @@ interface QuantityModalProps {
   onConfirm: (quantity: number) => void;
 }
 
-const QuantityModal: React.FC<QuantityModalProps> = ({ isOpen, productName, onClose, onConfirm }) => {
+const QuantityModal: React.FC<QuantityModalProps> = ({
+  isOpen,
+  productName,
+  onClose,
+  onConfirm,
+}) => {
   const [qty, setQty] = useState(1);
   if (!isOpen) return null;
 
@@ -23,20 +28,71 @@ const QuantityModal: React.FC<QuantityModalProps> = ({ isOpen, productName, onCl
       >
         <div className="flex items-center justify-between px-5 py-4 border-b">
           <h3 className="text-lg font-semibold">Add to cart</h3>
-          <button onClick={onClose} className="p-2 rounded hover:bg-gray-100"><X className="h-5 w-5" /></button>
+          <button
+            onClick={onClose}
+            type="button"
+            aria-label={`Close quantity modal`}
+            title="Close"
+            className="p-2 rounded hover:bg-gray-100"
+          >
+            <X className="h-5 w-5" />
+          </button>
         </div>
         <div className="p-5 space-y-4">
           <div className="text-sm text-gray-700">Product</div>
           <div className="font-medium">{productName}</div>
           <div className="text-sm text-gray-700">Quantity</div>
           <div className="flex items-center gap-2">
-            <button onClick={() => setQty(q => Math.max(1, q - 1))} className="px-3 py-2 rounded border">-</button>
-            <input type="number" min={1} value={qty} onChange={(e) => setQty(Math.max(1, Number(e.target.value) || 1))} className="w-24 px-3 py-2 border rounded" />
-            <button onClick={() => setQty(q => q + 1)} className="px-3 py-2 rounded border">+</button>
+            <button
+              onClick={() => setQty((q) => Math.max(1, q - 1))}
+              type="button"
+              aria-label={`Decrease quantity for ${productName}`}
+              title={`Decrease quantity for ${productName}`}
+              className="px-3 py-2 rounded border"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              min={1}
+              value={qty}
+              onChange={(e) => setQty(Math.max(1, Number(e.target.value) || 1))}
+              className="w-24 px-3 py-2 border rounded"
+              aria-label={`Quantity for ${productName}`}
+              title={`Quantity for ${productName}`}
+            />
+            <button
+              onClick={() => setQty((q) => q + 1)}
+              type="button"
+              aria-label={`Increase quantity for ${productName}`}
+              title={`Increase quantity for ${productName}`}
+              className="px-3 py-2 rounded border"
+            >
+              +
+            </button>
           </div>
           <div className="flex justify-end gap-3 pt-2">
-            <button onClick={onClose} className="px-4 py-2 rounded border">Cancel</button>
-            <button onClick={() => { onConfirm(qty); onClose(); }} className="px-4 py-2 rounded bg-blue-600 text-white">Add</button>
+            <button
+              onClick={onClose}
+              type="button"
+              aria-label="Cancel adding to cart"
+              title="Cancel"
+              className="px-4 py-2 rounded border"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={() => {
+                onConfirm(qty);
+                onClose();
+              }}
+              type="button"
+              aria-label={`Add ${qty} ${productName} to cart`}
+              title={`Add ${qty} ${productName} to cart`}
+              className="px-4 py-2 rounded bg-blue-600 text-white"
+            >
+              Add
+            </button>
           </div>
         </div>
       </motion.div>
@@ -45,5 +101,3 @@ const QuantityModal: React.FC<QuantityModalProps> = ({ isOpen, productName, onCl
 };
 
 export default QuantityModal;
-
-
